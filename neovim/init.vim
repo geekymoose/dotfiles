@@ -4,9 +4,9 @@
 " ******************************************************************************
 
 " Import external files
-source './components/plugins.vim'
-source './components/keys.vim'
-source './components/ocaml.vim'
+source $HOME/.config/nvim/components/plugins.vim
+source $HOME/.config/nvim/components/keys.vim
+source $HOME/.config/nvim/components/ocaml.vim
 
 " ******************************************************************************
 " PERSONAL SETTINGS
