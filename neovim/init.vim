@@ -12,7 +12,7 @@ source $HOME/.config/nvim/components/ocaml.vim
 " PERSONAL SETTINGS
 " ******************************************************************************
 set number
-set colorcolumn=80
+set colorcolumn=81
 set list
 set listchars=trail:.,tab:>-,nbsp:~,extends:>,precedes:<
 
@@ -31,6 +31,7 @@ syntax on
 syntax enable
 set background=dark
 colorscheme jellybeans
+highlight ColorColumn ctermbg=1
 
 
 " Completion
