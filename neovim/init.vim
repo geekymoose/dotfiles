@@ -20,6 +20,7 @@ set list
 set ruler
 set spell
 set mouse=a
+set cursorline
 
 " Coding
 set nowrap
@@ -38,8 +39,6 @@ syntax enable
 set background=dark
 colorscheme jellybeans
 highlight ColorColumn ctermbg=1
-
-" Not all vim text are transparent. This to correct
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 
