@@ -6,41 +6,57 @@
 " Import external files
 source $HOME/.config/nvim/components/plugins.vim
 source $HOME/.config/nvim/components/keys.vim
-source $HOME/.config/nvim/components/ocaml.vim
 
-" ******************************************************************************
-" PERSONAL SETTINGS
-" ******************************************************************************
+
+" ------------------------------------------------------------------------------
+" General Editor Settings
+" ------------------------------------------------------------------------------
+
+" Editor theme
 set number
 set colorcolumn=81
-set list
 set listchars=trail:.,tab:>-,nbsp:~,extends:>,precedes:<
-
-set mouse=a
-set nospell
+set list
 set ruler
+set spell
+set mouse=a
+
+" Coding
 set nowrap
 set autoindent
-set expandtab
+set expandtab " Use space instead of tabs
 set tabstop=4
 set shiftwidth=4
-set incsearch
-set noswapfile
 
+set incsearch
+set splitbelow
+set splitright
+
+" Syntax and theme
 syntax on
 syntax enable
 set background=dark
 colorscheme jellybeans
 highlight ColorColumn ctermbg=1
 
+" Not all vim text are transparent. This to correct
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
-" Completion
-" TODO To clean
+" misc
+set noswapfile
+set nobackup
+
+
+" ------------------------------------------------------------------------------
+" Conditional settings
+" ------------------------------------------------------------------------------
 function LOAD_OCAML()
-    set omnifunc=merlin#Complete
-    set completefunc=merlin#Complete
+    source $HOME/.config/nvim/components/ocaml.vim
 endfunction
-augroup omnifuncs
+
+" Load some settings according to specific filetype
+augroup conditional_settings
     autocmd!
     autocmd FileType ocaml call LOAD_OCAML()
 augroup end

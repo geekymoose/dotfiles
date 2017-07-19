@@ -32,13 +32,12 @@ noremap <2-LeftMouse>       <Nop>
 noremap <3-LeftMouse>       <Nop>
 noremap <4-LeftMouse>       <Nop>
 
-
 " Editing
 nnoremap <leader>i viwU
 nnoremap <leader>c <s-I>/*<esc><s-a>*/<esc>
 nnoremap <leader>a :set paste<cr>
 nnoremap <leader>aa :set nopaste<cr>
 
-" Not confirmed / Test
+" Mics
 nnoremap <leader>b :ls<cr>:buffer<Space>
 nnoremap <leader>gg :vimgrep //gj ./**/*.

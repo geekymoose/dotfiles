@@ -43,6 +43,6 @@ let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 let g:syntastic_ocaml_checkers = ['merlin'] 
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
-" TODO : to update according to the 'LOAD_OCAML' function (atm still in .vimrc)
-"set omnifunc=merlin#Complete
-"set completefunc=merlin#Complete
+" Autocompletion
+set omnifunc=merlin#Complete
+set completefunc=merlin#Complete
