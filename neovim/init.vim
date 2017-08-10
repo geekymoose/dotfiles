@@ -21,13 +21,16 @@ set ruler
 set spell
 set mouse=a
 set cursorline
+set showmatch
 
 " Coding
 set nowrap
 set autoindent
+set breakindent
 set expandtab " Use space instead of tabs
 set tabstop=4
 set shiftwidth=4
+set omnifunc=syntaxcomplete#Complete
 
 set incsearch
 set splitbelow
@@ -35,12 +38,14 @@ set splitright
 
 " Syntax and theme
 syntax on
-syntax enable
 set background=dark
 colorscheme jellybeans
-highlight ColorColumn ctermbg=1
+highlight ColorColumn ctermbg=Red
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
+highlight SpecialKey ctermbg=none
+highlight SpellBad ctermbg=none
+highlight SpellBad ctermfg=Red
 
 " misc
 set noswapfile
@@ -59,3 +64,10 @@ augroup conditional_settings
     autocmd!
     autocmd FileType ocaml call LOAD_OCAML()
 augroup end
+
+
+" TODO: Should be in plugins but I don't know why it's not working
+autocmd Syntax * RainbowParenthesesLoadBraces
+autocmd Syntax * RainbowParenthesesLoadRound
+autocmd Syntax * RainbowParenthesesLoadSquare
+autocmd Syntax * RainbowParenthesesLoadChevrons

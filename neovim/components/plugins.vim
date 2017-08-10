@@ -1,7 +1,7 @@
 " ******************************************************************************
 " PLUG (Plugins manager)
 " ******************************************************************************
-call plug#begin()
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -14,6 +14,12 @@ Plug 'Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --cla
 Plug 'https://github.com/plasticboy/vim-markdown'
 Plug 'https://github.com/vim-latex/vim-latex'
 Plug 'https://github.com/airblade/vim-gitgutter'
+Plug 'https://github.com/majutsushi/tagbar'
+Plug 'https://github.com/junegunn/vim-easy-align'
+Plug 'https://github.com/kien/rainbow_parentheses.vim'
+Plug 'https://github.com/reedes/vim-colors-pencil'
+Plug 'https://github.com/Kjwon15/vim-transparent'
+Plug 'https://github.com/editorconfig/editorconfig-vim'
 
 " Color scheme
 Plug 'https://github.com/nanotech/jellybeans.vim'
@@ -39,3 +45,10 @@ let g:airline#extensions#tabline#enabled = 1
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+" Rainbow parentheses -----
+autocmd VimEnter * RainbowParenthesesToggle
+" autocmd Syntax * RainbowParenthesesLoadBraces
+" autocmd Syntax * RainbowParenthesesLoadRound
+" autocmd Syntax * RainbowParenthesesLoadSquare
+" autocmd Syntax * RainbowParenthesesLoadChevrons

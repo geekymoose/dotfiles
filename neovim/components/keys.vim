@@ -33,11 +33,15 @@ noremap <3-LeftMouse>       <Nop>
 noremap <4-LeftMouse>       <Nop>
 
 " Editing
-nnoremap <leader>i viwU
+nnoremap <leader>u viwU
 nnoremap <leader>c <s-I>/*<esc><s-a>*/<esc>
-nnoremap <leader>a :set paste<cr>
-nnoremap <leader>aa :set nopaste<cr>
+nnoremap <leader>a :set paste<CR>
+nnoremap <leader>aa :set nopaste<CR>
 
 " Mics
-nnoremap <leader>b :ls<cr>:buffer<Space>
+nnoremap <leader>b :ls<CR>:buffer<SPACE>
 nnoremap <leader>gg :vimgrep //gj ./**/*.
+
+" Pluggins key binding
+nnoremap <F8> :TagbarToggle<CR>
+nnoremap <F7> :NERDTreeToggle<CR>
