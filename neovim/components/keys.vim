@@ -14,12 +14,14 @@
 let mapleader = "-"
 
 " General settings
-nnoremap <leader>vo :vsplit $MYVIMRC<cr>
-nnoremap <leader>vs :source $MYVIMRC<cr>
+nnoremap <leader>vo :vsplit $MYVIMRC<CR>
+nnoremap <leader>vs :source $MYVIMRC<CR>
 
 " Spell settings
-nnoremap <leader>sf :setlocal spelllang=CA_fr<cr>
-nnoremap <leader>se :set spelllang=CA_en<cr>
+nnoremap <leader>sf :setlocal spelllang=CA_fr<CR>
+nnoremap <leader>se :set spelllang=CA_en<CR>
+nnoremap <F2> :set spell<CR>
+nnoremap <F3> :set nospell<CR>
 
 " Mouse
 noremap <RightMouse>        <Nop>

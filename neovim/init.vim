@@ -18,7 +18,6 @@ set colorcolumn=81
 set listchars=trail:.,tab:>-,nbsp:~,extends:>,precedes:<
 set list
 set ruler
-set spell
 set mouse=a
 set cursorline
 set showmatch
@@ -70,4 +69,3 @@ augroup end
 autocmd Syntax * RainbowParenthesesLoadBraces
 autocmd Syntax * RainbowParenthesesLoadRound
 autocmd Syntax * RainbowParenthesesLoadSquare
-autocmd Syntax * RainbowParenthesesLoadChevrons
