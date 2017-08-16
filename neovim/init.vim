@@ -20,20 +20,24 @@ set list
 set ruler
 set mouse=a
 set cursorline
-set showmatch
+set laststatus=2
+set magic
+set ignorecase
+set incsearch
+set hlsearch
+set splitbelow
+set wildmenu
 
 " Coding
 set nowrap
 set autoindent
+set smartindent
+set smarttab
 set breakindent
 set expandtab " Use space instead of tabs
 set tabstop=4
 set shiftwidth=4
 set omnifunc=syntaxcomplete#Complete
-
-set incsearch
-set splitbelow
-set splitright
 
 " Syntax and theme
 syntax on
@@ -49,6 +53,10 @@ highlight SpellBad ctermfg=Red
 " misc
 set noswapfile
 set nobackup
+set encoding=utf8
+set lazyredraw
+filetype plugin on
+filetype indent on
 
 
 " ------------------------------------------------------------------------------

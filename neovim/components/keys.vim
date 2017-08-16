@@ -44,6 +44,9 @@ nnoremap <leader>aa :set nopaste<CR>
 nnoremap <leader>b :ls<CR>:buffer<SPACE>
 nnoremap <leader>gg :vimgrep //gj ./**/*.
 
-" Pluggins key binding
+" ------------------------------------------------------------------------------
+" Plugins key bindings
+" ------------------------------------------------------------------------------
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap <F7> :NERDTreeToggle<CR>
+nnoremap <F9> :BuffergatorToggle<CR>

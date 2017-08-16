@@ -35,21 +35,22 @@ call plug#end()
 " Some configurations
 " ------------------------------------------------------------------------------
 
-" vim-airline -----
+" ----- vim-airline -----
 let g:airline_powerline_fonts = 1
 " let g:airline_powerline_fonts = 0
 " let g:airline_symbols_ascii = 1
 let g:airline#extensions#tabline#enabled = 1
 
-" ctrlp -----
+" ----- ctrlp -----
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_by_filename = 1
 
-" Rainbow parentheses -----
+" ----- Rainbow parentheses -----
 autocmd VimEnter * RainbowParenthesesToggle
 
-" Syntastic
+" ----- Syntastic -----
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -57,3 +58,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+
+" ----- Buffergator -----
+let g:buffergator_display_regime = "parentdir"
+let g:buffergator_sort_regime = "basename"
