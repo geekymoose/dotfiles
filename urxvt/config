@@ -1,61 +1,64 @@
 ! General
-urxvt.title: (o.0)
+urxvt.title: urxvt terminal
 
 ! Disable all perl extension (If needed to be faster)
 ! urxvt.perl-ext:
 ! urxvt.perl-ext-common:
 
 ! All perl extensions
-urxvt.perl-ext-common: default,matcher,tabbed
+urxvt.perl-ext-common:      default,matcher,tabbed,font-size
 
 ! Theme
-urxvt.background: Black
-urxvt.foreground: White
-urxvt.letterSpace: -1
-urxvt.transparent: true
-urxvt.shading: 10
+urxvt.background:           #0f0f0f
+urxvt.foreground:           #c8c8c8
+! urxvt.background:           Black
+! urxvt.foreground:           White
+urxvt.letterSpace:          -1
+urxvt.transparent:          true
+urxvt.shading:              10
 
 ! ScrollBar
-urxvt.scrollBar: false
-urxvt.scrollBar_right: false
-urxvt.scrollBar_floating: false
-urxvt.scrollstyle: rxvt
+urxvt.scrollBar:            false
+urxvt.scrollBar_right:      false
+urxvt.scrollBar_floating:   false
+urxvt.scrollstyle:          rxvt
+urxvt.scrollTtyOutput:      false
+urxvt.scrollWithBuffer:     true
 
 ! Fonts
-urxvt.font: xft:Source Code Pro for Powerline:size=10
-urxvt.boldFont: xft:Source Code Pro for Powerline:size=10:bold
+urxvt.font:                 xft:Source\ Code\ Pro\ Medium:size=10
+! urxvt.font:               xft:Source\ Code\ Pro\ Medium:pixelsize=13
+! urxvt.font:               xft:Source Code Pro for Powerline:size=10
+! urxvt.boldFont:           xft:Source Code Pro for Powerline:size=10:bold
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+Xft.autohint:               false
+Xft.lcdfilter:              lcddefault
+
+! Font re-size
+urxvt.keysym.C-Up:          perl:font-size:increase
+urxvt.keysym.C-Down:        perl:font-size:decrease
+urxvt.keysym.C-S-Up:        perl:font-size:incglobal
+urxvt.keysym.C-S-Down:      perl:font-size:decglobal
+urxvt.font-size.step:       1
 
 ! Clickable links
-! urxvt.perl-ext-common: default,matcher
-urxvt.url-launcher: /usr/bin/xdg-open
-urxvt.matcher.button: 1
-urxvt.keysym.C-Delete: perl:matcher:last
-urxvt.keysym.M-Delete: perl:matcher:list
-urxvt.matcher.rend.0: Uline Bold fg5
+! urxvt.perl-ext-common:    default,matcher
+urxvt.url-launcher:         /usr/bin/xdg-open
+urxvt.matcher.button:       1
+urxvt.keysym.C-Delete:      perl:matcher:last
+urxvt.keysym.M-Delete:      perl:matcher:list
+urxvt.matcher.rend.0:       Uline Bold fg5
 
 ! Tabs
-! urxvt.perl-ext-common: tabbed
-urxvt.tabbed.tabbar-fg: 2
-urxvt.tabbed.tabbar-bg: 0
-urxvt.tabbed.tab-fg: 3
-urxvt.tabbed.tab-bg: 0
+! urxvt.perl-ext-common:    tabbed
+urxvt.tabbed.tabbar-fg:     2
+urxvt.tabbed.tabbar-bg:     0
+urxvt.tabbed.tab-fg:        3
+urxvt.tabbed.tab-bg:        0
 
-! Colors
-!! Tango color theme
-URxvt.color0:   rgb:00/00/00
-URxvt.color1:   rgb:CC/00/00
-URxvt.color2:   rgb:4E/9A/06
-URxvt.color3:   rgb:C4/A0/00
-URxvt.color4:   rgb:34/65/A4
-URxvt.color5:   rgb:75/50/7B
-URxvt.color6:   rgb:06/98/9A
-URxvt.color7:   rgb:D3/D7/CF
-URxvt.color8:   rgb:55/57/53
-URxvt.color9:   rgb:EF/29/29
-URxvt.color10:  rgb:8A/E2/34
-URxvt.color11:  rgb:FC/E9/4F
-URxvt.color12:  rgb:72/9F/CF
-URxvt.color13:  rgb:AD/7F/A8
-URxvt.color14:  rgb:34/E2/E2
-URxvt.color15:  rgb:EE/EE/EC
-URxvt.colorBD:  rgb:ff/ff/ff
+! Colors theme
+#include "./theme-current.conf"
