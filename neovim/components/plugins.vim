@@ -3,14 +3,14 @@
 " ******************************************************************************
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'jeetsukumaran/vim-buffergator'
-Plug 'vim-syntastic/syntastic'
-Plug 'universal-ctags/ctags'
-Plug 'Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --clang-completer --system-libclang'}
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline-themes'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+Plug 'https://github.com/scrooloose/nerdtree'
+Plug 'https://github.com/jeetsukumaran/vim-buffergator'
+Plug 'https://github.com/vim-syntastic/syntastic'
+Plug 'https://github.com/universal-ctags/ctags'
+Plug 'https://github.com/Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --clang-completer --system-libclang'}
 Plug 'https://github.com/plasticboy/vim-markdown'
 Plug 'https://github.com/vim-latex/vim-latex'
 Plug 'https://github.com/airblade/vim-gitgutter'
@@ -58,7 +58,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
 
 " ----- Buffergator -----
 let g:buffergator_display_regime = "parentdir"
