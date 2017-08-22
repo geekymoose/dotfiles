@@ -26,7 +26,7 @@ urxvt.scrollTtyOutput:      false
 urxvt.scrollWithBuffer:     true
 
 ! Fonts
-urxvt.font:                 xft:Source\ Code\ Pro\ Medium:size=11
+urxvt.font:                 xft:Source\ Code\ Pro\ for\ Powerline:size=11
 ! urxvt.font:               xft:Source\ Code\ Pro\ Medium:pixelsize=13
 ! urxvt.font:               xft:Source Code Pro for Powerline:size=10
 ! urxvt.boldFont:           xft:Source Code Pro for Powerline:size=10:bold

@@ -1,6 +1,7 @@
 # ------------------------------------------------------------------------------
 # ENVIRONMENT
 # ------------------------------------------------------------------------------
+
 # AddToPath function
 AddToPath(){
     [[ $# < 1 ]] && echo "Too few argument." && return;
@@ -13,6 +14,7 @@ AddToPath(){
 AddToPath "$HOME/.local/bin"
 AddToPath "$HOME/.opam/system/bin"
 
+# Use vim or nvim if detected
 EDITOR="/usr/bin/vim"
 which nvim >> /dev/null && EDITOR="/usr/bin/nvim"
 export EDITOR
