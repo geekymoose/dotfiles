@@ -20,6 +20,7 @@ Plug 'https://github.com/kien/rainbow_parentheses.vim'
 Plug 'https://github.com/reedes/vim-colors-pencil'
 Plug 'https://github.com/Kjwon15/vim-transparent'
 Plug 'https://github.com/editorconfig/editorconfig-vim'
+Plug 'https://github.com/vim-scripts/Conque-GDB'
 
 " Color scheme
 Plug 'https://github.com/nanotech/jellybeans.vim'
