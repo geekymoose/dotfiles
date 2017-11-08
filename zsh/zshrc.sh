@@ -98,7 +98,9 @@ setopt PUSHD_MINUS
 
 
 # Use fish-like syntax highlighting (If fish installed)
-FISH_DIR='/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-if [[ -f $FISH_DIR ]]; then
-    source $FISH_DIR
+FISH_SYNTAX_DIR='/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+if [[ -f $FISH_SYNTAX_DIR ]]; then
+    source $FISH_SYNTAX_DIR
+    ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor line)
+    export ZSH_HIGHLIGHT_HIGHLIGHTERS
 fi
