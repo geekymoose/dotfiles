@@ -10,17 +10,17 @@ AddToPath(){
     [[ "${PATH#*$1}" = "$PATH" ]] && PATH=$1:$PATH
 }
 
+
 # Update PATH
 AddToPath "$HOME/.local/bin"
-AddToPath "$HOME/.opam/system/bin"
+
 
 # Use vim or nvim if detected
 EDITOR="/usr/bin/vim"
 which nvim >> /dev/null && EDITOR="/usr/bin/nvim"
 export EDITOR
 
-# OPAM configuration
-if (( ! $+OPAM_IS_INIT )); then
-    export OPAM_IS_INIT=1
-    . $HOME/.opam/opam-init/init.zsh > /dev/null 2>&1 || true
-fi
+
+# Set default terminal
+TERMINAL="urxvt"
+export TERMINAL

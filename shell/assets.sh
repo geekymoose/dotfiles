@@ -1,9 +1,9 @@
 # ------------------------------------------------------------------------------
 # ASSETS
 # ------------------------------------------------------------------------------
-unsetopt autocd
+
+# Open a new terminal in a new window and disown it.
 function clone() {
-    $EDITOR &
-    disown
+    $TERMINAL & disown
 }
 
