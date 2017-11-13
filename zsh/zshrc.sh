@@ -81,7 +81,7 @@ autoload -Uz run-help-git
 
 
 # Remember recent directories
-DIRSTACKFILE="${HOME}/.zsh_history_dir"
+DIRSTACKFILE="${HOME}/.zsh_dir_history"
 if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
     dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
     [[ -d $dirstack[1] ]] && cd $dirstack[1]
