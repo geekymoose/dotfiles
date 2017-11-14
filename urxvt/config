@@ -1,7 +1,7 @@
 ! General
 urxvt.title: urxvt terminal
 
-! Disable all perl extension (If needed to be faster)
+! Disable all perl extension (If need to be faster)
 ! urxvt.perl-ext:
 ! urxvt.perl-ext-common:
 
@@ -59,4 +59,6 @@ urxvt.tabbed.tab-fg:        3
 urxvt.tabbed.tab-bg:        0
 
 ! Colors theme
+! (Use a symlink to switch between theme)
 #include "./theme-current.conf"
+

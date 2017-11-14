@@ -9,7 +9,8 @@ PS1='[\u@\h \W]\$ '
 
 
 # Include external files
-. "${HOME}/.config/shell/alias.sh"
-. "${HOME}/.config/shell/env.sh"
-. "${HOME}/.config/shell/assets.sh"
-. "${HOME}/.config/shell/theme.sh"
+source "${HOME}/.config/shell/alias.sh"
+source "${HOME}/.config/shell/env.sh"
+source "${HOME}/.config/shell/env-perso.sh"
+source "${HOME}/.config/shell/assets.sh"
+source "${HOME}/.config/shell/theme.sh"

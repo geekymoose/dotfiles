@@ -3,11 +3,11 @@
 #
 
 # Load zshrc file if exists
-[[ -f ~/.zshrc ]] && . ~/.zshrc
+[[ -f ~/.zshrc ]] && source ~/.zshrc
 
 
 # Load external files
-. "${HOME}/.config/shell/profile.sh"
+source "${HOME}/.config/shell/profile.sh"
 
 
 # Display welcome text

@@ -3,12 +3,11 @@
 #
 
 # Load bashrc file if exists
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f ~/.bashrc ]] && source ~/.bashrc
 
 
 # Load external files
-. "${HOME}/.config/shell/profile.sh"
-#
+source "${HOME}/.config/shell/profile.sh"
 
 
 # Display welcome text

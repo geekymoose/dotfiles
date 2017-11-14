@@ -1,6 +1,6 @@
-" ******************************************************************************
+" ------------------------------------------------------------------------------
 " MAPS / SHORTCUTS / KEY BINDINGS
-" ******************************************************************************
+" ------------------------------------------------------------------------------
 " (n:normal / i:insert / v:visual+select / x:visual / s:select / c:cmd / o:op)
 "
 " :nnoremap - Display normal mode maps
@@ -10,7 +10,8 @@
 " :xnoremap - Display visual mode maps
 " :cnoremap - Display command-line mode maps
 " :onoremap - Display operator pending mode maps
-" ******************************************************************************
+" ------------------------------------------------------------------------------
+
 let mapleader = "-"
 
 " General settings
@@ -43,6 +44,7 @@ nnoremap <leader>aa :set nopaste<CR>
 " Mics
 nnoremap <leader>b :ls<CR>:buffer<SPACE>
 nnoremap <leader>gg :vimgrep //gj ./**/*.
+
 
 " ------------------------------------------------------------------------------
 " Plugins key bindings

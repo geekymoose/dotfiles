@@ -1,6 +1,7 @@
-" ******************************************************************************
+" ------------------------------------------------------------------------------
 " PLUG (Plugins manager)
-" ******************************************************************************
+" ------------------------------------------------------------------------------
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'https://github.com/vim-airline/vim-airline'
@@ -10,7 +11,6 @@ Plug 'https://github.com/scrooloose/nerdtree'
 Plug 'https://github.com/jeetsukumaran/vim-buffergator'
 Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/universal-ctags/ctags'
-Plug 'https://github.com/Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --clang-completer --system-libclang'}
 Plug 'https://github.com/plasticboy/vim-markdown'
 Plug 'https://github.com/vim-latex/vim-latex'
 Plug 'https://github.com/airblade/vim-gitgutter'
@@ -20,7 +20,7 @@ Plug 'https://github.com/kien/rainbow_parentheses.vim'
 Plug 'https://github.com/reedes/vim-colors-pencil'
 Plug 'https://github.com/Kjwon15/vim-transparent'
 Plug 'https://github.com/editorconfig/editorconfig-vim'
-Plug 'https://github.com/vim-scripts/Conque-GDB'
+Plug 'https://github.com/Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --clang-completer --system-libclang'}
 
 " Color scheme
 Plug 'https://github.com/nanotech/jellybeans.vim'

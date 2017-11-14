@@ -1,27 +1,30 @@
 #
 # ~/.zshrc
 #
-# Requires extra components from ~/.config/shell/ directory.
+# zsh configuration.
 #
 
 
 # ------------------------------------------------------------------------------
 # EXTERNAL SETTINGS (Include files)
 # ------------------------------------------------------------------------------
+
 # Include external files
 source "${HOME}/.config/shell/alias.sh"
 source "${HOME}/.config/shell/env.sh"
+source "${HOME}/.config/shell/env-perso.sh"
 source "${HOME}/.config/shell/assets.sh"
 source "${HOME}/.config/shell/theme.sh"
+
 
 # ------------------------------------------------------------------------------
 # ZSH SPECIFIC SETTINGS
 # ------------------------------------------------------------------------------
 
-
 # Color
 autoload -Uz colors
 colors
+
 
 # Setup prompt
 autoload -Uz promptinit
@@ -78,23 +81,6 @@ bindkey  end-of-line
 autoload -Uz run-help
 alias help=run-help
 autoload -Uz run-help-git
-
-
-# Remember recent directories
-DIRSTACKFILE="${HOME}/.zsh_dir_history"
-if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
-    dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
-    [[ -d $dirstack[1] ]] && cd $dirstack[1]
-fi
-chpwd() {
-  print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
-}
-DIRSTACKSIZE=20
-setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME
-# Removes duplicates
-setopt PUSHD_IGNORE_DUPS
-# Reverts the +/- operators
-setopt PUSHD_MINUS
 
 
 # Use fish-like syntax highlighting (If fish installed)
