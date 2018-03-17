@@ -27,6 +27,7 @@ Plug 'https://github.com/reedes/vim-colors-pencil'
 Plug 'https://github.com/Kjwon15/vim-transparent'
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 Plug 'https://github.com/Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --clang-completer --system-libclang'}
+Plug 'https://github.com/tikhomirov/vim-glsl'
 
 " Color scheme
 Plug 'https://github.com/nanotech/jellybeans.vim'
@@ -197,3 +198,8 @@ augroup end
 autocmd Syntax * RainbowParenthesesLoadBraces
 autocmd Syntax * RainbowParenthesesLoadRound
 autocmd Syntax * RainbowParenthesesLoadSquare
+
+" Specific / tmp functions
+function Link_img()
+    exec '%s/\(<img.*src="\(.*\)".*>\)/<a href="\2">\1<\/a>/gc'
+endfunction
