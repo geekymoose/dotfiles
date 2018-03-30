@@ -45,8 +45,8 @@ call plug#end()
 
 " vim-airline
 let g:airline_powerline_fonts = 1
-" let g:airline_powerline_fonts = 0
-" let g:airline_symbols_ascii = 1
+" let g:airline_powerline_fonts = 0 " Use ASCII instead
+" let g:airline_symbols_ascii = 1 " Use ASCII instead
 let g:airline#extensions#tabline#enabled = 1
 
 " ctrlp
@@ -120,10 +120,7 @@ nnoremap <leader>aa :set nopaste<CR>
 nnoremap <leader>b :ls<CR>:buffer<SPACE>
 nnoremap <leader>gg :vimgrep //gj ./**/*.
 
-
-" ------------------------------------------------------------------------------
 " Plugins key bindings
-" ------------------------------------------------------------------------------
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap <F7> :NERDTreeToggle<CR>
 nnoremap <F9> :BuffergatorToggle<CR>
@@ -133,9 +130,18 @@ nnoremap <F9> :BuffergatorToggle<CR>
 " General Editor Settings
 " ------------------------------------------------------------------------------
 
-" Editor theme
+" Syntax and theme
+syntax on
+set background=dark
+colorscheme jellybeans
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight SpecialKey ctermbg=none
+highlight SpellBad ctermbg=none
+highlight SpellBad ctermfg=Red
+
+" General editor configs
 set number
-set colorcolumn=81
 set listchars=trail:.,tab:>-,nbsp:~,extends:>,precedes:<
 set list
 set ruler
@@ -149,30 +155,23 @@ set hlsearch
 set splitbelow
 set wildmenu
 
-" Coding
+" Tab / Text size / Ruler
+set textwidth=0
+set shiftwidth=4
+set smarttab
 set nowrap
+set expandtab
+set tabstop=4
+set colorcolumn=81
+highlight ColorColumn ctermbg=Black ctermfg=White
+
+" Coding / Completion / Indent / Format
 set autoindent
 set smartindent
-set smarttab
 set breakindent
-set expandtab " Use space instead of tabs
-set tabstop=4
-set shiftwidth=4
 set omnifunc=syntaxcomplete#Complete
 
-" Syntax and theme
-"set t_Co=256
-syntax on
-set background=dark
-colorscheme jellybeans
-highlight ColorColumn ctermbg=Red
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight SpecialKey ctermbg=none
-highlight SpellBad ctermbg=none
-highlight SpellBad ctermfg=Red
-
-" misc
+" Misc
 set noswapfile
 set nobackup
 set encoding=utf8
@@ -194,12 +193,7 @@ augroup conditional_settings
     autocmd FileType ocaml call LOAD_OCAML()
 augroup end
 
-" Plugin specific
+" Plugin specific (Must be called after syntax on)
 autocmd Syntax * RainbowParenthesesLoadBraces
 autocmd Syntax * RainbowParenthesesLoadRound
 autocmd Syntax * RainbowParenthesesLoadSquare
-
-" Specific / tmp functions
-function Link_img()
-    exec '%s/\(<img.*src="\(.*\)".*>\)/<a href="\2">\1<\/a>/gc'
-endfunction
