@@ -1,3 +1,10 @@
+!
+! To copy (or include) in ~/.Xresources
+! (Ex in Xresources: #include ".config/urxvt/config")
+!
+! Theme is included. Place theme in the same folder as this config
+!
+
 ! General
 urxvt.title: urxvt terminal
 
