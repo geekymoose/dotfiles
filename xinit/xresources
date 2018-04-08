@@ -1,5 +1,3 @@
-#
-# ~/.Xresources
-#
+! ~.Xresources
 
 #include ".config/urxvt/config"
