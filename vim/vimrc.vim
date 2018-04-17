@@ -139,45 +139,47 @@ highlight NonText ctermbg=none
 highlight SpecialKey ctermbg=none
 highlight SpellBad ctermbg=none
 highlight SpellBad ctermfg=Red
+highlight ColorColumn ctermbg=Black ctermfg=Red
 
 " General editor configs
-set number
 set listchars=trail:.,tab:>-,nbsp:~,extends:>,precedes:<
-set list
-set ruler
-set mouse=a
-set cursorline
-set laststatus=2
+set list                " Display special char
+set number              " Display line number
+set ruler               " Display line and column cursor
+set mouse=i             " Enable mouse in insert mode
+set cursorline          " Hightlight current cursor line
+set laststatus=2        " Always display status line
 set magic
-set ignorecase
-set incsearch
-set hlsearch
+set ignorecase          " Ignore uppercase
+set incsearch           " Show matches while typing
+set hlsearch            " Hightlight previous search
 set splitbelow
 set wildmenu
+set showmatch           " Show matching brace when insert one
+set matchtime=1         " Speed up matching time
 
 " Tab / Text size / Ruler
-set textwidth=0
-set shiftwidth=4
-set smarttab
-set nowrap
-set expandtab
-set tabstop=4
-set colorcolumn=81
-highlight ColorColumn ctermbg=Black ctermfg=White
+set shiftwidth=4        " Tab size
+set tabstop=4           " Tab size
+set expandtab           " Insert space instead of tab
+set smarttab            " Tab in front of a line insert blanck
+set textwidth=0         " Unlimited text width
+set nowrap              " Don't wrap text if reach screen size
+set colorcolumn=81      " 80 Char ruler
 
 " Coding / Completion / Indent / Format
-set autoindent
-set smartindent
-set breakindent
+set autoindent          " Copy indent from current line when new line
+set breakindent         " Wrapped line indented
+set smartindent         " Smart autoindent when new line
 set omnifunc=syntaxcomplete#Complete
 
 " Misc
-set noswapfile
-set nobackup
-set encoding=utf8
-set lazyredraw
-filetype plugin on
-filetype indent on
+set noswapfile          " No swapfile
+set nobackup            " No backup file
+set lazyredraw          " Speedup maccro execution (Don't redraw while exec)
+set autochdir           " vim cd in opened file / buffer etc
+filetype plugin on      " Enable filetype and plugin detection
+filetype indent on      " Enable filetype and indent detection
 
 
 " ------------------------------------------------------------------------------
