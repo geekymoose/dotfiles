@@ -146,7 +146,7 @@ set listchars=trail:.,tab:>-,nbsp:~,extends:>,precedes:<
 set list                " Display special char
 set number              " Display line number
 set ruler               " Display line and column cursor
-set mouse=i             " Enable mouse in insert mode
+set mouse=a             " Enable mouse in all modes
 set cursorline          " Hightlight current cursor line
 set laststatus=2        " Always display status line
 set magic
