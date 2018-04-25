@@ -3,6 +3,8 @@
 " Constantin Masson
 " ******************************************************************************
 
+syntax on " The first thing because some pluggin already need it
+
 
 " ------------------------------------------------------------------------------
 " PLUG (Plugins manager)
@@ -10,31 +12,35 @@
 
 call plug#begin('~/.config/nvim/plugged')
 
+" Syntax / Theme
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
-Plug 'https://github.com/ctrlpvim/ctrlp.vim'
-Plug 'https://github.com/scrooloose/nerdtree'
-Plug 'https://github.com/jeetsukumaran/vim-buffergator'
-Plug 'https://github.com/vim-syntastic/syntastic'
-Plug 'https://github.com/universal-ctags/ctags'
-Plug 'https://github.com/plasticboy/vim-markdown'
-Plug 'https://github.com/vim-latex/vim-latex'
-Plug 'https://github.com/airblade/vim-gitgutter'
-Plug 'https://github.com/majutsushi/tagbar'
-Plug 'https://github.com/junegunn/vim-easy-align'
-Plug 'https://github.com/kien/rainbow_parentheses.vim'
-Plug 'https://github.com/reedes/vim-colors-pencil'
-Plug 'https://github.com/Kjwon15/vim-transparent'
-Plug 'https://github.com/editorconfig/editorconfig-vim'
-Plug 'https://github.com/Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --clang-completer --system-libclang'}
-Plug 'https://github.com/tikhomirov/vim-glsl'
-
-" Color scheme
 Plug 'https://github.com/nanotech/jellybeans.vim'
 Plug 'https://github.com/tomasr/molokai'
-Plug 'https://github.com/chriskempson/tomorrow-theme'
 Plug 'https://github.com/altercation/solarized'
-Plug 'https://github.com/chriskempson/base16-vim'
+Plug 'https://github.com/chriskempson/tomorrow-theme'
+Plug 'https://github.com/tikhomirov/vim-glsl'
+Plug 'https://github.com/kien/rainbow_parentheses.vim'
+
+" Project management
+Plug 'https://github.com/scrooloose/nerdtree'
+Plug 'https://github.com/majutsushi/tagbar'
+Plug 'https://github.com/jeetsukumaran/vim-buffergator'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+Plug 'https://github.com/airblade/vim-gitgutter'
+
+" Code help (Indent / completion...)
+Plug 'https://github.com/editorconfig/editorconfig-vim'
+Plug 'https://github.com/vim-syntastic/syntastic'
+
+" Misc
+Plug 'https://github.com/vim-latex/vim-latex'
+
+" TODO
+" Plug 'https://github.com/plasticboy/vim-markdown'
+" Plug 'https://github.com/junegunn/vim-easy-align'
+" Plug 'https://github.com/reedes/vim-colors-pencil'
+" Plug 'https://github.com/Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --clang-completer --system-libclang'}
 
 call plug#end()
 
@@ -45,18 +51,21 @@ call plug#end()
 
 " vim-airline
 let g:airline_powerline_fonts = 1
-" let g:airline_powerline_fonts = 0 " Use ASCII instead
-" let g:airline_symbols_ascii = 1 " Use ASCII instead
 let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 0     " Use ASCII instead
+" let g:airline_symbols_ascii = 1       " Use ASCII instead
 
 " ctrlp
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_by_filename = 1
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 " Rainbow parentheses
 autocmd VimEnter * RainbowParenthesesToggle
+autocmd Syntax * RainbowParenthesesLoadBraces
+autocmd Syntax * RainbowParenthesesLoadRound
+autocmd Syntax * RainbowParenthesesLoadSquare
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -70,7 +79,6 @@ let g:syntastic_check_on_wq = 0
 " Buffergator
 let g:buffergator_display_regime = "parentdir"
 let g:buffergator_sort_regime = "basename"
-
 
 
 " ------------------------------------------------------------------------------
@@ -131,11 +139,7 @@ nnoremap <F9> :BuffergatorToggle<CR>
 " ------------------------------------------------------------------------------
 
 " Syntax and theme
-syntax on
-set background=dark
 colorscheme jellybeans
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
 highlight SpecialKey ctermbg=none
 highlight SpellBad ctermbg=none
 highlight SpellBad ctermfg=Red
@@ -156,7 +160,7 @@ set hlsearch            " Hightlight previous search
 set splitbelow
 set wildmenu
 set showmatch           " Show matching brace when insert one
-set matchtime=1         " Speed up matching time
+set matchtime=1         " Speed up brace matching time
 
 " Tab / Text size / Ruler
 set shiftwidth=4        " Tab size
@@ -180,22 +184,3 @@ set lazyredraw          " Speedup maccro execution (Don't redraw while exec)
 set autochdir           " vim cd in opened file / buffer etc
 filetype plugin on      " Enable filetype and plugin detection
 filetype indent on      " Enable filetype and indent detection
-
-
-" ------------------------------------------------------------------------------
-" Conditional settings
-" ------------------------------------------------------------------------------
-function LOAD_OCAML()
-    source $HOME/.config/nvim/components/ocaml.vim
-endfunction
-
-" Load some settings according to specific filetype
-augroup conditional_settings
-    autocmd!
-    autocmd FileType ocaml call LOAD_OCAML()
-augroup end
-
-" Plugin specific (Must be called after syntax on)
-autocmd Syntax * RainbowParenthesesLoadBraces
-autocmd Syntax * RainbowParenthesesLoadRound
-autocmd Syntax * RainbowParenthesesLoadSquare
