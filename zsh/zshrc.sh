@@ -54,6 +54,12 @@ function clone() {
     $TERMINAL & disown
 }
 
+# If exists, source file with computer specific settings
+ZSHRC_CUSTOM='.zshrc_custom'
+if [[ -f $ZSHRC_CUSTOM ]]; then
+    source $ZSHRC_CUSTOM
+fi
+
 
 # ------------------------------------------------------------------------------
 # COLOR THEME
