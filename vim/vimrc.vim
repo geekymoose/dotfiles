@@ -31,12 +31,13 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 
 " Code help (Indent / completion...)
 Plug 'https://github.com/editorconfig/editorconfig-vim'
-Plug 'https://github.com/vim-syntastic/syntastic'
 
 " Misc
 Plug 'https://github.com/vim-latex/vim-latex'
 
+
 " TODO
+" Plug 'https://github.com/vim-syntastic/syntastic'
 " Plug 'https://github.com/plasticboy/vim-markdown'
 " Plug 'https://github.com/junegunn/vim-easy-align'
 " Plug 'https://github.com/reedes/vim-colors-pencil'
