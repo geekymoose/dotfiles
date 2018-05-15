@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "Consolas, 'Source Code Pro', 'Source Code Pro for Powerline', 'monospace', monospace",
+    "editor.minimap.maxColumn": 25,
+    "editor.minimap.showSlider": "always",
+    "editor.rulers": [
+        80
+    ],
+    "window.menuBarVisibility": "toggle",
+    "workbench.iconTheme": "vs-minimal",
+}
