@@ -31,13 +31,13 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 
 " Code help (Indent / completion...)
 Plug 'https://github.com/editorconfig/editorconfig-vim'
+Plug 'https://github.com/vim-syntastic/syntastic'
 
 " Misc
 Plug 'https://github.com/vim-latex/vim-latex'
 
 
 " TODO
-" Plug 'https://github.com/vim-syntastic/syntastic'
 " Plug 'https://github.com/plasticboy/vim-markdown'
 " Plug 'https://github.com/junegunn/vim-easy-align'
 " Plug 'https://github.com/reedes/vim-colors-pencil'
@@ -77,6 +77,13 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Syntastic CPP
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_config_file = ".syntastic_cpp_config"
+let g:syntastic_cpp_include_dirs = [ 'includes', 'headers' ]
+let g:syntastic_cpp_auto_refresh_includes = 1
+let g:syntastic_quiet_messages = {"regex" : '.*pragma once in main file'}
+
 " Buffergator
 let g:buffergator_display_regime = "parentdir"
 let g:buffergator_sort_regime = "basename"
@@ -98,15 +105,28 @@ let g:buffergator_sort_regime = "basename"
 
 let mapleader = "-"
 
-" General settings
+" Ladder - General settings
 nnoremap <leader>vo :vsplit $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
-
-" Spell settings
+" Ladder - Spell settings
 nnoremap <leader>sf :setlocal spelllang=CA_fr<CR>
 nnoremap <leader>se :set spelllang=CA_en<CR>
+" Ladder - Editing
+nnoremap <leader>u viwU
+nnoremap <leader>c <s-I>/*<esc><s-a>*/<esc>
+nnoremap <leader>a :set paste<CR>
+nnoremap <leader>aa :set nopaste<CR>
+" Ladder - Mics
+nnoremap <leader>b :ls<CR>:buffer<SPACE>
+nnoremap <leader>gg :vimgrep //gj ./**/*.
+
+" F1 - F12 Keys
 nnoremap <F2> :set spell<CR>
 nnoremap <F3> :set nospell<CR>
+nnoremap <F4> :SyntasticToggleMode<CR>
+nnoremap <F7> :NERDTreeToggle<CR>
+nnoremap <F8> :BuffergatorToggle<CR>
+nnoremap <F9> :TagbarToggle<CR>
 
 " Mouse
 noremap <RightMouse>        <Nop>
@@ -118,21 +138,6 @@ noremap <LeftMouse>         <Nop>
 noremap <2-LeftMouse>       <Nop>
 noremap <3-LeftMouse>       <Nop>
 noremap <4-LeftMouse>       <Nop>
-
-" Editing
-nnoremap <leader>u viwU
-nnoremap <leader>c <s-I>/*<esc><s-a>*/<esc>
-nnoremap <leader>a :set paste<CR>
-nnoremap <leader>aa :set nopaste<CR>
-
-" Mics
-nnoremap <leader>b :ls<CR>:buffer<SPACE>
-nnoremap <leader>gg :vimgrep //gj ./**/*.
-
-" Plugins key bindings
-nnoremap <F8> :TagbarToggle<CR>
-nnoremap <F7> :NERDTreeToggle<CR>
-nnoremap <F9> :BuffergatorToggle<CR>
 
 
 " ------------------------------------------------------------------------------
