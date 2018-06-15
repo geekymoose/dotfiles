@@ -1,6 +1,6 @@
 !
 ! To copy (or include) in ~/.Xresources
-! (Ex in Xresources: #include ".config/urxvt/config")
+! For instance: in Xresources: #include ".config/urxvt/config"
 !
 ! Theme is included. Place theme in the same folder as this config
 !
@@ -65,6 +65,5 @@ urxvt.tabbed.tabbar-bg:     0
 urxvt.tabbed.tab-fg:        3
 urxvt.tabbed.tab-bg:        0
 
-! Colors theme
-! (Use a symlink to switch between theme)
+! Colors theme (Use a symlink to switch between theme)
 #include "./theme-current.conf"
