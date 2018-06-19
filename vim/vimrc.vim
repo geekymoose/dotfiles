@@ -31,8 +31,8 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 
 " Code help (Indent / completion...)
 Plug 'https://github.com/editorconfig/editorconfig-vim'
-Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --clang-completer --system-libclang'}
+" Plug 'https://github.com/vim-syntastic/syntastic'
 
 " Misc
 Plug 'https://github.com/vim-latex/vim-latex'
@@ -126,9 +126,9 @@ nnoremap <leader>gg :vimgrep //gj ./**/*.
 nnoremap <F2> :set spell<CR>
 nnoremap <F3> :set nospell<CR>
 nnoremap <F4> :SyntasticToggleMode<CR>
-nnoremap <F7> :TagbarToggle<CR>
-nnoremap <F8> :NERDTreeToggle<CR>
-nnoremap <F9> :BuffergatorToggle<CR>
+nnoremap <F7> :NERDTreeToggle<CR>
+nnoremap <F8> :BuffergatorToggle<CR>
+nnoremap <F9> :TagbarToggle<CR>
 
 " Mouse
 noremap <RightMouse>        <Nop>
