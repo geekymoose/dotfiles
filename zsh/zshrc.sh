@@ -126,9 +126,7 @@ key[PageDown]=${terminfo[knp]}
 
 
 # Binding
-bindkey -v # Vim like mode
-bindkey  beginning-of-line
-bindkey  end-of-line
+bindkey -e # Emacs like mode
 
 
 # Setup key
