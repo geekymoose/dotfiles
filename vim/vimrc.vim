@@ -21,6 +21,7 @@ Plug 'https://github.com/altercation/solarized'
 Plug 'https://github.com/chriskempson/tomorrow-theme'
 Plug 'https://github.com/tikhomirov/vim-glsl'
 Plug 'https://github.com/kien/rainbow_parentheses.vim'
+Plug 'https://github.com/pboettch/vim-cmake-syntax'
 
 " Project management
 Plug 'https://github.com/scrooloose/nerdtree'
