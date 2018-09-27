@@ -44,6 +44,11 @@ export EDITOR
 TERMINAL="urxvt"
 export TERMINAL
 
+# Add custom config if exists
+if [[ -f "./.zshrc_custom" ]]; then
+    source "./.zshrc_custom"
+fi
+
 
 # ------------------------------------------------------------------------------
 # ASSETS
