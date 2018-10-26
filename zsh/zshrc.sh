@@ -97,7 +97,7 @@ colors
 # Setup prompt
 autoload -Uz promptinit
 promptinit
-PROMPT="[%{$fg[cyan]%}%n%{$fg[blue]%}@%{$fg[green]%}%m%{$fg[magenta]%}]%{$fg[cyan]%}$ %{$reset_color%}"
+PROMPT="%{$fg[magenta]%}[%{$fg[cyan]%}%n%{$fg[blue]%}@%{$fg[green]%}%m%{$fg[magenta]%}]%{$fg[cyan]%}$ %{$reset_color%}"
 RPROMPT="%{$fg[magenta]%}[%{$fg[yellow]%}%~%{$fg[magenta]%}]%{$reset_color%}"
 
 
@@ -112,8 +112,8 @@ setopt COMPLETE_ALIASES
 
 # History
 HISTFILE=$HOME/.zsh_history
-HISTSIZE=40
-SAVEHIST=40
+HISTSIZE=42
+SAVEHIST=42
 
 
 # Key setting
@@ -156,3 +156,5 @@ if [[ -f $FISH_SYNTAX_DIR ]]; then
     ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor line)
     export ZSH_HIGHLIGHT_HIGHLIGHTERS
 fi
+
+
