@@ -36,6 +36,8 @@ Plug 'https://github.com/Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : 
 " Plug 'https://github.com/vim-syntastic/syntastic'
 
 " Misc
+Plug 'https://github.com/JamshedVesuna/vim-markdown-preview'
+" Plug 'https://github.com/iamcco/markdown-preview.nvim'
 " Plug 'https://github.com/vim-latex/vim-latex'
 
 " TODO
