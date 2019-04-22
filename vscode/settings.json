@@ -1,16 +1,16 @@
 {
     "editor.fontFamily": "Consolas, 'Source Code Pro', 'Source Code Pro for Powerline', 'monospace', monospace",
     "editor.minimap.maxColumn": 25,
-    "editor.minimap.showSlider": "always",
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "none",
     "editor.rulers": [
         80
     ],
     "window.zoomLevel": 0,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": false,
-    "workbench.activityBar.visible": true,
-    "window.menuBarVisibility": "default",
     "workbench.iconTheme": "vs-minimal",
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.insertSpaces": false,
+    "workbench.activityBar.visible": false
 }

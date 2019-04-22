@@ -33,6 +33,7 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 " Code help (Indent / completion...)
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 Plug 'https://github.com/Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --clang-completer --system-libclang'}
+Plug 'https://github.com/ericcurtin/CurtineIncSw.vim'
 " Plug 'https://github.com/vim-syntastic/syntastic'
 
 " Misc
@@ -89,6 +90,9 @@ let g:syntastic_quiet_messages = {"regex" : '.*pragma once in main file'}
 " Buffergator
 let g:buffergator_display_regime = "parentdir"
 let g:buffergator_sort_regime = "basename"
+
+" CurtineIncSw (switch .h .c)
+nnoremap <M-o> :call CurtineIncSw()<CR>
 
 
 " ------------------------------------------------------------------------------
@@ -195,3 +199,5 @@ set lazyredraw          " Speedup maccro execution (Don't redraw while exec)
 set autochdir           " vim cd in opened file / buffer etc
 filetype plugin on      " Enable filetype and plugin detection
 filetype indent on      " Enable filetype and indent detection
+
+
