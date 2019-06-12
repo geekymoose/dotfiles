@@ -12,5 +12,5 @@
     "breadcrumbs.enabled": true,
     "C_Cpp.updateChannel": "Insiders",
     "editor.insertSpaces": false,
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": true
 }
