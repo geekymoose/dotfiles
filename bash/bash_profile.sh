@@ -1,6 +1,4 @@
-#
 # ~/.bash_profile
-#
 
 # Load bashrc file if exists
 [[ -f ~/.bashrc ]] && source ~/.bashrc
@@ -12,3 +10,4 @@ if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ]; then
         *) echo " * No xinit environment set for tty$XDG_VTNR";;
     esac
 fi
+

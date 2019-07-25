@@ -21,11 +21,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-# Special setting for my Nvidia GPU, but shouldn't be required by others
-# See https://wiki.archlinux.org/index.php/NVIDIA_Optimus
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto
-
 # Start Window Manager according to parameter
 session="$1"
 case $session in

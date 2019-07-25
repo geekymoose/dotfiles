@@ -1,6 +1,4 @@
-#
 # ~/.zprofile
-#
 
 # Load zshrc file if exists
 [[ -f ~/.zshrc ]] && source ~/.zshrc
@@ -12,3 +10,4 @@ if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ]; then
         *) echo " * No xinit environment set for tty$XDG_VTNR";;
     esac
 fi
+

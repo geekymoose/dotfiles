@@ -1,6 +1,6 @@
 # My personal settings
-These are the settings I use daily.
-Feel free to use any of them (or any part of it).
+These are the common settings I use daily.
+Feel free to use any of them.
 
 
 # Features
@@ -10,13 +10,14 @@ Feel free to use any of them (or any part of it).
 - i3
 - terminator (may be deprecated since I mostly use urxvt)
 - urxvt (see the last line of file `config` to understand how to use themes)
-- vim (uses Plug: place plugins in `.config/nvim/plugged`)
+- vim (place the plugins in `.config/nvim/plugged`, then use the tool `Plug`)
 - vscode
 - xinit
-- xsh
+- zsh
 
 
 # Sync
 To synchronize the local settings with this folder, I use `coco-setting-manager`.
-It's a simple script to create symlinks according to a config file.
-Check out the source code on github: https://github.com/GeekyMoose/coco-settings-manager
+It's a simple script to create symlinks according to a config file
+(https://github.com/GeekyMoose/coco-settings-manager).
+
