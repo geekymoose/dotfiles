@@ -1,7 +1,7 @@
 {
     "editor.fontFamily": "Consolas, 'Source Code Pro', 'Source Code Pro for Powerline', 'monospace', monospace",
     "editor.minimap.maxColumn": 25,
-    "editor.renderWhitespace": "none",
+    "editor.renderWhitespace": "all",
     "editor.rulers": [
         80
     ],
