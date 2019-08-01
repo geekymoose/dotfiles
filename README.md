@@ -1,9 +1,10 @@
 # My personal settings
+
 These are the common settings I use daily.
 Feel free to use any of them.
 
+## Features
 
-# Features
 - Bash (may be deprecated since I mostly use zsh)
 - Editorconfig
 - Git
@@ -15,9 +16,8 @@ Feel free to use any of them.
 - xinit
 - zsh
 
+## Sync
 
-# Sync
 To synchronize the local settings with this folder, I use `coco-setting-manager`.
 It's a simple script to create symlinks according to a config file
-(https://github.com/GeekyMoose/coco-settings-manager).
-
+(<https://github.com/GeekyMoose/coco-settings-manager>).
