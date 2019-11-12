@@ -8,7 +8,7 @@
     "window.zoomLevel": 0,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": false,
-    "workbench.iconTheme": "vs-minimal",
+    "workbench.iconTheme": "vscode-icons",
     "breadcrumbs.enabled": true,
     "C_Cpp.updateChannel": "Insiders",
     "editor.insertSpaces": false,
