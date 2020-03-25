@@ -1,9 +1,7 @@
-!
-! To copy (or include) in ~/.Xresources
-! For instance: in Xresources: #include ".config/urxvt/config"
-!
-! Theme is included. Place theme in the same folder as this config
-!
+! To copy in ~/.Xresources (or include with #include ".config/urxvt/config")
+
+! Colors theme (place it in the same folder as this config)
+#include "./theme-current.conf"
 
 ! General
 urxvt.title: urxvt terminal
@@ -13,13 +11,11 @@ urxvt.title: urxvt terminal
 ! urxvt.perl-ext-common:
 
 ! All perl extensions
-urxvt.perl-ext-common:      default,matcher,tabbed,font-size
+urxvt.perl-ext-common:      default,matcher,font-size
 
 ! Theme
 urxvt.background:           #0f0f0f
 urxvt.foreground:           #c8c8c8
-! urxvt.background:           Black
-! urxvt.foreground:           White
 urxvt.letterSpace:          -1
 urxvt.transparent:          true
 urxvt.shading:              10
@@ -45,6 +41,7 @@ Xft.autohint:               false
 Xft.lcdfilter:              lcddefault
 
 ! Font re-size
+! urxvt.perl-ext-common:      font-size
 urxvt.keysym.C-Up:          perl:font-size:increase
 urxvt.keysym.C-Down:        perl:font-size:decrease
 urxvt.keysym.C-S-Up:        perl:font-size:incglobal
@@ -61,10 +58,7 @@ urxvt.matcher.rend.0:       Uline Bold fg5
 
 ! Tabs
 ! urxvt.perl-ext-common:    tabbed
-urxvt.tabbed.tabbar-fg:     2
-urxvt.tabbed.tabbar-bg:     0
-urxvt.tabbed.tab-fg:        3
-urxvt.tabbed.tab-bg:        0
-
-! Colors theme (Use a symlink to switch between theme)
-#include "./theme-current.conf"
+! urxvt.tabbed.tabbar-fg:     2
+! urxvt.tabbed.tabbar-bg:     0
+! urxvt.tabbed.tab-fg:        3
+! urxvt.tabbed.tab-bg:        0
