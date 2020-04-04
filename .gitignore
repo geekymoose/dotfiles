@@ -1,1 +1,3 @@
 *~
+src/neovim/.config/nvim/plugged
+src/neovim/.config/nvim/autoload/plug.vim.old

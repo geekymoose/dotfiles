@@ -5,20 +5,25 @@ Feel free to use any of them.
 
 ## Features
 
-- Bash (may be deprecated since I mostly use zsh)
-- Editorconfig
+- Bash (but I mostly use zsh)
 - Git
 - i3
-- Terminator (may be deprecated since I mostly use urxvt)
-- urxvt (see the last line of file `config` to understand how to use themes)
-- Vim (place the plugins in `.config/nvim/plugged`, then use the tool `Plug`)
+- Terminator (but I mostly use urxvt)
+- urxvt
+- Vim
 - Vscode
-- Xinit
+- X11
 - Zsh
 
 ## Sync
 
-To synchronize the local settings with this folder, I use `coco-setting-manager`.
-It's a simple script to create symlinks according to a config file
-(<https://github.com/GeekyMoose/coco-settings-manager>).
+I use GNU Stow to synchronize the settings. Each package in `src` is organized the same way it lives on the local computer. (I also saw other interesting techniques with git config. see link).
 
+```bash
+# Apply all symlinks
+./exec_stow.sh
+```
+
+- <https://www.reddit.com/r/linux/comments/afund1/manage_your_dotfiles_with_style_gnu_stow/>
+- <https://www.gnu.org/software/stow/>
+- <https://www.atlassian.com/git/tutorials/dotfiles>
