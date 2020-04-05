@@ -96,6 +96,9 @@ if [[ -f $FISH_SYNTAX_DIR ]]; then
     export ZSH_HIGHLIGHT_HIGHLIGHTERS
 fi
 
+# Miscs
+xset b off
+
 # ------------------------------------------------------------------------------
 function clone() {
     $TERMINAL & disown

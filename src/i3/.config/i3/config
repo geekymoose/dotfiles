@@ -163,20 +163,17 @@ bar {
 # Personal configuration
 # ------------------------------------------------------------------------------
 
-# Add default background at startup
-exec --no-startup-id "feh --no-fehbg --bg-fill ~/.config/wallpapers/default"
+# Autostarts (see https://wiki.archlinux.org/index.php/XDG_Autostart)
+exec --no-startup-id "dex -a"
 
 # Lock screen ('zozo-lock.sh' is a custom script placed in the PATH.)
-bindsym Mod1+Ctrl+l exec --no-startup-id "zozo-lock"
-bindsym XF86Launch1 exec --no-startup-id "zozo-lock"
-bindsym Mod1+Ctrl+k exec --no-startup-id "zozo-lock"
-
-# Lock after x min of inactivity
-exec --no-startup-id "xautolock -detectsleep -time 5 -locker 'zozo-lock' &"
+bindsym Mod1+Ctrl+l exec --no-startup-id "zozo-lock.sh"
+bindsym XF86Launch1 exec --no-startup-id "zozo-lock.sh"
+bindsym Mod1+Ctrl+k exec --no-startup-id "zozo-lock.sh"
 
 # Light
-bindsym Mod1+Up                 exec --no-startup-id "xbacklight -inc 5"
-bindsym Mod1+Down               exec --no-startup-id "xbacklight -dec 5"
+bindsym Mod1+Up     exec --no-startup-id "xbacklight -inc 5"
+bindsym Mod1+Down   exec --no-startup-id "xbacklight -dec 5"
 
 # Volume
 bindsym XF86AudioMute           exec --no-startup-id "amixer -q set Master toggle"
@@ -185,10 +182,10 @@ bindsym XF86AudioLowerVolume    exec --no-startup-id "amixer -q sset Master 2%-"
 bindsym Mod1+Right              exec --no-startup-id "amixer -q sset Master 2%+"
 bindsym Mod1+Left               exec --no-startup-id "amixer -q sset Master 2%-"
 
-# Shortcuts (dmenu)
+# Custom shortcuts (dmenu)
 bindsym Mod1+f exec --no-startup-id "firefox"
-bindsym Mod1+k exec --no-startup-id "keepass"
-bindsym Mod1+v exec --no-startup-id "veracrypt"
+bindsym Mod1+r exec --no-startup-id "ranger"
+bindsym Mod1+e exec --no-startup-id "pcmanfm"
+bindsym Mod1+v exec --no-startup-id "pavucontrol"
 bindsym Mod1+u exec --no-startup-id "urxvt"
-
 
