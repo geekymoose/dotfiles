@@ -101,3 +101,12 @@ function clone() {
     $TERMINAL & disown
 }
 
+# See https://wiki.archlinux.org/index.php/Ranger
+# (Section: Preventing nested ranger instances)
+function ranger() {
+    if [ -z "$RANGER_LEVEL" ]; then
+        /usr/bin/ranger "$@"
+    else
+        exit
+    fi
+}
