@@ -1,5 +1,14 @@
 # ~/.zshrc
 
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+
 # ------------------------------------------------------------------------------
 alias ls='ls --color=auto'
 alias la='ls -a'
@@ -88,14 +97,6 @@ autoload -Uz run-help
 alias help=run-help
 autoload -Uz run-help-git
 
-# Use fish-like syntax highlighting (if fish installed)
-FISH_SYNTAX_DIR='/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-if [[ -f $FISH_SYNTAX_DIR ]]; then
-    source $FISH_SYNTAX_DIR
-    ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor line)
-    export ZSH_HIGHLIGHT_HIGHLIGHTERS
-fi
-
 # Miscs
 xset b off
 
@@ -104,8 +105,16 @@ function clone() {
     $TERMINAL & disown
 }
 
+# Use fish-like syntax highlighting (if fish installed)
+FISH_SYNTAX_DIR='/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+if [[ -f $FISH_SYNTAX_DIR ]]; then
+    source $FISH_SYNTAX_DIR
+    ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor line)
+    export ZSH_HIGHLIGHT_HIGHLIGHTERS
+fi
+
 # See https://wiki.archlinux.org/index.php/Ranger
-# (Section: Preventing nested ranger instances)
+# Preventing nested ranger instanceh 
 function ranger() {
     if [ -z "$RANGER_LEVEL" ]; then
         /usr/bin/ranger "$@"
@@ -113,3 +122,9 @@ function ranger() {
         exit
     fi
 }
+
+# Theme powerlevel10k https://github.com/romkatv/powerlevel10k#get-started
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
