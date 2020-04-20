@@ -64,13 +64,13 @@ cpu_usage {
 }
 
 memory {
-    format = " %used used (%available free)"
+    format = " %used (%percentage_used)"
     threshold_degraded = 20%
     threshold_critical = 10%
 }
 
 disk "/" {
-    format = " %percentage_used" # Font awesome database f1c0
+    format = " %used (%percentage_used)" # Font awesome database f1c0
     threshold_type = percentage_free
     low_threshold = 15
 }

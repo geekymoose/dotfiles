@@ -28,8 +28,8 @@ export PATH="$PATH:$HOME/.cargo/bin"
 which nvim >> /dev/null && EDITOR="/usr/bin/nvim" || EDITOR="/usr/bin/vim"
 export EDITOR
 
-TERMINAL="urxvt"
-export TERMINAL
+TERM="kitty"
+export TERM
 
 # ------------------------------------------------------------------------------
 # See https://www.gnu.org/software/termutils/manual/termcap-1.3/html_mono/termcap.html
