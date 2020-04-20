@@ -1,6 +1,6 @@
 # ~/.config/i3status/config
 #
-# Uses font awesome (For icones)
+# Uses font awesome for icones
 # https://fontawesome.com/cheatsheet#use
 #
 #
@@ -70,7 +70,7 @@ cpu_usage {
 }
 
 memory {
-    format = " %used used (%available free)" # Font awesome memory f538
+    format = "%used used (%available free)"
     threshold_degraded = 15%
     threshold_critical = 10%
 }
@@ -87,6 +87,6 @@ volume master {
 }
 
 tztime local {
-    format = " %H:%M"
+    format = " %Y-%m-%d %H:%M"
 }
 

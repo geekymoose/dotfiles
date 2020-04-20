@@ -1,7 +1,7 @@
 ! To copy in ~/.Xresources (or include with #include ".config/urxvt/config")
 
-! Colors theme (place it in the same folder as this config)
-#include "./theme-current.conf"
+! Colors theme (theme file to in the same folder as this config)
+#include "./theme-default.conf"
 
 ! General
 urxvt.title: urxvt terminal
@@ -30,8 +30,6 @@ urxvt.scrollWithBuffer:     true
 
 ! Fonts
 urxvt.font:                 xft:Source\ Code\ Pro:size=11
-!urxvt.font:                 xft:Source\ Code\ Pro\ for\ Powerline:size=11
-!urxvt.boldFont:             xft:Source\ Code\ Pro\ for\ Powerline:size=10:bold
 Xft.dpi:                    96
 Xft.antialias:              true
 Xft.rgba:                   rgb
