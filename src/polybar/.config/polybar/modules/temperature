@@ -1,0 +1,20 @@
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp><label>
+format-warn = <ramp><label-warn>
+label = " %temperature-c% "
+label-background = ${colors.label}
+label-foreground = ${colors.white}
+label-warn = " %temperature-c% "
+label-warn-background = ${colors.label}
+label-warn-foreground = ${colors.white}
+
+ramp-0 = %{T2}%{T-}
+ramp-1 = %{T2}%{T-}
+ramp-2 = %{T2}%{T-}
+ramp-background = ${colors.prefix}
+ramp-foreground = ${colors.white}
+ramp-padding = 1

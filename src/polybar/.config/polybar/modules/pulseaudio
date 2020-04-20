@@ -1,0 +1,19 @@
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = false
+
+format-volume = <ramp-volume><label-volume>
+label-volume = " %percentage%% "
+label-volume-background = ${colors.label}
+label-volume-foreground = ${colors.white}
+label-muted = %{T2}%{T-} 0%
+label-muted-background = ${colors.prefix}
+label-muted-foreground = ${colors.white}
+label-muted-padding = 1
+
+ramp-volume-0 = %{T2}%{T-}
+ramp-volume-1 = %{T2}%{T-}
+ramp-volume-2 = %{T2}%{T-}
+ramp-volume-background = ${colors.prefix}
+ramp-volume-foreground = ${colors.white}
+ramp-volume-padding = 1

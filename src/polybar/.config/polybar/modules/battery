@@ -1,0 +1,47 @@
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ACAD
+full-at = 98
+
+format-charging = <animation-charging><label-charging>
+format-charging-background = ${colors.label}
+format-charging-foreground = ${colors.white}
+label-charging = " %percentage%% "
+label-charging-background = ${colors.label}
+label-charging-foreground = ${colors.white}
+
+format-discharging = <ramp-capacity><label-discharging>
+format-discharging-background = ${colors.label}
+format-discharging-foreground = ${colors.white}
+label-discharging = " %percentage%% "
+label-discharging-background = ${colors.label}
+label-discharging-foreground = ${colors.white}
+
+format-full-background = ${colors.label}
+format-full-foreground = ${colors.white}
+format-full-prefix = %{T2}%{T-}
+format-full-prefix-background = ${colors.prefix}
+format-full-prefix-foreground = ${colors.white}
+format-full-prefix-padding = 1
+label-full = " %percentage%% "
+
+ramp-capacity-0 = %{T2}%{T-}
+ramp-capacity-1 = %{T2}%{T-}
+ramp-capacity-2 = %{T2}%{T-}
+ramp-capacity-3 = %{T2}%{T-}
+ramp-capacity-4 = %{T2}%{T-}
+ramp-capacity-background = ${colors.prefix}
+ramp-capacity-foreground = ${colors.white}
+ramp-capacity-padding = 1
+
+animation-charging-0 = %{T2}%{T-}
+animation-charging-1 = %{T2}%{T-}
+animation-charging-2 = %{T2}%{T-}
+animation-charging-3 = %{T2}%{T-}
+animation-charging-4 = %{T2}%{T-}
+animation-charging-5 = %{T2}%{T-}
+animation-charging-background = ${colors.prefix}
+animation-charging-foreground = ${colors.white}
+animation-charging-framerate = 900
+animation-charging-padding = 1
