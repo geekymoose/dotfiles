@@ -6,11 +6,18 @@ Feel free to use any of them.
 ## Features
 
 - Bash (but I mostly use zsh)
+- Dunst
 - Git
 - i3
+- Kitty
+- Neovim
+- Picom
+- Pip
+- Polybar (test)
+- Ranger
+- Rofi (test)
 - Terminator (but I mostly use urxvt)
 - urxvt
-- Vim
 - Vscode
 - X11
 - Zsh
