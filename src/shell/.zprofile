@@ -1,5 +1,8 @@
 # ~/.zprofile
 
+# Load profile file if exists
+[[ -f ~/.profile ]] && source ~/.profile
+
 # Load zshrc file if exists
 [[ -f ~/.zshrc ]] && source ~/.zshrc
 
