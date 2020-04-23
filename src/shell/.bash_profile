@@ -1,5 +1,8 @@
 # ~/.bash_profile
 
+# Load profile file if exists
+[[ -f ~/.profile ]] && source ~/.profile
+
 # Load bashrc file if exists
 [[ -f ~/.bashrc ]] && source ~/.bashrc
 

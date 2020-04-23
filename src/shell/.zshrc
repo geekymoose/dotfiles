@@ -1,8 +1,5 @@
 # ~/.zshrc
 
-umask 027 # By default, no perm for 'a' group (file: 640, folder: 750)
-
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -10,8 +7,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 # ------------------------------------------------------------------------------
+
 alias ls='ls --color=auto'
 alias la='ls -a'
 alias ll='ls -l'
@@ -24,16 +21,7 @@ alias vv='dirs -v'
 which nvim >> /dev/null && alias vim='nvim'
 
 # ------------------------------------------------------------------------------
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/.cargo/bin"
 
-which nvim >> /dev/null && EDITOR="/usr/bin/nvim" || EDITOR="/usr/bin/vim"
-export EDITOR
-
-TERM="kitty"
-export TERM
-
-# ------------------------------------------------------------------------------
 # See https://www.gnu.org/software/termutils/manual/termcap-1.3/html_mono/termcap.html
 export LESS_TERMCAP_mb=$(printf '\e[01;31m')
 export LESS_TERMCAP_md=$(printf '\e[01;35m')
@@ -47,6 +35,7 @@ LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
 export LS_COLORS
 
 # ------------------------------------------------------------------------------
+
 # Color
 autoload -Uz colors
 colors
@@ -99,13 +88,7 @@ autoload -Uz run-help
 alias help=run-help
 autoload -Uz run-help-git
 
-# Miscs
-xset b off
-
 # ------------------------------------------------------------------------------
-function clone() {
-    $TERMINAL & disown
-}
 
 # Use fish-like syntax highlighting (if fish installed)
 FISH_SYNTAX_DIR='/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
@@ -114,6 +97,14 @@ if [[ -f $FISH_SYNTAX_DIR ]]; then
     ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor line)
     export ZSH_HIGHLIGHT_HIGHLIGHTERS
 fi
+
+# Theme powerlevel10k https://github.com/romkatv/powerlevel10k#get-started
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# ------------------------------------------------------------------------------
 
 # See https://wiki.archlinux.org/index.php/Ranger
 # Preventing nested ranger instanceh 
@@ -125,8 +116,7 @@ function ranger() {
     fi
 }
 
-# Theme powerlevel10k https://github.com/romkatv/powerlevel10k#get-started
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+function clone() {
+    $TERMINAL & disown
+}
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
