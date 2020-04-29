@@ -198,4 +198,5 @@ bindsym Mod1+c exec --no-startup-id "gnome-clocks"
 
 # Special case: open in floating mode (you can get the class and instance using xprop)
 for_window [class="Org.gnome.clocks" instance="org.gnome.clocks"] floating enable
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 
