@@ -189,9 +189,13 @@ bindsym Mod1+Right              exec --no-startup-id "amixer -q sset Master 2%+"
 bindsym Mod1+Left               exec --no-startup-id "amixer -q sset Master 2%-"
 
 # Custom shortcuts (dmenu)
+
 bindsym Mod1+f exec --no-startup-id "$BROWSER"
 bindsym Mod1+u exec --no-startup-id "$TERM"
 bindsym Mod1+e exec --no-startup-id "nemo"
 bindsym Mod1+p exec --no-startup-id "pavucontrol"
 bindsym Mod1+c exec --no-startup-id "gnome-clocks"
+
+# Special case: open in floating mode (you can get the class and instance using xprop)
+for_window [class="Org.gnome.clocks" instance="org.gnome.clocks"] floating enable
 
