@@ -173,9 +173,8 @@ exec --no-startup-id "sleep 1 && picom -b" # I had weird bug when picon was star
 exec --no-startup-id "dex -a"
 
 # Lock screen ('zozo-lock.sh' is a custom script placed in the PATH.)
-bindsym Mod1+Ctrl+l exec --no-startup-id "zozo-lock.sh"
 bindsym XF86Launch1 exec --no-startup-id "zozo-lock.sh"
-bindsym Mod1+Ctrl+k exec --no-startup-id "zozo-lock.sh"
+bindsym Mod1+Ctrl+l exec --no-startup-id "zozo-lock.sh"
 
 # Light
 bindsym Mod1+Up     exec --no-startup-id "xbacklight -inc 5"
@@ -193,9 +192,8 @@ bindsym Mod1+Left               exec --no-startup-id "amixer -q sset Master 2%-"
 bindsym Mod1+f exec --no-startup-id "$BROWSER"
 bindsym Mod1+u exec --no-startup-id "$TERM"
 bindsym Mod1+e exec --no-startup-id "nemo"
-bindsym Mod1+p exec --no-startup-id "pavucontrol"
-bindsym Mod1+o exec --no-startup-id "gnome-clocks"
-
+bindsym Mod4+p exec --no-startup-id "pavucontrol"
+bindsym Mod4+o exec --no-startup-id "gnome-clocks"
 # Special case: open in floating mode (you can get the class and instance using xprop)
 for_window [class="Org.gnome.clocks" instance="org.gnome.clocks"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
