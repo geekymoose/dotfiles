@@ -10,6 +10,7 @@ Feel free to use any of them.
 - Git
 - i3
 - Kitty
+- Mime
 - Neovim
 - Picom
 - Pip
