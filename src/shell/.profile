@@ -13,7 +13,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 which nvim >> /dev/null && EDITOR="/usr/bin/nvim" || EDITOR="/usr/bin/vim"
 export EDITOR
 
-which alacritty >> /dev/null && TERM="alacritty" || EDITOR=linux
+which alacritty >> /dev/null && TERM="alacritty" || TERM=linux
 export TERM
 
 export VISUAL=$EDITOR
