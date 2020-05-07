@@ -7,9 +7,10 @@ image/png=org.gnome.eog.desktop;
 text/plain=nvim.desktop;
 application/pdf=atril.desktop;
 application/x-mozilla-bookmarks=nvim.desktop;
+video/x-matroska=vlc.desktop;
 
 [Default Applications]
-x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/msteams=teams-for-linux.desktop
 image/jpeg=org.gnome.eog.desktop
 image/png=org.gnome.eog.desktop
 text/plain=nvim.desktop
@@ -17,3 +18,4 @@ inode/directory=nemo.desktop
 application/x-gnome-saved-search=nemo.desktop
 application/pdf=atril.desktop
 application/x-mozilla-bookmarks=nvim.desktop
+video/x-matroska=vlc.desktop
