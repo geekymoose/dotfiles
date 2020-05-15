@@ -8,6 +8,8 @@ text/plain=nvim.desktop;
 application/pdf=atril.desktop;
 application/x-mozilla-bookmarks=nvim.desktop;
 video/x-matroska=vlc.desktop;
+video/mp4=vlc.desktop;
+image/gif=org.gnome.eog.desktop;
 
 [Default Applications]
 x-scheme-handler/msteams=teams-for-linux.desktop
@@ -19,3 +21,5 @@ application/x-gnome-saved-search=nemo.desktop
 application/pdf=atril.desktop
 application/x-mozilla-bookmarks=nvim.desktop
 video/x-matroska=vlc.desktop
+video/mp4=vlc.desktop
+image/gif=org.gnome.eog.desktop
