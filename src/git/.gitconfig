@@ -12,6 +12,7 @@
 
 [pull]
     recurseSubmodules   = on-demand
+    rebase              = false
 
 [credential]
     helper              = cache
