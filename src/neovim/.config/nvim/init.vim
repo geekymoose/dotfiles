@@ -59,6 +59,9 @@ let g:airline#extensions#tabline#enabled = 1
 " let g:airline_powerline_fonts = 0     " Use ASCII instead
 " let g:airline_symbols_ascii = 1       " Use ASCII instead
 
+" NERDTree
+let NERDTreeShowHidden=1
+
 " ctrlp
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
