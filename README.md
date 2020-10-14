@@ -8,7 +8,6 @@ Feel free to use any of them.
 - Bash (but I mostly use zsh)
 - Git
 - i3
-- Kitty
 - Mime
 - Neovim
 - Picom
