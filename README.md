@@ -12,7 +12,6 @@ Feel free to use any of them.
 - Neovim
 - Picom
 - Pip
-- Polybar (test)
 - Ranger
 - Rofi (test)
 - Terminator (but I mostly use urxvt)
