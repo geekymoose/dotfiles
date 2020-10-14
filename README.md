@@ -6,7 +6,6 @@ Feel free to use any of them.
 ## Features
 
 - Bash (but I mostly use zsh)
-- Dunst
 - Git
 - i3
 - Kitty
