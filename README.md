@@ -13,7 +13,6 @@ Feel free to use any of them.
 - Picom
 - Pip
 - Ranger
-- Rofi (test)
 - Terminator (but I mostly use urxvt)
 - urxvt
 - Vscode
