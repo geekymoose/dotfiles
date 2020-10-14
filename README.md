@@ -5,23 +5,30 @@ Feel free to use any of them.
 
 ## Features
 
-- Bash (but I mostly use zsh)
-- Git
-- i3
-- Mime
-- Neovim
-- Picom
-- Pip
-- Ranger
-- Terminator (but I mostly use urxvt)
-- urxvt
-- Vscode
-- X11
-- Zsh
+- Console
+    - Alacritty
+    - Terminator (but I mostly use urxvt)
+    - Urxvt
+    - Zsh
+    - Bash (but I mostly use zsh)
+    - X11
+- Programming
+    - Vscode
+    - Neovim
+    - Git
+    - Pip
+- WM
+    - i3
+    - GTK
+    - Mime
+    - Picom
+    - Ranger
 
 ## Sync
 
-I use GNU Stow to synchronize the settings. Each package in `src` is organized the same way it lives on the local computer. (I also saw other interesting techniques with git config. see link).
+I use GNU Stow to synchronize the settings.
+Each package in `src` is organized the same way it lives on the local computer.
+(I saw other interesting techniques with git config. see link).
 
 ```bash
 # Apply all symlinks
