@@ -10,11 +10,11 @@ umask 027 # By default, no perm for 'a' group (file: 640, folder: 750)
 # Default applications
 # ------------------------------------------------------------------------------
 
+which urxvt >> /dev/null && TERM="urxvt" || TERM=linux
+export TERM
+
 which nvim >> /dev/null && EDITOR="/usr/bin/nvim" || EDITOR="/usr/bin/vim"
 export EDITOR
-
-which alacritty >> /dev/null && TERM="alacritty" || TERM=linux
-export TERM
 
 export VISUAL=$EDITOR
 export BROWSER="firefox"
