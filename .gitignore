@@ -1,3 +1,4 @@
 *~
 src/neovim/.config/nvim/plugged
 src/neovim/.config/nvim/autoload/plug.vim.old
+src/gtk/.config/gtk-3.0/bookmarks

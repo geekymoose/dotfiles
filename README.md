@@ -7,10 +7,10 @@ Feel free to use any of them.
 
 - Console
     - Alacritty
-    - Terminator (but I mostly use urxvt)
+    - Terminator
     - Urxvt
     - Zsh
-    - Bash (but I mostly use zsh)
+    - Bash
     - X11
 - Programming
     - Vscode
