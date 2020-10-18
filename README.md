@@ -24,6 +24,11 @@ Feel free to use any of them.
     - Picom
     - Ranger
 
+## Install
+
+All the required packages are listed in the `pkglist.txt` file (archlinux).
+You may use `pacman -S - < pkglist.txt` to install everything at once.
+
 ## Sync
 
 I use GNU Stow to synchronize the settings.
