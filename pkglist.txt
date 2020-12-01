@@ -4,6 +4,7 @@ ttf-dejavu
 alacritty
 
 git
+tk
 
 arc-gtk-theme
 arc-icon-theme

@@ -12,5 +12,8 @@
     "breadcrumbs.enabled": true,
     "C_Cpp.updateChannel": "Insiders",
     "editor.insertSpaces": false,
-    "workbench.activityBar.visible": true
+    "workbench.activityBar.visible": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    }
 }
