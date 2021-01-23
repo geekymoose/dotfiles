@@ -6,23 +6,23 @@ Feel free to use any of them.
 ## Features
 
 - Console
-    - Alacritty
-    - Terminator
-    - Urxvt
-    - Zsh
-    - Bash
-    - X11
+  - Alacritty
+  - Terminator
+  - Urxvt
+  - Zsh
+  - Bash
+  - X11
 - Programming
-    - Vscode
-    - Neovim
-    - Git
-    - Pip
+  - Vscode
+  - Neovim
+  - Git
+  - Pip
 - WM
-    - i3
-    - GTK
-    - Mime
-    - Picom
-    - Ranger
+  - i3
+  - GTK
+  - Mime
+  - Picom
+  - Ranger
 
 ## Install
 
