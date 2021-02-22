@@ -5,4 +5,5 @@
 # postswitch is executed after a mode switch has taken place.
 # This can be used to notify window managers or other applications about the switch.
 
+nitrogen --restore # Background
 notify-send "Autorandr configuration switched"

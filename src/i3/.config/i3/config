@@ -165,7 +165,6 @@ bar {
 
 # Start utils programs (e.g., background)
 exec --no-startup-id "picom" # Compositor
-exec --no-startup-id "nitrogen --restore" # Background
 exec --no-startup-id "dex -a" # Autostarts (see https://wiki.archlinux.org/index.php/XDG_Autostart)
 exec --no-startup-id "xautolock -detectsleep -time 5 -locker 'zozo-lock.sh'"
 
