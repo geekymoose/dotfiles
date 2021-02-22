@@ -20,8 +20,8 @@ Feel free to use any of them.
 - Window Manager
   - Autorandr <https://github.com/phillipberndt/autorandr>
   - i3 <https://wiki.archlinux.org/index.php/I3>
-  - GTK
-  - Mime
+  - GTK <https://wiki.archlinux.org/index.php/GTK>
+  - Mime <https://wiki.archlinux.org/index.php/XDG_MIME_Applications>
   - Notification Daemon <https://wiki.archlinux.org/index.php/Desktop_notifications>
   - Pam <https://wiki.archlinux.org/index.php/PAM>
   - Picom <https://wiki.archlinux.org/index.php/Picom>
