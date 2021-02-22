@@ -1,28 +1,30 @@
-# My personal settings
+# My Linux dotfiles
 
 These are the common settings I use daily.
 Feel free to use any of them.
+(I use Archlinux as my main Linux distribution).
 
 ## Features
 
 - Console
-  - Alacritty
-  - Terminator
-  - Urxvt
+  - Alacritty <https://wiki.archlinux.org/index.php/Alacritty>
+  - Urxvt <https://wiki.archlinux.org/index.php/Urxvt?redirect=no>
   - Zsh
   - Bash
   - X11
 - Programming
-  - Vscode
-  - Neovim
-  - Git
-  - Pip
-- WM
-  - i3
+  - Vscode <https://wiki.archlinux.org/index.php/Visual_Studio_Code>
+  - Neovim <https://wiki.archlinux.org/index.php/Neovim>
+  - Git <https://wiki.archlinux.org/index.php/Git>
+  - Pip <https://wiki.archlinux.org/index.php/Python>
+- Window Manager
+  - Autorandr <https://github.com/phillipberndt/autorandr>
+  - i3 <https://wiki.archlinux.org/index.php/I3>
   - GTK
   - Mime
-  - Picom
-  - Ranger
+  - Notification Daemon <https://wiki.archlinux.org/index.php/Desktop_notifications>
+  - Picom <https://wiki.archlinux.org/index.php/Picom>
+  - Ranger <https://wiki.archlinux.org/index.php/Ranger>
 
 ## Install
 
@@ -33,7 +35,7 @@ You may use `pacman -S - < pkglist.txt` to install everything at once.
 
 I use GNU Stow to synchronize the settings.
 Each package in `src` is organized the same way it lives on the local computer.
-(I saw other interesting techniques with git config. see link).
+(I saw other interesting techniques with git config. see links).
 
 ```bash
 # Apply all symlinks

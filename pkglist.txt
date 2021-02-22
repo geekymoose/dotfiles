@@ -1,6 +1,10 @@
 stow
 ttf-dejavu
 
+autorandr
+
+notification-daemon
+
 alacritty
 
 git
@@ -24,10 +28,12 @@ xautolock
 dex
 
 neovim
-xclip
 python-neovim
+xclip
 
 picom
+
+python
 
 ranger
 atool
@@ -53,3 +59,7 @@ nemo-terminal
 ffmpegthumbnailer
 
 code
+
+rxvt-unicode
+
+xorg-xinit
