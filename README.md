@@ -23,8 +23,10 @@ Feel free to use any of them.
   - GTK
   - Mime
   - Notification Daemon <https://wiki.archlinux.org/index.php/Desktop_notifications>
+  - Pam <https://wiki.archlinux.org/index.php/PAM>
   - Picom <https://wiki.archlinux.org/index.php/Picom>
   - Ranger <https://wiki.archlinux.org/index.php/Ranger>
+  - SSH agent <https://wiki.archlinux.org/index.php/SSH_keys>
 
 ## Install
 
