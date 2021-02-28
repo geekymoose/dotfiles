@@ -24,7 +24,6 @@ Feel free to use any of them.
   - Mime <https://wiki.archlinux.org/index.php/XDG_MIME_Applications>
   - Notification Daemon <https://wiki.archlinux.org/index.php/Desktop_notifications>
   - Pam <https://wiki.archlinux.org/index.php/PAM>
-  - Picom <https://wiki.archlinux.org/index.php/Picom>
   - Ranger <https://wiki.archlinux.org/index.php/Ranger>
   - SSH agent <https://wiki.archlinux.org/index.php/SSH_keys>
 

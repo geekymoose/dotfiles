@@ -164,13 +164,8 @@ bar {
 # ------------------------------------------------------------------------------
 
 # Start utils programs (e.g., background)
-exec --no-startup-id "picom" # Compositor
 exec --no-startup-id "dex -a" # Autostarts (see https://wiki.archlinux.org/index.php/XDG_Autostart)
-exec --no-startup-id "xautolock -detectsleep -time 5 -locker 'zozo-lock.sh'"
-
-# Lock screen ('zozo-lock.sh' is a custom script placed in the PATH.)
-bindsym XF86Launch1 exec --no-startup-id "zozo-lock.sh"
-bindsym Mod1+Ctrl+l exec --no-startup-id "zozo-lock.sh"
+exec --no-startup-id "xautolock -detectsleep -time 5 -locker 'i3lock -f -e -c 351d4c'"
 
 # Light
 bindsym Mod1+Up     exec --no-startup-id "xbacklight -inc 5"
