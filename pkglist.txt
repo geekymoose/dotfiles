@@ -1,21 +1,54 @@
 stow
-ttf-dejavu
 
-autorandr
+# ------------------------------------------------------------------------------
+# Console
+# ------------------------------------------------------------------------------
 
-notification-daemon
+# --- Zsh ---
+zsh
+zsh-completions
+zsh-syntax-highlighting
+zsh-theme-powerlevel10k
 
+# --- Bash ---
+bash
+bash-completion
+
+# --- Other ---
 alacritty
+rxvt-unicode
+xorg-xinit
 
+# ------------------------------------------------------------------------------
+# Programming
+# ------------------------------------------------------------------------------
+
+# --- Git ---
 git
 tk
 
+# --- Editors ----
+code
+neovim
+python-neovim
+xclip
+
+# --- Miscs ---
+python
+
+# ------------------------------------------------------------------------------
+# Window Manager
+# ------------------------------------------------------------------------------
+
+# --- GTK Theme ---
 arc-gtk-theme
 arc-icon-theme
+ttf-dejavu
 ttf-roboto
 ttf-roboto-mono
 papirus-icon-theme
 
+# --- Window manager i3
 i3-gaps
 i3status
 i3blocks
@@ -27,12 +60,13 @@ nitrogen
 xautolock
 dex
 
-neovim
-python-neovim
-xclip
+# --- Neno file manager
+nemo
+nemo-preview
+nemo-terminal
+ffmpegthumbnailer
 
-python
-
+# --- Ranger console file manager
 ranger
 atool
 ffmpegthumbnailer
@@ -43,21 +77,6 @@ poppler
 python-chardet
 w3m
 
-zsh
-zsh-completions
-zsh-syntax-highlighting
-zsh-theme-powerlevel10k
-
-bash
-bash-completion
-
-nemo
-nemo-preview
-nemo-terminal
-ffmpegthumbnailer
-
-code
-
-rxvt-unicode
-
-xorg-xinit
+# --- Miscs ---
+autorandr
+notification-daemon
