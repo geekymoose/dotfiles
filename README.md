@@ -30,7 +30,12 @@ Feel free to use any of them.
 ## Install
 
 All the required packages are listed in the `pkglist.txt` file (archlinux).
-You may use `pacman -S - < pkglist.txt` to install everything at once.
+You can comment any package from the file to skip its install.
+
+```bash
+# Install all required archlinux packages
+./exec_pacman.sh
+```
 
 ## Sync
 
