@@ -51,3 +51,4 @@ Each package in `src` is organized the same way it lives on the local computer.
 - <https://www.reddit.com/r/linux/comments/afund1/manage_your_dotfiles_with_style_gnu_stow/>
 - <https://www.gnu.org/software/stow/>
 - <https://www.atlassian.com/git/tutorials/dotfiles>
+- <https://github.com/kazhala/dotbare>
