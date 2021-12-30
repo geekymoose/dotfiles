@@ -1,7 +1,5 @@
 #!/bin/sh
-#
 # ~/.xinitrc
-#
 
 # Load Xresources and Xmodmap if exists
 userresources=$HOME/.Xresources
@@ -13,10 +11,6 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 [[ -f $sysmodmap ]]     && xmodmap $sysmodmap
 [[ -f $usermodmap ]]    && xmodmap "$usermodmap"
 
-# Load xprofile if exists
-xprofile=$HOME/.xprofile
-[[ -f $xprofile ]] && source $xprofile
-
 # start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
@@ -24,6 +18,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     done
     unset f
 fi
+
+# Default applications
+which urxvt >> /dev/null && TERM="urxvt" || TERM=linux
+export TERM
+which nvim >> /dev/null && EDITOR="/usr/bin/nvim" || EDITOR="/usr/bin/vim"
+export EDITOR
+export VISUAL=$EDITOR
+export BROWSER="firefox"
 
 # Start Window Manager according to parameter
 session="$1"
@@ -34,4 +36,3 @@ case $session in
     # Unknown session, try to run it as command
     *) exec "$1";;
 esac
-

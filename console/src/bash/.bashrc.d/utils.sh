@@ -1,36 +1,4 @@
-# ~/.profile
-#
-# Stuff common to all login shells (e.g., bash_profile, zprofile)
-
-
 umask 027 # By default, no perm for 'a' group (file: 640, folder: 750)
-
-
-# ------------------------------------------------------------------------------
-# Default applications
-# ------------------------------------------------------------------------------
-
-which urxvt >> /dev/null && TERM="urxvt" || TERM=linux
-export TERM
-
-which nvim >> /dev/null && EDITOR="/usr/bin/nvim" || EDITOR="/usr/bin/vim"
-export EDITOR
-
-export VISUAL=$EDITOR
-export BROWSER="firefox"
-
-
-# ------------------------------------------------------------------------------
-# Envirnoment / Path
-# ------------------------------------------------------------------------------
-
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/.cargo/bin"
-
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-
 
 # ------------------------------------------------------------------------------
 # Colors
@@ -73,4 +41,3 @@ function ranger() {
         exit
     fi
 }
-

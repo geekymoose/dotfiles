@@ -7,21 +7,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
-# ------------------------------------------------------------------------------
-# Aliases
-# ------------------------------------------------------------------------------
-
-alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -l'
-alias lla='ls -al'
-alias rm='rm -i'
-alias ip='ip -c'
-alias grep='grep --color=auto'
-alias emacs='emacs -nw'
-alias vv='dirs -v'
-which nvim >> /dev/null && alias vim='nvim'
+# User specific config (common with bashrc)
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            source "$rc"
+        fi
+    done
+fi
 
 
 # ------------------------------------------------------------------------------

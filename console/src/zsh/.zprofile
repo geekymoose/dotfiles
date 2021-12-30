@@ -1,10 +1,10 @@
-# ~/.bash_profile
+# ~/.zprofile
 
-# Load profile file if exists
-[[ -f ~/.profile ]] && source ~/.profile
+# Source global definitions
+[[ -f /etc/zsh ]] && source /etc/zsh/zprofile
 
-# Load bashrc file if exists
-[[ -f ~/.bashrc ]] && source ~/.bashrc
+# Source zshrc
+[[ -f ~/.zshrc ]] && source ~/.zshrc
 
 # Start Xorg server according to logged terminal
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ]; then
