@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 # Source global definitions
-[[ -f /etc/bashrc ] && source /etc/bashrc
+[[ -f /etc/bashrc ]] && source /etc/bashrc
 
 # User specific config
 if [ -d ~/.bashrc.d ]; then
@@ -13,5 +13,5 @@ if [ -d ~/.bashrc.d ]; then
             source "$rc"
         fi
     done
+    unset rc
 fi
-unset rc

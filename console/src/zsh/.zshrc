@@ -14,6 +14,7 @@ if [ -d ~/.bashrc.d ]; then
             source "$rc"
         fi
     done
+    unset rc
 fi
 
 
