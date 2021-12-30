@@ -1,4 +1,4 @@
 # ~/.bash_profile
 
-# Load bashrc file if exists
+# Source bashrc
 [[ -f ~/.bashrc ]] && source ~/.bashrc
