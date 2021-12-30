@@ -7,19 +7,18 @@ Feel free to use any of them.
 ## Features
 
 - Console
-  - Alacritty <https://wiki.archlinux.org/index.php/Alacritty>
   - Urxvt <https://wiki.archlinux.org/index.php/Urxvt?redirect=no>
   - Zsh
   - Bash
-  - X11
 - Programming
   - Vscode <https://wiki.archlinux.org/index.php/Visual_Studio_Code>
   - Neovim <https://wiki.archlinux.org/index.php/Neovim>
   - Git <https://wiki.archlinux.org/index.php/Git>
   - Pip <https://wiki.archlinux.org/index.php/Python>
-- Window Manager
-  - Autorandr <https://github.com/phillipberndt/autorandr>
+- Archlinux
+  - X11 <https://wiki.archlinux.org/title/Xorg>
   - i3 <https://wiki.archlinux.org/index.php/I3>
+  - Autorandr <https://github.com/phillipberndt/autorandr>
   - GTK <https://wiki.archlinux.org/index.php/GTK>
   - Mime <https://wiki.archlinux.org/index.php/XDG_MIME_Applications>
   - Notification Daemon <https://wiki.archlinux.org/index.php/Desktop_notifications>

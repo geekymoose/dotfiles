@@ -1,5 +1,7 @@
 stow
 
+
+
 # ------------------------------------------------------------------------------
 # Console
 # ------------------------------------------------------------------------------
@@ -14,10 +16,22 @@ zsh-theme-powerlevel10k
 bash
 bash-completion
 
-# --- Other ---
+# --- Consoles ---
 alacritty
 rxvt-unicode
-xorg-xinit
+
+# --- Ranger console file manager
+ranger
+atool
+ffmpegthumbnailer
+highlight
+mediainfo
+perl-image-exiftool
+poppler
+python-chardet
+w3m
+
+
 
 # ------------------------------------------------------------------------------
 # Programming
@@ -36,8 +50,10 @@ xclip
 # --- Miscs ---
 python
 
+
+
 # ------------------------------------------------------------------------------
-# Window Manager
+# Archlinux
 # ------------------------------------------------------------------------------
 
 # --- GTK Theme ---
@@ -66,17 +82,7 @@ nemo-preview
 nemo-terminal
 ffmpegthumbnailer
 
-# --- Ranger console file manager
-ranger
-atool
-ffmpegthumbnailer
-highlight
-mediainfo
-perl-image-exiftool
-poppler
-python-chardet
-w3m
-
 # --- Miscs ---
 autorandr
 notification-daemon
+xorg-xinit
