@@ -15,7 +15,7 @@ You can see the category's README for further details about the category.
 
 ## Install
 
-All the required packages are listed in the `pkglist.txt` file (archlinux).
+All the required packages are listed in the `pkglist.txt` file (Archlinux).
 You can comment any package from the file to skip its install.
 
 ```bash
