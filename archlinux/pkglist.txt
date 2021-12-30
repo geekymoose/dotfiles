@@ -1,0 +1,37 @@
+# ------------------------------------------------------------------------------
+# Archlinux
+# ------------------------------------------------------------------------------
+
+stow
+
+# --- System ---
+xorg-xinit
+autorandr
+notification-daemon
+arandr
+nitrogen
+xautolock
+dex
+xclip
+
+# --- GTK Theme ---
+arc-gtk-theme
+arc-icon-theme
+ttf-dejavu
+ttf-roboto
+ttf-roboto-mono
+papirus-icon-theme
+
+# --- Window manager i3
+i3-gaps
+i3status
+i3blocks
+i3lock
+ttf-font-awesome
+dmenu
+
+# --- Neno file manager
+nemo
+nemo-preview
+nemo-terminal
+ffmpegthumbnailer

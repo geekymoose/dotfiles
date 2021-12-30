@@ -6,25 +6,12 @@ Feel free to use any of them.
 
 ## Features
 
-- Console
-  - Urxvt <https://wiki.archlinux.org/index.php/Urxvt?redirect=no>
-  - Zsh
-  - Bash
-- Programming
-  - Vscode <https://wiki.archlinux.org/index.php/Visual_Studio_Code>
-  - Neovim <https://wiki.archlinux.org/index.php/Neovim>
-  - Git <https://wiki.archlinux.org/index.php/Git>
-  - Pip <https://wiki.archlinux.org/index.php/Python>
+Each category has several dotfiles.
+You can see the category's README for further details about the category.
+
 - Archlinux
-  - X11 <https://wiki.archlinux.org/title/Xorg>
-  - i3 <https://wiki.archlinux.org/index.php/I3>
-  - Autorandr <https://github.com/phillipberndt/autorandr>
-  - GTK <https://wiki.archlinux.org/index.php/GTK>
-  - Mime <https://wiki.archlinux.org/index.php/XDG_MIME_Applications>
-  - Notification Daemon <https://wiki.archlinux.org/index.php/Desktop_notifications>
-  - Pam <https://wiki.archlinux.org/index.php/PAM>
-  - Ranger <https://wiki.archlinux.org/index.php/Ranger>
-  - SSH agent <https://wiki.archlinux.org/index.php/SSH_keys>
+- Console
+- Programming
 
 ## Install
 
@@ -36,16 +23,17 @@ You can comment any package from the file to skip its install.
 ./exec_pacman.sh
 ```
 
-## Sync
+## Setup
 
 I use GNU Stow to synchronize the settings.
-Each package in `src` is organized the same way it lives on the local computer.
-(I saw other interesting techniques with git config. see links).
+Each package in the `src` folder is organized the same way it lives on the local computer.
 
 ```bash
 # Apply all symlinks
 ./exec_stow.sh
 ```
+
+I saw other interesting techniques with git config. For further information, see these links:
 
 - <https://www.reddit.com/r/linux/comments/afund1/manage_your_dotfiles_with_style_gnu_stow/>
 - <https://www.gnu.org/software/stow/>
