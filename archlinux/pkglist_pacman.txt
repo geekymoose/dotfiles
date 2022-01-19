@@ -1,0 +1,124 @@
+# Pacman package list for basic archlinux basic install
+
+stow
+
+# ------------------------------------------------------------------------------
+# System
+# ------------------------------------------------------------------------------
+
+xorg-xinit
+xclip
+networkmanager
+acpi
+xf86-input-wacom
+
+linux
+linux-firmware
+linux-lts-docs
+linux-lts-headers
+
+
+# ------------------------------------------------------------------------------
+# System (utils and tools)
+# ------------------------------------------------------------------------------
+
+zip
+unzip
+rsync
+ntfs-3g
+openssh
+htop
+
+android-tools
+usbutils
+
+xfce4-screenshooter
+spectable
+
+
+# ------------------------------------------------------------------------------
+# Window manager (utils and tools)
+# ------------------------------------------------------------------------------
+
+arandr
+autorandr
+nitrogen
+xautolock
+dex
+notification-daemon
+
+
+# ------------------------------------------------------------------------------
+# Window manager (i3)
+# ------------------------------------------------------------------------------
+
+i3-gaps
+i3status
+i3blocks
+i3lock
+ttf-font-awesome
+dmenu
+
+
+# ------------------------------------------------------------------------------
+# GTK Theme
+# ------------------------------------------------------------------------------
+
+arc-gtk-theme
+arc-icon-theme
+ttf-dejavu
+ttf-roboto
+ttf-roboto-mono
+papirus-icon-theme
+
+
+# ------------------------------------------------------------------------------
+# Neno file manager
+# ------------------------------------------------------------------------------
+
+nemo
+nemo-preview
+nemo-terminal
+ffmpegthumbnailer
+
+
+# ------------------------------------------------------------------------------
+# Documentation
+# ------------------------------------------------------------------------------
+
+man-db
+man-pages
+texinfo
+
+
+# ------------------------------------------------------------------------------
+# Sound
+# ------------------------------------------------------------------------------
+
+alsa-firmware
+alsa-tools
+alsa-utils
+
+pulseaudio
+pulseaudio-alsa
+
+pavucontrol
+
+
+# ------------------------------------------------------------------------------
+# Extra Fonts
+# ------------------------------------------------------------------------------
+
+adobe-source-han-sans-cn-fonts
+adobe-source-han-sans-hk-fonts
+adobe-source-han-sans-jp-fonts
+adobe-source-han-sans-kr-fonts
+adobe-source-han-sans-otc-fonts
+adobe-source-han-sans-tw-fonts
+adobe-source-han-serif-cn-fonts
+adobe-source-han-serif-jp-fonts
+adobe-source-han-serif-kr-fonts
+adobe-source-han-serif-otc-fonts
+adobe-source-han-serif-tw-fonts
+adobe-source-sans-pro-fonts
+adobe-source-serif-pro-fonts

@@ -6,8 +6,7 @@ Feel free to use any of them.
 
 ## Features
 
-Each category has several dotfiles.
-You can see the category's README for further details about the category.
+Each category has several dotfiles (see the category's README).
 
 - Archlinux
 - Console
@@ -15,16 +14,18 @@ You can see the category's README for further details about the category.
 
 ## Install
 
-All the required packages are listed in the `pkglist.txt` file (Archlinux).
+Open the folder you want to install.
+All the required packages are listed in the `pkglist_pacman.txt` file (Archlinux).
 You can comment any package from the file to skip its install.
 
 ```bash
-# Install all required archlinux packages
+# Install all required packages using pacman (Archlinux)
 ./exec_pacman.sh
 ```
 
 ## Setup
 
+Open the folder you want to setup.
 I use GNU Stow to synchronize the settings.
 Each package in the `src` folder is organized the same way it lives on the local computer.
 
@@ -32,6 +33,8 @@ Each package in the `src` folder is organized the same way it lives on the local
 # Apply all symlinks
 ./exec_stow.sh
 ```
+
+## Resources
 
 I saw other interesting techniques with git config. For further information, see these links:
 
