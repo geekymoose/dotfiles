@@ -10,3 +10,4 @@
 - Pam <https://wiki.archlinux.org/index.php/PAM>
 - SSH agent <https://wiki.archlinux.org/index.php/SSH_keys>
 - X11 <https://wiki.archlinux.org/title/Xorg>
+- Custom scripts (prefixed with `zozo-`)

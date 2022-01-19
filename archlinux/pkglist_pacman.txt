@@ -33,7 +33,6 @@ android-tools
 usbutils
 
 xfce4-screenshooter
-spectable
 
 
 # ------------------------------------------------------------------------------

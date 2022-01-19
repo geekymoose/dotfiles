@@ -8,8 +8,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # User specific config (common with bashrc)
-if [ -d ~/.bashrc.d ]; then
-    for rc in ~/.bashrc.d/*; do
+if [ -d ~/.config/bashrc.d ]; then
+    for rc in ~/.config/bashrc.d/*; do
         if [ -f "$rc" ]; then
             source "$rc"
         fi
