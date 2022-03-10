@@ -33,7 +33,6 @@ rxvt-unicode
 # ------------------------------------------------------------------------------
 
 ranger
-atool
 ffmpegthumbnailer
 highlight
 mediainfo
