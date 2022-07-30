@@ -19,7 +19,7 @@ linux-lts-headers
 
 
 # ------------------------------------------------------------------------------
-# System (utils and tools)
+# System utilities
 # ------------------------------------------------------------------------------
 
 zip
@@ -29,24 +29,16 @@ ntfs-3g
 openssh
 htop
 
-android-tools
-usbutils
-gvfs-mtp
-libmtp
-
 xfce4-screenshooter
 
 
 # ------------------------------------------------------------------------------
-# Window manager (utils and tools)
+# Android
 # ------------------------------------------------------------------------------
-
-arandr
-autorandr
-nitrogen
-xautolock
-dex
-notification-daemon
+android-tools
+usbutils
+gvfs-mtp
+libmtp
 
 
 # ------------------------------------------------------------------------------
@@ -59,6 +51,18 @@ i3blocks
 i3lock
 ttf-font-awesome
 dmenu
+
+
+# ------------------------------------------------------------------------------
+# Window manager (extra for i3 config)
+# ------------------------------------------------------------------------------
+
+arandr
+autorandr
+nitrogen
+xautolock
+dex
+notification-daemon
 
 
 # ------------------------------------------------------------------------------
