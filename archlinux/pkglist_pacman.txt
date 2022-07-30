@@ -31,6 +31,8 @@ htop
 
 android-tools
 usbutils
+gvfs-mtp
+libmtp
 
 xfce4-screenshooter
 
