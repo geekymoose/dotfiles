@@ -1,4 +1,6 @@
+#
 # ~/.zprofile
+#
 
 # Source global definitions
 [[ -f /etc/zsh ]] && source /etc/zsh/zprofile

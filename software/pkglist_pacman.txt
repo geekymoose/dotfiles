@@ -1,6 +1,7 @@
-# Pacman package for software
+# Pacman packages for software
 
 stow
+
 
 # ------------------------------------------------------------------------------
 # content-creation
@@ -9,14 +10,15 @@ stow
 krita
 darktable
 kdenlive
+
 obs-studio
+v4l2loopback-dkms
+
 
 # ------------------------------------------------------------------------------
 # Multimedia
 # ------------------------------------------------------------------------------
 
-eog
-atril
 vlc
 picard
 rhythmbox
@@ -28,16 +30,6 @@ youtube-dl
 # ------------------------------------------------------------------------------
 
 firefox
-remmina
-evolution
 veracrypt
 keepass
 
-
-# ------------------------------------------------------------------------------
-# Gaming
-# ------------------------------------------------------------------------------
-
-# Warning: for steam, activate the multilib in /etc/pacman.conf
-ttf-liberation
-steam

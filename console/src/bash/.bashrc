@@ -1,4 +1,6 @@
+#
 # ~/.bashrc
+#
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -7,8 +9,8 @@
 [[ -f /etc/bashrc ]] && source /etc/bashrc
 
 # User specific config
-if [ -d ~/.config/bashrc.d ]; then
-    for rc in ~/.config/bashrc.d/*; do
+if [ -d ~/.config/sh.d ]; then
+    for rc in ~/.config/sh.d/*; do
         if [ -f "$rc" ]; then
             source "$rc"
         fi

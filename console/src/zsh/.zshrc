@@ -1,4 +1,6 @@
+#
 # ~/.zshrc
+#
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -7,9 +9,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# User specific config (common with bashrc)
-if [ -d ~/.config/bashrc.d ]; then
-    for rc in ~/.config/bashrc.d/*; do
+# User specific config (common with all shells)
+if [ -d ~/.config/sh.d ]; then
+    for rc in ~/.config/sh.d/*; do
         if [ -f "$rc" ]; then
             source "$rc"
         fi
