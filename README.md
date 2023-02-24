@@ -9,8 +9,10 @@ Feel free to use any of them.
 Each category has several dotfiles (see the category's README).
 
 - Archlinux
+- Archlinux_i3
 - Console
 - Programming
+- Software
 
 ## Install
 

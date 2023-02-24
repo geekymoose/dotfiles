@@ -1,4 +1,6 @@
-# Archlinux dotfiles
+# Archlinux i3 dotfiles
+
+> My i3 setup
 
 ## Features
 
