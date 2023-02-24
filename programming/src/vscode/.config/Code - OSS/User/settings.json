@@ -17,6 +17,6 @@
     "[cpp]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
-    "workbench.colorTheme": "Visual Studio 2019 Dark",
     "editor.codeLens": false,
+    "workbench.colorTheme": "Default Dark+",
 }
