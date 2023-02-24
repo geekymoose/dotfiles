@@ -22,6 +22,11 @@ linux-lts-headers
 
 zip
 unzip
+tar
+unrar
+gzip
+bzip2
+
 rsync
 ntfs-3g
 openssh

@@ -33,9 +33,12 @@ rxvt-unicode
 # ------------------------------------------------------------------------------
 
 ranger
+
+atool
 ffmpegthumbnailer
 highlight
 mediainfo
+odt2txt
 perl-image-exiftool
 poppler
 python-chardet
