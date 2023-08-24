@@ -43,3 +43,4 @@ perl-image-exiftool
 poppler
 python-chardet
 w3m
+fontimage
