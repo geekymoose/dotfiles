@@ -7,8 +7,8 @@ stow
 # content-creation
 # ------------------------------------------------------------------------------
 
-krita
 darktable
+krita
 kdenlive
 
 obs-studio
