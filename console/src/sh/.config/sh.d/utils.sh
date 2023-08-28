@@ -25,7 +25,7 @@ export LS_COLORS
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
-[[ -f "$XDG_RUNTIME_DIR/ssh-agent.env" ]] && source "$XDG_RUNTIME_DIR/ssh-agent.env"
+[[ -f "$XDG_RUNTIME_DIR/ssh-agent.env" ]] && source "$XDG_RUNTIME_DIR/ssh-agent.env" > /dev/null
 
 
 # ------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ fi
 # ------------------------------------------------------------------------------
 
 # See https://wiki.archlinux.org/index.php/Ranger
-# Preventing nested ranger instanceh 
+# Preventing nested ranger instances
 function ranger() {
     if [ -z "$RANGER_LEVEL" ]; then
         /usr/bin/ranger "$@"
