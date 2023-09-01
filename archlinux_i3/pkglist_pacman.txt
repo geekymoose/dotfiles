@@ -4,13 +4,6 @@ stow
 
 
 # ------------------------------------------------------------------------------
-# System utilities
-# ------------------------------------------------------------------------------
-
-xfce4-screenshooter
-
-
-# ------------------------------------------------------------------------------
 # Window manager (i3)
 # ------------------------------------------------------------------------------
 
@@ -18,8 +11,8 @@ i3-gaps
 i3status
 i3blocks
 i3lock
-ttf-font-awesome
 dmenu
+ttf-font-awesome
 
 
 # ------------------------------------------------------------------------------
@@ -33,9 +26,12 @@ xautolock
 dex
 notification-daemon
 
+xfce4-screenshooter
+pavucontrol
+
 
 # ------------------------------------------------------------------------------
-# GTK Theme
+# GTK theme
 # ------------------------------------------------------------------------------
 
 arc-gtk-theme
@@ -54,29 +50,3 @@ nemo
 nemo-preview
 nemo-terminal
 ffmpegthumbnailer
-
-
-# ------------------------------------------------------------------------------
-# Sound
-# ------------------------------------------------------------------------------
-
-pavucontrol
-
-
-# ------------------------------------------------------------------------------
-# Extra Fonts
-# ------------------------------------------------------------------------------
-
-adobe-source-han-sans-cn-fonts
-adobe-source-han-sans-hk-fonts
-adobe-source-han-sans-jp-fonts
-adobe-source-han-sans-kr-fonts
-adobe-source-han-sans-otc-fonts
-adobe-source-han-sans-tw-fonts
-adobe-source-han-serif-cn-fonts
-adobe-source-han-serif-jp-fonts
-adobe-source-han-serif-kr-fonts
-adobe-source-han-serif-otc-fonts
-adobe-source-han-serif-tw-fonts
-adobe-source-sans-pro-fonts
-adobe-source-serif-pro-fonts
