@@ -10,7 +10,7 @@
     "editor.insertSpaces": false,
     "editor.fontLigatures": "'ccmp' off",
     "workbench.activityBar.visible": true,
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "simple-icons",
     "window.zoomLevel": 0,
     "breadcrumbs.enabled": true,
     "C_Cpp.updateChannel": "Insiders",
