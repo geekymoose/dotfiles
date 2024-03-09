@@ -1,22 +1,22 @@
 # My Linux dotfiles
 
-These are the common settings I use daily.
-Feel free to use any of them.
-(I use Archlinux as my main Linux distribution).
+My personal Archlinux configuration.
+These are targeted for my usecase, but feel free to it.
 
 ## Features
 
-Each category has several dotfiles (see the category's README).
-
-- Archlinux
-- Archlinux_i3
-- Console
-- Programming
-- Software
+- Alacritty <https://wiki.archlinux.org/title/Alacritty>
+- Bash <https://wiki.archlinux.org/title/Bash>
+- Ranger <https://wiki.archlinux.org/index.php/Ranger>
+- Urxvt <https://wiki.archlinux.org/index.php/Urxvt?redirect=no>
+- Zsh <https://wiki.archlinux.org/title/zsh>
+- Git <https://wiki.archlinux.org/index.php/Git>
+- Neovim <https://wiki.archlinux.org/index.php/Neovim>
+- Pip <https://wiki.archlinux.org/index.php/Python>
+- Vscode <https://wiki.archlinux.org/index.php/Visual_Studio_Code>
 
 ## Install
 
-Open the folder you want to install.
 All the required packages are listed in the `pkglist_pacman.txt` file (Archlinux).
 You can comment any package from the file to skip its install.
 
@@ -27,7 +27,6 @@ You can comment any package from the file to skip its install.
 
 ## Setup
 
-Open the folder you want to setup.
 I use GNU Stow to synchronize the settings.
 Each package in the `src` folder is organized the same way it lives on the local computer.
 
