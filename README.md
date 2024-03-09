@@ -7,13 +7,11 @@ These are targeted for my usecase, but feel free to it.
 
 - Alacritty <https://wiki.archlinux.org/title/Alacritty>
 - Bash <https://wiki.archlinux.org/title/Bash>
+- Git <https://wiki.archlinux.org/index.php/Git>
+- Neovim <https://wiki.archlinux.org/index.php/Neovim>
 - Ranger <https://wiki.archlinux.org/index.php/Ranger>
 - Urxvt <https://wiki.archlinux.org/index.php/Urxvt?redirect=no>
 - Zsh <https://wiki.archlinux.org/title/zsh>
-- Git <https://wiki.archlinux.org/index.php/Git>
-- Neovim <https://wiki.archlinux.org/index.php/Neovim>
-- Pip <https://wiki.archlinux.org/index.php/Python>
-- Vscode <https://wiki.archlinux.org/index.php/Visual_Studio_Code>
 
 ## Install
 
