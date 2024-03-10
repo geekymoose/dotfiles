@@ -36,6 +36,11 @@ unrar
 gzip
 bzip2
 
+bat
+fzf
+rg
+git-delta
+
 rsync
 ntfs-3g
 openssh

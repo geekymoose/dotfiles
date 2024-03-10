@@ -2,11 +2,6 @@
     name                = geekymoose
     email               = constantin.masson@umontreal.ca
 
-[alias]
-    s                   = status
-    logone              = log --oneline --decorate --graph --branches
-    logones             = log --oneline --decorate --graph --branches --format=\"%h %an %ae\"
-
 [push]
     default             = simple
     recurseSubmodules   = on-demand
@@ -18,12 +13,30 @@
 [credential]
     helper              = cache
 
+[core]
+    pager               = delta
+
+[interactive]
+    diffFilter          = delta --color-only
+
 [merge]
     tool                = vimdiff
     conflictstyle       = diff3
 
 [diff]
     tool                = vimdiff
+    colorMoved          = default
 
 [mergetool]
     keepBackup          = false
+
+[delta]
+    line-numbers        = true
+    side-by-side        = true
+    navigate            = true      # use n and N to move between diff sections
+    light               = false     # set to true if you're in a terminal w/ a light background color (e.g.
+
+[alias]
+    s                   = status
+    logone              = log --oneline --decorate --graph --branches
+    logones             = log --oneline --decorate --graph --branches --format=\"%h %an %ae\"
