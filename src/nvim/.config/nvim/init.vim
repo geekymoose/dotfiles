@@ -16,35 +16,17 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 Plug 'https://github.com/nanotech/jellybeans.vim'
-Plug 'https://github.com/tomasr/molokai'
-Plug 'https://github.com/altercation/solarized'
-Plug 'https://github.com/chriskempson/tomorrow-theme'
-Plug 'https://github.com/tikhomirov/vim-glsl'
-Plug 'https://github.com/kien/rainbow_parentheses.vim'
-Plug 'https://github.com/pboettch/vim-cmake-syntax'
 
 " Project management
 Plug 'https://github.com/scrooloose/nerdtree'
-Plug 'https://github.com/majutsushi/tagbar'
-Plug 'https://github.com/jeetsukumaran/vim-buffergator'
-Plug 'https://github.com/ctrlpvim/ctrlp.vim'
-Plug 'https://github.com/airblade/vim-gitgutter'
+" Plug 'https://github.com/majutsushi/tagbar'
+" Plug 'https://github.com/jeetsukumaran/vim-buffergator'
+" Plug 'https://github.com/airblade/vim-gitgutter'
 
 " Code help (Indent / completion...)
 Plug 'https://github.com/editorconfig/editorconfig-vim'
-Plug 'https://github.com/Valloric/YouCompleteMe', {'for' : ['c', 'cpp'], 'do' : './install.py --clang-completer --system-libclang'}
-Plug 'https://github.com/ericcurtin/CurtineIncSw.vim'
+" Plug 'https://github.com/ericcurtin/CurtineIncSw.vim'
 " Plug 'https://github.com/vim-syntastic/syntastic'
-
-" Misc
-Plug 'https://github.com/JamshedVesuna/vim-markdown-preview'
-" Plug 'https://github.com/iamcco/markdown-preview.nvim'
-" Plug 'https://github.com/vim-latex/vim-latex'
-
-" TODO
-" Plug 'https://github.com/plasticboy/vim-markdown'
-" Plug 'https://github.com/junegunn/vim-easy-align'
-" Plug 'https://github.com/reedes/vim-colors-pencil'
 
 call plug#end()
 
@@ -62,40 +44,28 @@ let g:airline#extensions#tabline#enabled = 1
 " NERDTree
 let NERDTreeShowHidden=1
 
-" ctrlp
-" Ignore files in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-let g:ctrlp_by_filename = 1
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
-" Rainbow parentheses
-autocmd VimEnter * RainbowParenthesesToggle
-autocmd Syntax * RainbowParenthesesLoadBraces
-autocmd Syntax * RainbowParenthesesLoadRound
-autocmd Syntax * RainbowParenthesesLoadSquare
-
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " Syntastic CPP
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_config_file = ".syntastic_cpp_config"
-let g:syntastic_cpp_include_dirs = [ 'includes', 'headers' ]
-let g:syntastic_cpp_auto_refresh_includes = 1
-let g:syntastic_quiet_messages = {"regex" : '.*pragma once in main file'}
+" let g:syntastic_cpp_check_header = 1
+" let g:syntastic_cpp_config_file = ".syntastic_cpp_config"
+" let g:syntastic_cpp_include_dirs = [ 'includes', 'headers' ]
+" let g:syntastic_cpp_auto_refresh_includes = 1
+" let g:syntastic_quiet_messages = {"regex" : '.*pragma once in main file'}
 
 " Buffergator
-let g:buffergator_display_regime = "parentdir"
-let g:buffergator_sort_regime = "basename"
+" let g:buffergator_display_regime = "parentdir"
+" let g:buffergator_sort_regime = "basename"
 
 " CurtineIncSw (switch .h .c)
-nnoremap <M-o> :call CurtineIncSw()<CR>
+" nnoremap <M-o> :call CurtineIncSw()<CR>
 
 
 " ------------------------------------------------------------------------------
