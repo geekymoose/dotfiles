@@ -7,11 +7,7 @@ stow
 # System Core
 # ------------------------------------------------------------------------------
 
-linux
 linux-firmware
-linux-lts-docs
-linux-lts-headers
-
 acpi
 networkmanager
 xf86-input-wacom
@@ -23,8 +19,10 @@ texinfo
 alsa-firmware
 alsa-tools
 alsa-utils
-pulseaudio
-pulseaudio-alsa
+pipewire
+wireplumber
+pipewire-alsa
+pipewire-pulse
 
 
 # ------------------------------------------------------------------------------
@@ -79,7 +77,6 @@ perl-image-exiftool
 poppler
 python-chardet
 w3m
-fontimage
 
 
 # ------------------------------------------------------------------------------
