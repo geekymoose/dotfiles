@@ -1,10 +1,11 @@
 [include]
-    path                = ./.gitconfig-perso
+    name                = geekymoose
+    email               = constantin.masson@umontreal.ca
 
 [alias]
     s                   = status
-    logone              = log --oneline --decorate --graph
-    logones             = log --oneline --decorate --graph --format=\"%h %an %ae\"
+    logone              = log --oneline --decorate --graph --branches
+    logones             = log --oneline --decorate --graph --branches --format=\"%h %an %ae\"
 
 [push]
     default             = simple
@@ -26,10 +27,3 @@
 
 [mergetool]
     keepBackup          = false
-
-[mergetool "intellij"]
-    cmd                 = /usr/local/bin/idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
-    trustExitCode       = true
-[difftool "intellij"]
-    cmd                 = /usr/local/bin/idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
-
