@@ -9,7 +9,5 @@ alias lla='ls -al'
 alias rm='rm -i'
 alias ip='ip -c'
 alias grep='grep --color=auto'
-alias emacs='emacs -nw'
-alias vv='dirs -v'
 which nvim >> /dev/null && alias vim='nvim'
 
