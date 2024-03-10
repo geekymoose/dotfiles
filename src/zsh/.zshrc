@@ -39,6 +39,8 @@ autoload -Uz run-help
 autoload -Uz run-help-git
 alias help=run-help
 
+# Keys
+bindkey -e
 
 
 # ------------------------------------------------------------------------------
