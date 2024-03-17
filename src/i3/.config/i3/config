@@ -203,3 +203,10 @@ bar {
         position top
         status_command i3status
 }
+
+
+# ------------------------------------------------------------------------------
+# Personal configuration
+# ------------------------------------------------------------------------------
+bindsym Mod1+f exec --no-startup-id "$BROWSER"
+bindsym Mod1+u exec --no-startup-id "$TERM"
