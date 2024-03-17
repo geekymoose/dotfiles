@@ -5,13 +5,14 @@ These are targeted for my usecase, but feel free to it.
 
 ## Features
 
-- Alacritty <https://wiki.archlinux.org/title/Alacritty>
-- Bash <https://wiki.archlinux.org/title/Bash>
-- Git <https://wiki.archlinux.org/index.php/Git>
-- Neovim <https://wiki.archlinux.org/index.php/Neovim>
-- Ranger <https://wiki.archlinux.org/index.php/Ranger>
-- Urxvt <https://wiki.archlinux.org/index.php/Urxvt?redirect=no>
-- Zsh <https://wiki.archlinux.org/title/zsh>
+- alacritty <https://wiki.archlinux.org/title/alacritty>
+- bash <https://wiki.archlinux.org/title/bash>
+- git <https://wiki.archlinux.org/index.php/git>
+- i3 <https://wiki.archlinux.org/index.php/i3>
+- neovim <https://wiki.archlinux.org/index.php/neovim>
+- ranger <https://wiki.archlinux.org/index.php/ranger>
+- urxvt <https://wiki.archlinux.org/index.php/urxvt>
+- zsh <https://wiki.archlinux.org/title/zsh>
 
 ## Install
 
