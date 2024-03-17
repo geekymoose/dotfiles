@@ -206,7 +206,10 @@ bar {
 
 
 # ------------------------------------------------------------------------------
-# Personal configuration
+# Personal extra configuration
 # ------------------------------------------------------------------------------
-bindsym Mod1+f exec --no-startup-id "$BROWSER"
-bindsym Mod1+u exec --no-startup-id "$TERM"
+exec --no-startup-id nitrogen  --restore # Setup background
+
+# TODO It would be better to use $BROWSER and $TERM instead (but I have an issue with wayland for now)
+bindsym Mod1+f exec --no-startup-id "firefox"
+bindsym Mod1+u exec --no-startup-id "alacritty"
