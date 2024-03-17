@@ -38,7 +38,6 @@ bzip2
 
 bat
 fzf
-rg
 
 rsync
 ntfs-3g
@@ -60,8 +59,7 @@ noto-fonts-emoji
 # ------------------------------------------------------------------------------
 
 i3-wm
-i3-lock
-i3-status
+dmenu
 dex
 xss-lock
 nitrogen
