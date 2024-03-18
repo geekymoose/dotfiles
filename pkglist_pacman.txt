@@ -9,8 +9,10 @@ stow
 
 linux-firmware
 acpi
-networkmanager
 xf86-input-wacom
+
+networkmanager
+network-manager-applet
 
 man-db
 man-pages
@@ -52,6 +54,7 @@ libmtp
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+ttf-font-awesome
 
 
 # ------------------------------------------------------------------------------
@@ -59,6 +62,7 @@ noto-fonts-emoji
 # ------------------------------------------------------------------------------
 
 i3-wm
+i3status
 dmenu
 dex
 xss-lock
@@ -101,6 +105,9 @@ git
 git-delta
 tk
 
+code
+neovim
+
 
 # ------------------------------------------------------------------------------
 # Softwares
@@ -113,10 +120,13 @@ kdenlive
 obs-studio
 v4l2loopback-dkms
 
-vlc
-firefox
 veracrypt
 cryptsetup
 keepass
+
+firefox
 discord
 obsidian
+
+oeg
+vlc

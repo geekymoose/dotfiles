@@ -7,12 +7,14 @@ These are targeted for my usecase, but feel free to it.
 
 - alacritty <https://wiki.archlinux.org/title/alacritty>
 - bash <https://wiki.archlinux.org/title/bash>
+- gtk <https://wiki.archlinux.org/index.php/gtk>
 - git <https://wiki.archlinux.org/index.php/git>
 - i3 <https://wiki.archlinux.org/index.php/i3>
 - neovim <https://wiki.archlinux.org/index.php/neovim>
 - ranger <https://wiki.archlinux.org/index.php/ranger>
 - urxvt <https://wiki.archlinux.org/index.php/urxvt>
 - zsh <https://wiki.archlinux.org/title/zsh>
+- x11 <https://wiki.archlinux.org/title/xorg>
 
 ## Install
 
