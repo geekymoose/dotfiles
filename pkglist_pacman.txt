@@ -41,6 +41,8 @@ bzip2
 bat
 fzf
 
+inetutils
+
 rsync
 ntfs-3g
 openssh
