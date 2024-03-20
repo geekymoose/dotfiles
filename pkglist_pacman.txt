@@ -7,10 +7,6 @@ stow
 # System Core
 # ------------------------------------------------------------------------------
 
-linux-firmware
-acpi
-xf86-input-wacom
-
 networkmanager
 network-manager-applet
 
@@ -25,6 +21,16 @@ pipewire
 wireplumber
 pipewire-alsa
 pipewire-pulse
+
+acpi
+linux-firmware
+xf86-input-wacom
+libwacom
+
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+ttf-font-awesome
 
 
 # ------------------------------------------------------------------------------
@@ -53,11 +59,6 @@ usbutils
 gvfs-mtp
 libmtp
 
-noto-fonts
-noto-fonts-cjk
-noto-fonts-emoji
-ttf-font-awesome
-
 
 # ------------------------------------------------------------------------------
 # i3 Window Manager
@@ -66,9 +67,13 @@ ttf-font-awesome
 i3-wm
 i3status
 dmenu
+
 dex
 xss-lock
 nitrogen
+
+lightdm
+lightdm-slick-greeter
 
 
 # ------------------------------------------------------------------------------
@@ -118,6 +123,8 @@ neovim
 darktable
 krita
 kdenlive
+scribus
+libreoffice-fresh
 
 obs-studio
 v4l2loopback-dkms
@@ -130,5 +137,6 @@ firefox
 discord
 obsidian
 
-oeg
+eog
 vlc
+evince
