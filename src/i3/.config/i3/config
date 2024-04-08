@@ -213,3 +213,5 @@ exec --no-startup-id nitrogen  --restore # Setup background
 # TODO It would be better to use $BROWSER and $TERM instead (but I have an issue with wayland for now)
 bindsym Mod1+f exec --no-startup-id "firefox"
 bindsym Mod1+u exec --no-startup-id "alacritty"
+
+bindsym Mod1+l exec --no-startup-id "i3lock --nofork -e --image=$HOME/.local/share/backgrounds/current_lock.png -t"
