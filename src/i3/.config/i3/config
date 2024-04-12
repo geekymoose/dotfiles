@@ -2,12 +2,14 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
-# This config file uses keycodes (bindsym) and was written for the QWERTY
-# layout.
-#
-# To get a config file with the same key positions, but for your current
-# layout, use the i3-config-wizard
+# This config file uses keycodes (bindsym) and was written for the QWERTY layout.
+# To get a config file with the same key positions, but for your current layout, use the i3-config-wizard
 
+
+# ------------------------------------------------------------------------------
+# Generated i3: part based on the i3 template
+# To update this part, you can check the i3 default config
+# ------------------------------------------------------------------------------
 
 set $mod Mod4
 

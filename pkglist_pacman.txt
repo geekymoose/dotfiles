@@ -46,6 +46,7 @@ bzip2
 
 bat
 fzf
+ripgrep
 
 inetutils
 
@@ -82,6 +83,7 @@ lightdm-slick-greeter
 
 alacritty
 rxvt-unicode
+tmux
 
 bash
 bash-completion
