@@ -17,7 +17,6 @@ require "plugins.neogit"
 require "plugins.nerdtree"
 require "plugins.telescope"
 require('gitsigns').setup()
-require("ibl").setup()
 
 -- Load extra lua config
 require "configs.keymap"
@@ -36,8 +35,8 @@ vim.opt.ruler = true                -- Display line and column cursor
 vim.opt.colorcolumn = "81"          -- 80 Char ruler
 vim.opt.laststatus = 2              -- Always display status line
 
--- vim.opt.list = true                 -- Display special char (e.g., tab, whitespaces)
-vim.opt.listchars = { trail = '.', tab = '>-', leadmultispace = '|...', nbsp = '~', extends = '>', precedes = '<' }
+vim.opt.list = true                 -- Display special char (e.g., tab, whitespaces)
+vim.opt.listchars = { trail = '.', tab = '|-', leadmultispace = '|...', nbsp = '~', extends = '>', precedes = '<' }
 
 
 -- Tab / Whitechars
@@ -62,6 +61,7 @@ vim.opt.hlsearch = true             -- Hightlight previous search
 vim.opt.wildmenu = true             -- Pressing wildchar (TAB) invokes completion
 vim.opt.showmatch = true            -- Show matching brace when insert one
 vim.opt.matchtime = 1               -- Speed up brace matching time
+
 
 -- Misc
 -- filetype plugin on      -- Enable filetype and plugin detection

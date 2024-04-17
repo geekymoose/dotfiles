@@ -31,7 +31,6 @@ Plug('https://github.com/nvim-telescope/telescope.nvim')
 
 -- Syntax
 Plug('https://github.com/tree-sitter/tree-sitter')
-Plug('https://github.com/lukas-reineke/indent-blankline.nvim')
 
 vim.call('plug#end')
 
