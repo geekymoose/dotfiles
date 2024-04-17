@@ -18,9 +18,9 @@ alsa-firmware
 alsa-tools
 alsa-utils
 pipewire
-wireplumber
 pipewire-alsa
 pipewire-pulse
+wireplumber
 
 acpi
 linux-firmware
@@ -37,9 +37,9 @@ ttf-font-awesome
 # System utilities
 # ------------------------------------------------------------------------------
 
+tar
 zip
 unzip
-tar
 unrar
 gzip
 bzip2
@@ -92,7 +92,6 @@ zsh
 zsh-completions
 zsh-autosuggestions
 zsh-syntax-highlighting
-zsh-theme-powerlevel10k
 
 ranger
 atool
@@ -107,7 +106,7 @@ w3m
 
 
 # ------------------------------------------------------------------------------
-# Dev
+# Programming
 # ------------------------------------------------------------------------------
 
 git
@@ -116,6 +115,11 @@ tk
 
 code
 neovim
+
+clang
+cmake
+
+rustup
 
 
 # ------------------------------------------------------------------------------

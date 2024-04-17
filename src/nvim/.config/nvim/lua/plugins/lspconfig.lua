@@ -1,5 +1,11 @@
-local lspconfig = require 'lspconfig'
+-- -----------------------------------------------------------------------------
+-- LSP Config plugin
+-- https://github.com/neovim/nvim-lspconfig
+-- -----------------------------------------------------------------------------
 
-lspconfig['clangd'].setup()
-lspconfig['pyright'].setup()
+local lspconfig = require('lspconfig')
+
+lspconfig.clangd.setup {}
+lspconfig.pyright.setup {}
+lspconfig.rust_analyzer.setup { settings = { ['rust-analyzer'] = {}, }, }
 

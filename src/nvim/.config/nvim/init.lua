@@ -8,18 +8,23 @@
 vim.api.nvim_set_option('syntax', 'on')
 
 
--- Load all plugins
-require "plugins.plug"
-require "plugins.vscode"
-require "plugins.editorconfig"
-require "plugins.lualine"
-require "plugins.neogit"
-require "plugins.nerdtree"
-require "plugins.telescope"
-require('gitsigns').setup()
+-- Load custom configs
+require("configs.keymap")
 
--- Load extra lua config
-require "configs.keymap"
+
+-- Load init plugins
+require("plugins.plug")
+require("plugins.vscode")
+
+
+-- Load all plugins
+require("plugins.editorconfig")
+require("plugins.lspconfig")
+require("plugins.lualine")
+require("plugins.neogit")
+require("plugins.nerdtree")
+require("plugins.telescope")
+require('gitsigns').setup()
 
 
 -- General Utils options
