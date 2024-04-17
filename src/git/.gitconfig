@@ -19,16 +19,18 @@
 [interactive]
     diffFilter          = delta --color-only
 
+[diff]
+    colorMoved          = true
+
 [merge]
     tool                = vimdiff
     conflictstyle       = diff3
 
-[diff]
-    tool                = vimdiff
-    colorMoved          = default
-
 [mergetool]
     keepBackup          = false
+
+[mergetool "vimdiff"]
+    cmd                 = nvim -d "$LOCAL" "$BASE" "$REMOTE" "$MERGED" -c '$windcmd w' -c 'wincmd J'
 
 [delta]
     line-numbers        = true
@@ -40,3 +42,4 @@
     s                   = status
     logone              = log --oneline --decorate --graph --branches
     logones             = log --oneline --decorate --graph --branches --format=\"%h %an %ae\"
+
