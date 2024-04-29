@@ -19,8 +19,22 @@
 [interactive]
     diffFilter          = delta --color-only
 
+[delta]
+    line-numbers        = true
+    side-by-side        = true
+    navigate            = true      # use n and N to move between diff sections
+    light               = false     # set to true if you're in a terminal w/ a light background color (e.g.
+
 [diff]
+    tool                = vimdiff
     colorMoved          = true
+    guitool             = vscode
+
+[difftool "vscode"]
+    cmd                 = code --wait --diff "$LOCAL" "$REMOTE"
+
+[difftool "vimdiff"]
+    cmd                 = nvim -d "$LOCAL" "$REMOTE"
 
 [merge]
     tool                = vimdiff
@@ -30,13 +44,7 @@
     keepBackup          = false
 
 [mergetool "vimdiff"]
-    cmd                 = nvim -d "$LOCAL" "$BASE" "$REMOTE" "$MERGED" -c '$windcmd w' -c 'wincmd J'
-
-[delta]
-    line-numbers        = true
-    side-by-side        = true
-    navigate            = true      # use n and N to move between diff sections
-    light               = false     # set to true if you're in a terminal w/ a light background color (e.g.
+    cmd                 = nvim -d "$LOCAL" "$BASE" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
 
 [alias]
     s                   = status
