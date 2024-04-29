@@ -1,3 +1,4 @@
+#!/bin/sh
 # ~/.xinitrc
 
 # Load Xresources and Xmodmap if exists
