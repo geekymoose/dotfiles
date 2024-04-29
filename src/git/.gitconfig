@@ -27,8 +27,8 @@
 
 [diff]
     tool                = vimdiff
-    colorMoved          = true
     guitool             = vscode
+    colorMoved          = true
 
 [difftool "vscode"]
     cmd                 = code --wait --diff "$LOCAL" "$REMOTE"
@@ -38,6 +38,7 @@
 
 [merge]
     tool                = vimdiff
+    guitool             = vscode
     conflictstyle       = diff3
 
 [mergetool]
@@ -45,6 +46,9 @@
 
 [mergetool "vimdiff"]
     cmd                 = nvim -d "$LOCAL" "$BASE" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
+
+[mergetool "vscode"]
+    cmd                 = code --wait "$MERGE"
 
 [alias]
     s                   = status
