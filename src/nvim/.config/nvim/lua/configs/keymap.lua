@@ -2,6 +2,7 @@
 -- Custom general key bindins
 -- n:normal / i:insert / v:visual+select / x:visual / s:select / c:cmd / o:op
 -- -----------------------------------------------------------------------------
+
 vim.g.mapleader = '-'
 
 vim.keymap.set('n', '<leader>vo', ':vsplit $MYVIMRC<CR>')

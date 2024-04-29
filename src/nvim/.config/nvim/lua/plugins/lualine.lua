@@ -3,8 +3,11 @@
 -- https://github.com/nvim-lualine/lualine.nvim
 -- -----------------------------------------------------------------------------
 
-require('lualine').setup({
+local lualine = require("lualine")
+
+lualine.setup({
     options = {
-        theme = 'vscode',
+        theme = "vscode",
     },
 })
+

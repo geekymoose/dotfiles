@@ -4,12 +4,11 @@
 -- Server-specific settings: see `:help lspconfig-setup`
 -- -----------------------------------------------------------------------------
 
-local lspconfig = require('lspconfig')
+local lspconfig = require("lspconfig")
 
 lspconfig.clangd.setup {}
 lspconfig.pyright.setup {}
-lspconfig.rust_analyzer.setup { settings = { ['rust-analyzer'] = {}, }, }
-
+lspconfig.rust_analyzer.setup { settings = { ["rust-analyzer"] = {}, }, }
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -17,7 +16,6 @@ vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
-
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
