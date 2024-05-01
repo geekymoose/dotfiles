@@ -1,6 +1,12 @@
-# Pacman packages list for basic archlinux system
-
-stow
+# ------------------------------------------------------------------------------
+# All the pacman packages to install on my archlinux system.
+#
+# You can comment a line with '#'
+# Run `./exec_pacman.sh` to install all these packages
+#
+# For further details about pacman
+# https://wiki.archlinux.org/title/Pacman
+# ------------------------------------------------------------------------------
 
 
 # ------------------------------------------------------------------------------
@@ -9,6 +15,7 @@ stow
 
 networkmanager
 network-manager-applet
+inetutils
 
 man-db
 man-pages
@@ -23,19 +30,18 @@ pipewire-pulse
 wireplumber
 
 acpi
+udisks2 
 linux-firmware
+
 xf86-input-wacom
 libwacom
-
-noto-fonts
-noto-fonts-cjk
-noto-fonts-emoji
-ttf-font-awesome
 
 
 # ------------------------------------------------------------------------------
 # System utilities
 # ------------------------------------------------------------------------------
+
+stow
 
 tar
 zip
@@ -47,8 +53,7 @@ bzip2
 bat
 fzf
 ripgrep
-
-inetutils
+jq
 
 rsync
 ntfs-3g
@@ -62,20 +67,52 @@ libmtp
 
 
 # ------------------------------------------------------------------------------
-# i3 Window Manager
+# Window Manager Environment (i3)
 # ------------------------------------------------------------------------------
 
 i3-wm
 i3status
+i3lock
 dmenu
+rofi
+rofimoji
+# rofi-power-menu (AUR)
+
+lightdm
+lightdm-slick-greeter
 
 dex
 xss-lock
 nitrogen
 arandr
+dunst
+pavucontrol
+xfce4-screenshooter
+scrot
 
-lightdm
-lightdm-slick-greeter
+pcmanfm-gtk3
+gvfs
+
+eog
+evince
+vlc
+
+
+# ------------------------------------------------------------------------------
+# Fonts / Themes
+# ------------------------------------------------------------------------------
+
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+
+ttf-roboto
+ttf-roboto-mono
+
+ttf-font-awesome
+ttf-nerd-fonts-symbols
+
+papirus-icon-theme
 
 
 # ------------------------------------------------------------------------------
@@ -121,6 +158,8 @@ clang
 cmake
 
 rustup
+lua
+python
 
 
 # ------------------------------------------------------------------------------
@@ -143,10 +182,6 @@ keepass
 firefox
 discord
 obsidian
-
-eog
-vlc
-evince
 
 sane
 xsane
