@@ -11,6 +11,7 @@ These are targeted for my usecase, but feel free to it.
 - git <https://wiki.archlinux.org/index.php/git>
 - gtk <https://wiki.achlinux.org/index.php/gtk>
 - i3 <https://wiki.archlinux.org/index.php/i3>
+- mime <https://wiki.archlinux.org/title/XDG_MIME_Applications>
 - neovim <https://wiki.archlinux.org/index.php/neovim>
 - ranger <https://wiki.archlinux.org/index.php/ranger>
 - rofi <https://wiki.archlinux.org/title/rofi>
