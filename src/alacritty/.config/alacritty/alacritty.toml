@@ -1,9 +1,15 @@
+# ------------------------------------------------------------------------------
+# https://wiki.archlinux.org/title/Alacritty
+# https://github.com/alacritty/alacritty
+# ------------------------------------------------------------------------------
+
 [cursor.style]
 blinking = "On"
 shape = "Beam"
 
 [window]
-#decorations = "none"
+decorations = "none"
 dynamic_title = true
 opacity = 0.98
-#startup_mode = "Maximized"
+startup_mode = "Maximized"
+

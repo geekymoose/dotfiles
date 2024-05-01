@@ -1,3 +1,4 @@
+# ------------------------------------------------------------------------------
 # i3status configuration file.
 # see "man i3status" for documentation.
 
@@ -8,6 +9,7 @@
 #
 # Uses font awesome for icones
 # https://fontawesome.com/cheatsheet
+# ------------------------------------------------------------------------------
 
 general {
         colors = true
