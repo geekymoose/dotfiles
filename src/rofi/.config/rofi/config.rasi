@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // https://github.com/davatorium/rofi
-// https://wiki.archlinux.org/title/Rofi
+// https://wiki.archlinux.org/title/rofi
 //
 // To see the default config, run `rofi -dump-config`
 // You can check all themes with: `rofi-theme-selector`

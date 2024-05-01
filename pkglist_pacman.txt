@@ -59,6 +59,7 @@ rsync
 ntfs-3g
 openssh
 htop
+btop
 
 android-tools
 usbutils
@@ -87,13 +88,13 @@ nitrogen
 arandr
 dunst
 pavucontrol
-xfce4-screenshooter
 scrot
+xfce4-screenshooter
 
 pcmanfm-gtk3
 gvfs
 
-eog
+viewnior
 evince
 vlc
 
