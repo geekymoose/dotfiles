@@ -1,0 +1,66 @@
+# ------------------------------------------------------------------------------
+# See dunst(5) for all configuration options
+# To see each option documentation, open the official config:
+# /etc/dunst/dunstrc
+#
+# https://wiki.archlinux.org/title/Dunst
+# https://dunst-project.org
+# ------------------------------------------------------------------------------
+
+[global]
+
+    # Theme (box)
+    format = "<b>%a</b>\n%s %p\n%b"
+    frame_color = "#56adef"
+    frame_width = 1
+    transparency = 15
+    show_indicators = yes
+    geometry = "0x4-25+25"
+    padding = 8
+    horizontal_padding = 10
+    icon_position = left
+    icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
+    max_icon_size=128
+
+    # Theme (text)
+    font = Noto Sans 10
+    alignment = left
+    word_wrap = no
+    markup = full
+    ignore_newline = no
+
+    # Theme (box stack)
+    line_height = 0
+    separator_height = 1
+    separator_color = #263238
+
+    # History
+    sticky_history = yes
+    history_length = 20
+    show_age_threshold = 60
+    idle_threshold = 120 
+
+    # Navigation
+    monitor = 0
+    follow = mouse
+
+    # Utils
+    sort = yes
+    indicate_hidden = yes
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = firefox
+
+[urgency_low]
+    background = "#263238"
+    foreground = "#556064"
+    timeout = 10
+
+[urgency_normal]
+    background = "#263238"
+    foreground = "#F9FAF9"
+    timeout = 10
+
+[urgency_critical]
+    background = "#D62929"
+    foreground = "#F9FAF9"
+    timeout = 0
