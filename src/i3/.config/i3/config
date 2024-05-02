@@ -17,7 +17,7 @@ font pango:NotoSans 8
 bar {
     position top
     status_command i3status
-    font pango:NotoSans 11
+    font pango:NotoSans 9
 }
 
 
