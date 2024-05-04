@@ -49,9 +49,7 @@ bindkey -e
 
 # Theme powerlevel10k https://github.com/romkatv/powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# By default, powerlevel10k theme is installed on the system here, you can use:
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f "${HOME}/.zshrc.p10k.zsh-theme" ]] || source "${HOME}/.zshrc.p10k.zsh-theme"
 [[ ! -f "${HOME}/.zshrc.p10k" ]] || source "${HOME}/.zshrc.p10k"
 
 # Use fish-like syntax highlighting (if fish installed)
