@@ -10,7 +10,7 @@ configuration {
     font: "NotoSans 14";
     icon-theme: "Papirus";
     show-icons: true;
-    modes: "drun,run,p:rofi-power-menu,window,ssh"; // Requires rofi-power-menu (AUR)
+    modes: "drun,run,window,ssh";
 
     timeout {
         action: "kb-cancel";
