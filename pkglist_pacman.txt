@@ -56,7 +56,11 @@ wayland
 # System utilities
 # ------------------------------------------------------------------------------
 
+base
+base-devel
 stow
+which
+openssh
 
 tar
 zip
@@ -83,9 +87,6 @@ libmtp
 htop
 btop
 
-openssh
-which
-
 
 # ------------------------------------------------------------------------------
 # Window Manager Environment
@@ -97,6 +98,7 @@ lightdm-slick-greeter
 i3-wm
 i3status
 i3lock
+# i3lock-color (AUR)
 dmenu
 rofi
 rofimoji
@@ -155,6 +157,7 @@ zsh
 zsh-completions
 zsh-autosuggestions
 zsh-syntax-highlighting
+# zsh-theme-powerlevel10k (AUR)
 
 ranger
 atool
