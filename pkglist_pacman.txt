@@ -110,7 +110,7 @@ noto-fonts-emoji
 ttf-roboto
 ttf-roboto-mono
 
-ttf-nerd-fonts
+nerd-fonts
 ttf-nerd-fonts-symbols
 
 ttf-font-awesome
