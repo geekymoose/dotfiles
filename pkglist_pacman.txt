@@ -17,24 +17,39 @@ networkmanager
 network-manager-applet
 inetutils
 
-man-db
-man-pages
-texinfo
-
 alsa-firmware
 alsa-tools
 alsa-utils
 pipewire
 pipewire-alsa
 pipewire-pulse
+pipewire-jack
 wireplumber
 
 acpi
-udisks2 
 linux-firmware
-
 xf86-input-wacom
 libwacom
+
+man-db
+man-pages
+texinfo
+
+reflector
+
+
+# ------------------------------------------------------------------------------
+# Graphics
+# ------------------------------------------------------------------------------
+
+mesa
+
+xorg-server
+xorg-xinit
+xorg-xwayland
+arandr
+
+wayland
 
 
 # ------------------------------------------------------------------------------
@@ -57,19 +72,26 @@ jq
 
 rsync
 ntfs-3g
-openssh
-htop
-btop
+dosfstools
+udisks2
+usbutils
 
 android-tools
-usbutils
 gvfs-mtp
 libmtp
 
+htop
+btop
+
+openssh
+
 
 # ------------------------------------------------------------------------------
-# Window Manager Environment (i3)
+# Window Manager Environment
 # ------------------------------------------------------------------------------
+
+lightdm
+lightdm-slick-greeter
 
 i3-wm
 i3status
@@ -78,14 +100,14 @@ dmenu
 rofi
 rofimoji
 # rofi-power-menu (AUR)
+xss-lock
 
-lightdm
-lightdm-slick-greeter
+sway
+swaylock
+swayidle
 
 dex
-xss-lock
 nitrogen
-arandr
 dunst
 pavucontrol
 scrot
