@@ -11,13 +11,12 @@
 set $mod Mod4
 
 # font for window titles (and bar if bar {} has no font set)
-font pango:NotoSans 8
+font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 9
 
 # start the i3bar
 bar {
     position top
     status_command i3status
-    font pango:NotoSans 9
 }
 
 
