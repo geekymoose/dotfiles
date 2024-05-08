@@ -14,9 +14,10 @@ set $mod Mod4
 font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 9
 
 # start the i3bar
+bindsym $mod+m bar mode toggle
 bar {
     position top
-    status_command i3status
+    status_command i3status-rs
 }
 
 

@@ -1,0 +1,90 @@
+# ------------------------------------------------------------------------------
+# i3status-rust configuration file.
+# see "man i3status-rs" for documentation.
+# https://github.com/greshake/i3status-rust
+#
+# For a list of available blocks, see:
+# https://docs.rs/i3status-rs/latest/i3status_rs/blocks/index.html
+# ------------------------------------------------------------------------------
+
+icons_format = "{icon}"
+
+[theme]
+theme = "solarized-dark"
+[theme.overrides]
+idle_bg = "#123456"
+idle_fg = "#abcdef"
+
+[icons]
+icons = "awesome4"
+
+
+[[block]]
+block = "music"
+format = " $icon $volume $prev $play $next $combo "
+player = "spotify"
+[[block.click]]
+button = "up"
+action = "volume_up"
+[[block.click]]
+button = "down"
+action = "volume_down"
+
+[[block]]
+block = "sound"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "battery"
+format = " $percentage {$time |}"
+device = "DisplayDevice"
+missing_format = ""
+
+[[block]]
+block = "cpu"
+format = " $icon $utilization "
+
+[[block]]
+block = "amd_gpu"
+format = " $icon $utilization "
+interval = 1
+
+[[block]]
+block = "memory"
+format = " $icon $mem_used_percents.eng(w:2) "
+warning_mem = 70
+critical_mem = 90
+warning_swap = 20
+critical_swap = 90
+
+[[block]]
+block = "disk_space"
+info_type = "available"
+alert_unit = "GB"
+alert = 10.0
+warning = 15.0
+format = " $icon $available "
+
+[[block]]
+block = "net"
+format = " $icon $device "
+
+[[block]]
+block = "backlight"
+device = "intel_backlight"
+missing_format = ""
+
+[[block]]
+block = "keyboard_layout"
+driver = "setxkbmap"
+
+[[block]]
+block = "notify"
+format = " $icon {$paused{Off}|On} "
+
+[[block]]
+block = "time"
+format = " $timestamp.datetime(f:'%a %d/%m %R') "
+interval = 5
