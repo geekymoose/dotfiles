@@ -21,7 +21,7 @@ icons = "awesome4"
 
 [[block]]
 block = "music"
-format = " $icon $volume $prev $play $next $combo "
+format = " $icon $combo $volume $prev $play $next "
 player = "spotify"
 [[block.click]]
 button = "up"

@@ -18,6 +18,7 @@ bindsym $mod+m bar mode toggle
 bar {
     position top
     status_command i3status-rs
+    tray_output none
 }
 
 

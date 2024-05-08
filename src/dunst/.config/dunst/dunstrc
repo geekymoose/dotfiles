@@ -9,15 +9,18 @@
 
 [global]
 
-    # Theme (box)
+    # Theme (box size)
+    padding = 8
+    horizontal_padding = 10
+    width = 400
+    height = 300
+
+    # Theme (box format)
     format = "<b>%a</b>\n%s %p\n%b"
     frame_color = "#56adef"
     frame_width = 1
     transparency = 15
     show_indicators = yes
-    geometry = "0x4-25+25"
-    padding = 8
-    horizontal_padding = 10
     icon_position = left
     icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
     max_icon_size=128
@@ -29,7 +32,7 @@
     markup = full
     ignore_newline = no
 
-    # Theme (box stack)
+    # Theme (boxes stack)
     line_height = 0
     separator_height = 1
     separator_color = #263238
@@ -61,6 +64,7 @@
     timeout = 10
 
 [urgency_critical]
-    background = "#D62929"
+    background = "#603030"
     foreground = "#F9FAF9"
     timeout = 0
+
