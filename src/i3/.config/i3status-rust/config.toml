@@ -7,16 +7,13 @@
 # https://docs.rs/i3status-rs/latest/i3status_rs/blocks/index.html
 # ------------------------------------------------------------------------------
 
-icons_format = "{icon}"
-
 [theme]
 theme = "solarized-dark"
 [theme.overrides]
-idle_bg = "#123456"
-idle_fg = "#abcdef"
+separator = ""
 
 [icons]
-icons = "awesome4"
+icons = "awesome6"
 
 
 [[block]]
