@@ -9,8 +9,6 @@
 
 [theme]
 theme = "solarized-dark"
-[theme.overrides]
-separator = ""
 
 [icons]
 icons = "awesome6"
