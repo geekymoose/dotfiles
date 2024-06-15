@@ -8,7 +8,7 @@
 # ------------------------------------------------------------------------------
 
 [theme]
-theme = "solarized-dark"
+theme = "semi-native"
 
 [icons]
 icons = "awesome6"
@@ -16,7 +16,7 @@ icons = "awesome6"
 
 [[block]]
 block = "music"
-format = " $icon $combo $volume $prev $play $next "
+format = " $icon $volume $prev $play $next "
 player = "spotify"
 [[block.click]]
 button = "up"
