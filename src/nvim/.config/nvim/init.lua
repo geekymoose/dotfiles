@@ -16,8 +16,10 @@ require("plugins.vscode")
 require("plugins.editorconfig")
 require("plugins.lspconfig")
 require("plugins.lualine")
-require("plugins.neogit")
-require("plugins.nerdtree")
+require("plugins.nvimtree")
 require("plugins.telescope")
+require("plugins.treesitter")
+
 require("gitsigns").setup()
+require("nvim-autopairs").setup()
 
