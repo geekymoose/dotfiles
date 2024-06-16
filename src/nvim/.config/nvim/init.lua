@@ -9,7 +9,7 @@ require("plugins.plug")
 require("plugins.vscode")
 
 -- Load global configs
-require("configs.basics")
+require("configs.options")
 require("configs.keymap")
 
 -- Load all plugins
