@@ -16,9 +16,11 @@ plug('https://github.com/edeneast/nightfox.nvim')
 -- Explorer / Search
 plug('https://github.com/nvim-tree/nvim-tree.lua')
 plug('https://github.com/romgrk/barbar.nvim')
-plug('https://github.com/nvim-telescope/telescope.nvim')
-plug('https://github.com/nvim-lua/plenary.nvim') -- required by telescope
 plug('https://github.com/folke/todo-comments.nvim')
+plug('https://github.com/nvim-lua/plenary.nvim') -- required by telescope
+plug('https://github.com/nvim-telescope/telescope.nvim')
+plug('https://github.com/nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' })
+plug('https://github.com/nvim-telescope/telescope-media-files.nvim')
 
 -- Syntax
 plug('https://github.com/editorconfig/editorconfig-vim')
