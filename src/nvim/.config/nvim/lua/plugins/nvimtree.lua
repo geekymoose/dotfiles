@@ -3,9 +3,9 @@
 -- https://github.com/nvim-tree/nvim-tree.lua
 -- -----------------------------------------------------------------------------
 
-vim.g.loaded_netrw = 1          -- Disable netrw
-vim.g.loaded_netrwPlugin = 1    -- Disable netrw
-vim.opt.termguicolors = true    -- Enable 24-bit colour
+vim.g.loaded_netrw = 1          -- Ensure netrw is disabled
+vim.g.loaded_netrwPlugin = 1    -- Ensure netrw is disabled
+vim.opt.termguicolors = true    -- Ensure 24-bit colour is enabled
 
 require("nvim-tree").setup {
     view = {
@@ -24,10 +24,4 @@ require("nvim-tree").setup {
         },
     },
 }
-
--- Key bindings
-vim.keymap.set('n', '<F5>', ':NvimTreeCollapse<CR>')
-vim.keymap.set('n', '<F6>', ':NvimTreeToggle<CR>')
-vim.keymap.set('n', '<F7>', ':NvimTreeOpen<CR>')
-vim.keymap.set('n', '<F8>', ':NvimTreeFindFile<CR>')
 
