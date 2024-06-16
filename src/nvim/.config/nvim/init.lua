@@ -26,4 +26,5 @@ require("plugins.treesitter")
 require("gitsigns").setup()
 require("nvim-autopairs").setup()
 require("trouble").setup()
+require('glow').setup({ style = "dark", width = 120, })
 
