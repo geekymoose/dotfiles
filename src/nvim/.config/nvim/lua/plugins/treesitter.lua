@@ -2,7 +2,8 @@
 -- Syntax highlight with Treesitter
 -- https://github.com/nvim-treesitter/nvim-treesitter
 --
--- See :h nvim-treesitter
+-- :h nvim-treesitter for general help
+-- :h nvim-treesitter-commands for a list of all available commands
 -- -----------------------------------------------------------------------------
 
 require ("nvim-treesitter.configs").setup {
@@ -55,4 +56,10 @@ require ("nvim-treesitter.configs").setup {
         additional_vim_regex_highlighting = false,
     },
 }
+
+
+-- Folding with treesitter
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.o.foldlevel = 99
 

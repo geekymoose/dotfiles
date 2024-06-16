@@ -2,6 +2,8 @@
 -- LSP Config plugin
 -- https://github.com/neovim/nvim-lspconfig
 -- Server-specific settings: see `:help lspconfig-setup`
+--
+-- :h lspconfig-all
 -- -----------------------------------------------------------------------------
 
 local lspconfig = require("lspconfig")
@@ -46,5 +48,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.lsp.buf.format { async = true }
         end, opts)
     end,
+})
+
+-- LSP diagnostic
+vim.diagnostic.config({
+    virtual_text = false,
+    signs = true,
+    update_in_insert = true,
+    underline = true,
+    severity_sort = false,
 })
 

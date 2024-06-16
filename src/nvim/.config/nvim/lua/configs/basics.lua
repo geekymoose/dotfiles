@@ -41,3 +41,6 @@ vim.opt.wildmenu = true             -- Pressing wildchar (TAB) invokes completio
 vim.opt.showmatch = true            -- Show matching brace when insert one
 vim.opt.matchtime = 1               -- Speed up brace matching time
 
+-- Completion
+vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
+

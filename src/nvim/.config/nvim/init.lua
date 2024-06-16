@@ -13,13 +13,17 @@ require("plugins.plug")
 require("plugins.vscode")
 
 -- Load all plugins
+require("plugins.cmp")
 require("plugins.editorconfig")
 require("plugins.lspconfig")
 require("plugins.lualine")
+require("plugins.mason")
 require("plugins.nvimtree")
+require("plugins.todocomments")
 require("plugins.telescope")
 require("plugins.treesitter")
 
 require("gitsigns").setup()
 require("nvim-autopairs").setup()
+require("trouble").setup()
 
