@@ -52,10 +52,10 @@
     cmd                 = nvim -d "$LOCAL" "$BASE" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
 
 [mergetool "vscode"]
-    cmd                 = code --wait "$MERGE"
+    cmd                 = code --wait --merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 
 [alias]
     s                   = status
-    logone              = log --oneline --decorate --graph --branches
-    logones             = log --oneline --decorate --graph --branches --format=\"%h %an %ae\"
+    logone              = log --oneline --decorate --graph
+    logones             = log --oneline --decorate --graph --format='%h %an %ae'
 
