@@ -1,5 +1,5 @@
 -- -----------------------------------------------------------------------------
--- LSP Config plugin
+-- LSP config plugin
 -- https://github.com/neovim/nvim-lspconfig
 -- Server-specific settings: see `:help lspconfig-setup`
 --

@@ -1,9 +1,9 @@
 -- -----------------------------------------------------------------------------
--- Completion utils
+-- Completion utilities
 -- https://github.com/hrsh7th/nvim-cmp
 -- -----------------------------------------------------------------------------
 
-local cmp = require'cmp'
+local cmp = require("cmp")
 
 cmp.setup({
     snippet = {
@@ -41,6 +41,7 @@ cmp.setup({
         { name = 'calc'},                               -- source for math calculation
     },
     formatting = {
+        -- To show where the suggestion comes from
         fields = {'menu', 'abbr', 'kind'},
         format = function(entry, item)
             local menu_icon ={

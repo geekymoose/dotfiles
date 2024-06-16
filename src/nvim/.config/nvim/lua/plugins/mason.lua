@@ -1,5 +1,5 @@
 -- -----------------------------------------------------------------------------
--- Mason (LSP utils)
+-- Mason (LSP utilities)
 -- https://github.com/williamboman/mason.nvim
 --
 -- :h mason

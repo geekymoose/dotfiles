@@ -1,16 +1,16 @@
 -- -----------------------------------------------------------------------------
 -- The NeoVim lua configuration file
--- $HOME/.confg/nvim/init.lua
+-- To place in $HOME/.confg/nvim/init.lua
 -- https://neovim.io/doc/user/lua-guide.html
 -- -----------------------------------------------------------------------------
-
--- Load custom configs
-require("configs.basics")
-require("configs.keymap")
 
 -- Load init plugins
 require("plugins.plug")
 require("plugins.vscode")
+
+-- Load global configs
+require("configs.basics")
+require("configs.keymap")
 
 -- Load all plugins
 require("plugins.cmp")

@@ -1,16 +1,12 @@
 -- -----------------------------------------------------------------------------
--- NVim Tree
+-- NVimTree Plugin
 -- https://github.com/nvim-tree/nvim-tree.lua
 -- -----------------------------------------------------------------------------
 
--- Disable netrw (to avoid conflicts)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1          -- Disable netrw
+vim.g.loaded_netrwPlugin = 1    -- Disable netrw
+vim.opt.termguicolors = true    -- Enable 24-bit colour
 
--- Enable 24-bit colour
-vim.opt.termguicolors = true
-
--- Setup (with some custom config overrides)
 require("nvim-tree").setup {
     view = {
         width = 40,
