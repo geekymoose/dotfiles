@@ -99,7 +99,6 @@ i3-wm
 i3status
 i3status-rust
 i3lock
-# i3lock-color (AUR)
 dmenu
 rofi
 rofimoji
