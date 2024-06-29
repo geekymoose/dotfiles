@@ -29,7 +29,7 @@ local telescope = require("telescope.builtin")
 vim.keymap.set('n', '<C-p>', telescope.find_files, {})
 vim.keymap.set('n', '<C-Tab>', telescope.buffers, {})
 vim.keymap.set('n', '<leader>f', telescope.live_grep, {})
-vim.keymap.set('n', '<leader>fh', telescope.help_tags, {})
+vim.keymap.set('n', '<leader>h', telescope.help_tags, {})
 
 vim.keymap.set('n', '<leader>D', function() telescope.diagnostics {} end)
 
