@@ -15,24 +15,20 @@ fi
 # Miscs
 # ------------------------------------------------------------------------------
 
-# Color
-autoload -Uz colors
-colors
+# Colors / Prompt / Completion
+autoload -Uz colors && colors
+autoload -Uz compinit && compinit
+autoload -Uz promptinit && promptinit
 
-# Setup prompt
-autoload -Uz promptinit
-promptinit
-
-# Completion
-autoload -Uz compinit
-compinit
+# ZStyle
 zstyle ':completion:*' rehash true # Automatic rehash call
 zstyle ':completion:*' menu select
+zstyle :compinstall filename '/home/coco/.zshrc'
 
 # History
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=42
-SAVEHIST=42
+HISTSIZE=100
+SAVEHIST=100
 
 # Help (not present by default in zsh)
 autoload -Uz run-help
@@ -40,20 +36,20 @@ autoload -Uz run-help-git
 alias help=run-help
 
 # Keys
-bindkey -e
+bindkey -v
 
 
 # ------------------------------------------------------------------------------
 # Pluggins
 # ------------------------------------------------------------------------------
 
-# Theme powerlevel10k https://github.com/romkatv/powerlevel10k
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f "${HOME}/.zshrc.p10k" ]] || source "${HOME}/.zshrc.p10k"
+# Fish-like syntax and suggestions (zsh-syntax-highlighting and zsh-autosuggestions)
+source '/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+source '/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh'
 
-# Use fish-like syntax highlighting (if fish installed)
-# https://github.com/zsh-users/zsh-syntax-highlighting
-FISH_SYNTAX_DIR='/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-source $FISH_SYNTAX_DIR
+# OhMyZSH (https://github.com/ohmyzsh/ohmyzsh)
+export ZSH="/usr/share/oh-my-zsh"
+ZSH_THEME="jonathan"
+plugins=(git)
+source "$ZSH/oh-my-zsh.sh"
 
