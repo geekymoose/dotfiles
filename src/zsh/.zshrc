@@ -15,6 +15,9 @@ fi
 # Miscs
 # ------------------------------------------------------------------------------
 
+# Keys
+bindkey -e
+
 # Colors / Prompt / Completion
 autoload -Uz colors && colors
 autoload -Uz compinit && compinit
@@ -35,9 +38,6 @@ autoload -Uz run-help
 autoload -Uz run-help-git
 alias help=run-help
 
-# Keys
-bindkey -v
-
 
 # ------------------------------------------------------------------------------
 # Pluggins
@@ -47,9 +47,6 @@ bindkey -v
 source '/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 source '/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh'
 
-# OhMyZSH (https://github.com/ohmyzsh/ohmyzsh)
-export ZSH="/usr/share/oh-my-zsh"
-ZSH_THEME="jonathan"
-plugins=(git)
-source "$ZSH/oh-my-zsh.sh"
+# oh-my-posh (https://ohmyposh.dev/docs/installation/prompt)
+eval "$(oh-my-posh init zsh --config '/usr/share/oh-my-posh/themes/powerlevel10k_classic.omp.json')"
 

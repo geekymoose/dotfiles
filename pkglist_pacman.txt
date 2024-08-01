@@ -158,7 +158,7 @@ zsh
 zsh-completions
 zsh-autosuggestions
 zsh-syntax-highlighting
-# zsh-theme-powerlevel10k (AUR)
+# oh-my-posh (AUR)
 
 ranger
 atool
@@ -208,7 +208,7 @@ v4l2loopback-dkms
 
 veracrypt
 cryptsetup
-keepass
+keepassxc
 
 firefox
 discord
