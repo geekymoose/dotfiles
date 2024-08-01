@@ -5,6 +5,7 @@ These are targeted for my usecase, but feel free to it.
 
 ## Features
 
+- autorandr <https://github.com/phillipberndt/autorandr>
 - alacritty <https://wiki.archlinux.org/title/alacritty>
 - bash <https://wiki.archlinux.org/title/bash>
 - dunst <https://wiki.archlinux.org/title/dunst>
