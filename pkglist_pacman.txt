@@ -46,8 +46,10 @@ mesa
 
 xorg-server
 xorg-xinit
+xorg-xrandr
 xorg-xwayland
 arandr
+autorandr
 
 wayland
 
@@ -99,11 +101,11 @@ i3-wm
 i3status
 i3status-rust
 i3lock
+xss-lock
 dmenu
 rofi
 rofimoji
 # rofi-power-menu (AUR)
-xss-lock
 
 sway
 swaylock
