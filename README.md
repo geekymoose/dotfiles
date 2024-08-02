@@ -1,7 +1,7 @@
 # My Linux dotfiles
 
-My personal Archlinux configuration.
-These are targeted for my usecase, but feel free to it.
+My personal Archlinux configuration (I use i3 window manager).
+These are targeted for my usecase, but I hope they can be useful for you.
 
 ## Features
 
@@ -12,10 +12,11 @@ These are targeted for my usecase, but feel free to it.
 - git <https://wiki.archlinux.org/index.php/git>
 - gtk <https://wiki.achlinux.org/index.php/gtk>
 - i3 <https://wiki.archlinux.org/index.php/i3>
-- mime <https://wiki.archlinux.org/title/XDG_MIME_Applications>
+- mime <https://wiki.archlinux.org/title/xdg_mime_applications>
 - neovim <https://wiki.archlinux.org/index.php/neovim>
 - ranger <https://wiki.archlinux.org/index.php/ranger>
 - rofi <https://wiki.archlinux.org/title/rofi>
+- ssh <https://wiki.archlinux.org/title/ssh_keys>
 - tmux <https://wiki.archlinux.org/title/tmux>
 - urxvt <https://wiki.archlinux.org/index.php/urxvt>
 - x11 <https://wiki.archlinux.org/title/xorg>
@@ -49,3 +50,4 @@ I saw other interesting techniques with git config. For further information, see
 - <https://www.gnu.org/software/stow/>
 - <https://www.atlassian.com/git/tutorials/dotfiles>
 - <https://github.com/kazhala/dotbare>
+

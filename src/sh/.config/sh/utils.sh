@@ -1,23 +1,24 @@
+# ------------------------------------------------------------------------------
+# Miscs utilities
+# ------------------------------------------------------------------------------
+
 umask 027 # By default, no perm for 'a' group (file: 640, folder: 750)
 
 
-# ------------------------------------------------------------------------------
-# ssh-agent
-# ------------------------------------------------------------------------------
-
-## See https://wiki.archlinux.org/index.php/SSH_keys
+# SSH
+# Make sure that only one ssh-agent process runs at a time
+# See https://wiki.archlinux.org/index.php/ssh_keys (section ssh-agent)
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
-[[ -f "$XDG_RUNTIME_DIR/ssh-agent.env" ]] && source "$XDG_RUNTIME_DIR/ssh-agent.env" > /dev/null
+if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" > /dev/null
+fi
 
 
-# ------------------------------------------------------------------------------
-# Custom config
-# ------------------------------------------------------------------------------
-
-# See https://wiki.archlinux.org/index.php/Ranger
+# RANGER
 # Preventing nested ranger instances
+# See https://wiki.archlinux.org/index.php/Ranger
 function ranger() {
     if [ -z "$RANGER_LEVEL" ]; then
         /usr/bin/ranger "$@"
@@ -25,3 +26,4 @@ function ranger() {
         exit
     fi
 }
+
