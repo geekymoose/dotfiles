@@ -1,6 +1,6 @@
 -- -----------------------------------------------------------------------------
 -- VSCode theme
--- https://github.com/Mofiqul/vscode.nvim
+-- https://github.com/mofiqul/vscode.nvim
 -- -----------------------------------------------------------------------------
 
 require("vscode.colors").get_colors()

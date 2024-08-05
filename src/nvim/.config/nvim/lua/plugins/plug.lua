@@ -7,11 +7,14 @@ local plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
--- Theme
-plug('https://github.com/mofiqul/vscode.nvim')
+-- UI
 plug('https://github.com/nvim-lualine/lualine.nvim')
 plug('https://github.com/nvim-tree/nvim-web-devicons')
+
+-- Theme
+plug('https://github.com/mofiqul/vscode.nvim')
 plug('https://github.com/edeneast/nightfox.nvim')
+plug('https://github.com/rebelot/kanagawa.nvim')
 
 -- Utils
 plug('https://github.com/folke/todo-comments.nvim')
