@@ -149,6 +149,9 @@ papirus-icon-theme
 # Themes
 # ------------------------------------------------------------------------------
 
+qt5ct
+qt6ct
+
 arc-gtk-theme
 breeze-icons
 
