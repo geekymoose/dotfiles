@@ -21,5 +21,5 @@ export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
 
 # QT config for all environments (see https://wiki.archlinux.org/title/qt#gtk_and_qt)
-QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
+export QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
 
