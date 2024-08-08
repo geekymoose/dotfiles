@@ -19,45 +19,52 @@ vim.keymap.set('n', '<F3>', ':set nospell<CR>')
 
 
 -- -----------------------------------------------------------------------------
--- Plugin keys
--- -----------------------------------------------------------------------------
-
-
 -- Telescope plugin
+-- -----------------------------------------------------------------------------
 local telescope = require("telescope.builtin")
 
 vim.keymap.set('n', '<C-p>', telescope.find_files, {})
 vim.keymap.set('n', '<C-Tab>', telescope.buffers, {})
 vim.keymap.set('n', '<leader>f', telescope.live_grep, {})
 vim.keymap.set('n', '<leader>h', telescope.help_tags, {})
-
 vim.keymap.set('n', '<leader>D', function() telescope.diagnostics {} end)
 
 
+-- -----------------------------------------------------------------------------
 -- TodoComments plugin
+-- -----------------------------------------------------------------------------
 local todocomments = require("todo-comments")
 vim.keymap.set('n', '<leader>t', ':TodoTelescope<CR>', {})
 vim.keymap.set("n", "]t", function() todocomments.jump_next() end, { desc = "Next todo comment" })
 vim.keymap.set("n", "[t", function() todocomments.jump_prev() end, { desc = "Previous todo comment" })
 
 
+-- -----------------------------------------------------------------------------
 -- NvimTree plugin
+-- -----------------------------------------------------------------------------
 vim.keymap.set('n', '<F5>', ':NvimTreeCollapse<CR>')
 vim.keymap.set('n', '<F6>', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<F7>', ':NvimTreeOpen<CR>')
 vim.keymap.set('n', '<F8>', ':NvimTreeFindFile<CR>')
 
 
+-- -----------------------------------------------------------------------------
 -- Vim diagnostic (see :h vim.diagnostic)
+-- -----------------------------------------------------------------------------
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 
 
+-- -----------------------------------------------------------------------------
 -- LSP Config
 -- Use LspAttach autocommand to only map the following keys after the LSP started
 -- https://neovim.io/doc/user/lsp.html#LspAttach
+-- -----------------------------------------------------------------------------
+
+vim.keymap.set('n', '<Esc>o', ':ClangdSwitchSourceHeader<CR>') -- Hack: <Esc> because M-o didn't work (ALT+o)
+
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)

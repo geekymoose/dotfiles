@@ -3,14 +3,17 @@
 -- https://github.com/mofiqul/vscode.nvim
 -- -----------------------------------------------------------------------------
 
-require("vscode.colors").get_colors()
+local vscode = require("vscode")
+local vscode_colors = require("vscode.colors")
 
-require("vscode").setup({
+vscode_colors.get_colors()
+
+vscode.setup({
     transparent = true,             -- Enable transparent background
     italic_comments = true,         -- Enable italic comment
     underline_links = true,         -- Underline `@markup.link.*` variants
     disable_nvimtree_bg = true,     -- Disable nvim-tree background color
 })
 
-require("vscode").load()
+vscode.load('dark')
 
