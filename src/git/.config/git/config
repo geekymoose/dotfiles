@@ -2,9 +2,8 @@
 # https://git-scm.com/docs/git-config
 # ------------------------------------------------------------------------------
 
-[user]
-    name                = geekymoose
-    email               = constantin.masson@umontreal.ca
+[include]
+    path                = ~/.config/git-custom/config
 
 [push]
     default             = simple
