@@ -27,6 +27,7 @@ plug('https://github.com/romgrk/barbar.nvim')
 plug('https://github.com/nvim-telescope/telescope.nvim')
 plug('https://github.com/nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' })
 plug('https://github.com/nvim-telescope/telescope-media-files.nvim')
+plug('https://github.com/ahmedkhalf/project.nvim')
 
 -- Syntax
 plug('https://github.com/editorconfig/editorconfig-vim')

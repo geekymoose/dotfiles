@@ -23,8 +23,9 @@ require("plugins.todocomments")
 require("plugins.telescope")
 require("plugins.treesitter")
 
+require("glow").setup({ style = "dark", width = 120, })
 require("gitsigns").setup()
 require("nvim-autopairs").setup()
+require("project_nvim").setup()
 require("trouble").setup()
-require('glow').setup({ style = "dark", width = 120, })
 
