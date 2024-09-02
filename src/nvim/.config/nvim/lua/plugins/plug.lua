@@ -30,6 +30,7 @@ plug('https://github.com/nvim-telescope/telescope-media-files.nvim')
 plug('https://github.com/ahmedkhalf/project.nvim')
 
 -- Syntax
+plug('https://github.com/rhysd/vim-clang-format')
 plug('https://github.com/editorconfig/editorconfig-vim')
 plug('https://github.com/rrethy/vim-illuminate')
 plug('https://github.com/windwp/nvim-autopairs')
