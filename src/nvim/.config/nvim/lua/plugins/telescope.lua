@@ -7,10 +7,10 @@ local telescope = require("telescope");
 
 telescope.setup({
     defaults = {
-        layout_strategy = "vertical",
+        layout_strategy = "horizontal",
         layout_config = {
-            height = 0.90,
-            width = 0.80,
+            height = 0.99,
+            width = 0.99,
         },
         file_ignore_patterns = {
             -- By default, things in .gitignore are also ignored
