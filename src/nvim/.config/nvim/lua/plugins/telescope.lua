@@ -4,6 +4,7 @@
 -- -----------------------------------------------------------------------------
 
 local telescope = require("telescope");
+local action_layout = require("telescope.actions.layout")
 
 telescope.setup({
     defaults = {
@@ -18,6 +19,15 @@ telescope.setup({
             "^./extern/",
             "^build/",
             "^LICENSE*",
+        },
+        vimgrep_arguments = {
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--ignore-case",
         },
     },
     extensions = {
