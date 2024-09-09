@@ -15,6 +15,8 @@ vim.opt.splitright = true           -- New vsplit window is created at right
 vim.opt.clipboard = "unnamedplus"   -- Always use the clipboard for all operations
 
 -- Display
+vim.opt.title = true                -- Dynamic update of the window title
+vim.opt.titlestring = "%{getcwd()}" -- The dynamic window title (see :help statuline for options)
 vim.opt.number = true               -- Display line number
 vim.opt.cursorline = true           -- Highlight current cursor line
 vim.opt.ruler = true                -- Display line and column cursor
