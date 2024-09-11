@@ -17,6 +17,7 @@ application/pdf=mupdf.desktop
 
 image/jpeg=viewnior.desktop;gpicview.desktop;
 image/png=viewnior.desktop;gpicview.desktop;
+x-scheme-handler/postman=Postman.desktop
 
 
 [Added Associations]
