@@ -74,6 +74,9 @@ libmtp
 htop
 btop
 
+neofetch
+filelight
+
 
 # ------------------------------------------------------------------------------
 # Graphics
@@ -212,14 +215,16 @@ python
 godot
 
 docker
+lnav
 
 
 # ------------------------------------------------------------------------------
 # Softwares
 # ------------------------------------------------------------------------------
 
-darktable
 krita
+blender
+darktable
 kdenlive
 scribus
 libreoffice-fresh
@@ -234,7 +239,10 @@ keepassxc
 firefox
 discord
 obsidian
+# sleek (AUR)
+# spotify (AUR)
+# anki (AUR)
 
 sane
-xsane
+# xsane (AUR)
 
