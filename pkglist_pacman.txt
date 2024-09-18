@@ -73,9 +73,15 @@ libmtp
 
 htop
 btop
-
-neofetch
+lsof
 filelight
+neofetch
+
+ltrace
+strace
+curl
+gnu-netcat
+nmap
 
 
 # ------------------------------------------------------------------------------
