@@ -94,12 +94,19 @@ function run_rsync_backup() {
     ensure_folder_exists ${dst}
     ensure_is_installed "rsync"
 
-    echo -e "${COLOR_CMD}Running RSync backup..."
-    echo -e "${COLOR_CMD}Source: ${src}"
-    echo -e "${COLOR_CMD}Destination: ${dst}${COLOR_NORMAL}"
+    echo "Running rsync backup..."
+    echo " -> Source: ${src}"
+    echo " -> Destination: ${dst}"
 
     # Run rsync and make sure we add prefix "/" (see documentation)
     apply_cmd "rsync -avr --delete ${src}/ ${dst}/"
+
+    if [[ $? -eq 0 ]]; then
+        echo -e "${COLOR_SUCCESS}[OK] Backup rsync successfully done${COLOR_NORMAL}"
+    else
+        echo -e "${COLOR_ERROR}[ERR] An error occured during the rsync${COLOR_NORMAL}"
+        exit 42
+    fi
 }
 
 # Runs adb-sync backup (checks that src and dest are valid folders)
@@ -116,5 +123,12 @@ function run_adb_sync_backup() {
 
     apply_cmd "adb devices"
     apply_cmd "adb-sync --delete ${SRC}/ ${DST}/"
+
+    if [[ $? -eq 0 ]]; then
+        echo -e "${COLOR_SUCCESS}[OK] Backup adb-sync successfully done${COLOR_NORMAL}"
+    else
+        echo -e "${COLOR_ERROR}[ERR] An error occured during the adb-sync${COLOR_NORMAL}"
+        exit 42
+    fi
 }
 
