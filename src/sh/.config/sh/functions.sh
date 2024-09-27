@@ -91,7 +91,6 @@ function run_rsync_backup() {
     local src="$1"
     local dst="$2"
     ensure_folder_exists ${src}
-    ensure_folder_exists ${dst}
     ensure_is_installed "rsync"
 
     echo "Running rsync backup..."
@@ -117,7 +116,6 @@ function run_adb_sync_backup() {
     local src="$1"
     local dst="$2"
     ensure_folder_exists ${src}
-    ensure_folder_exists ${dst}
     ensure_is_installed "adb"
     ensure_is_installed "adb-sync"
 
