@@ -120,7 +120,7 @@ function run_adb_sync_backup() {
     ensure_is_installed "adb-sync"
 
     apply_cmd "adb devices"
-    apply_cmd "adb-sync --delete ${SRC}/ ${DST}/"
+    apply_cmd "adb-sync --delete ${src}/ ${dst}/"
 
     if [[ $? -eq 0 ]]; then
         echo -e "${COLOR_SUCCESS}[OK] Backup adb-sync successfully done${COLOR_NORMAL}"
