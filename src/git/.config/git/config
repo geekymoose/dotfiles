@@ -5,6 +5,9 @@
 [include]
     path                = ~/.config/git-custom/config
 
+[init]
+    defaultBranch       = main
+
 [push]
     default             = simple
     recurseSubmodules   = on-demand
