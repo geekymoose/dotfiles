@@ -10,6 +10,61 @@
 
 
 # ------------------------------------------------------------------------------
+# Graphics
+# ------------------------------------------------------------------------------
+
+mesa
+
+xorg-server
+xorg-xinit
+xorg-xrandr
+xorg-xwayland
+arandr
+autorandr
+
+wayland
+
+
+# ------------------------------------------------------------------------------
+# Window Manager (WM)
+# ------------------------------------------------------------------------------
+
+lightdm
+lightdm-slick-greeter
+
+i3-wm
+i3status
+i3status-rust
+i3lock
+nitrogen
+xss-lock
+
+sway
+swaybg
+swaylock
+swayidle
+
+dmenu
+rofi
+rofimoji
+# rofi-power-menu (AUR)
+
+dex
+dunst
+pavucontrol
+scrot
+xfce4-screenshooter
+
+pcmanfm-gtk3
+gvfs
+
+viewnior
+mupdf
+vlc
+chafa
+
+
+# ------------------------------------------------------------------------------
 # System Core
 # ------------------------------------------------------------------------------
 
@@ -56,10 +111,10 @@ gzip
 bzip2
 
 bat
-fzf
 ripgrep
-jq
 fd
+fzf
+jq
 
 rsync
 ntfs-3g
@@ -85,56 +140,14 @@ nmap
 
 
 # ------------------------------------------------------------------------------
-# Graphics
+# Themes
 # ------------------------------------------------------------------------------
 
-mesa
+qt5ct
+qt6ct
 
-xorg-server
-xorg-xinit
-xorg-xrandr
-xorg-xwayland
-arandr
-autorandr
-
-wayland
-
-
-# ------------------------------------------------------------------------------
-# Window Manager Environment
-# ------------------------------------------------------------------------------
-
-lightdm
-lightdm-slick-greeter
-
-i3-wm
-i3status
-i3status-rust
-i3lock
-xss-lock
-dmenu
-rofi
-rofimoji
-# rofi-power-menu (AUR)
-
-sway
-swaylock
-swayidle
-
-dex
-nitrogen
-dunst
-pavucontrol
-scrot
-xfce4-screenshooter
-
-pcmanfm-gtk3
-gvfs
-
-viewnior
-mupdf
-vlc
-chafa
+arc-gtk-theme
+breeze-icons
 
 
 # ------------------------------------------------------------------------------
@@ -153,17 +166,6 @@ ttf-nerd-fonts-symbols
 
 ttf-font-awesome
 papirus-icon-theme
-
-
-# ------------------------------------------------------------------------------
-# Themes
-# ------------------------------------------------------------------------------
-
-qt5ct
-qt6ct
-
-arc-gtk-theme
-breeze-icons
 
 
 # ------------------------------------------------------------------------------
