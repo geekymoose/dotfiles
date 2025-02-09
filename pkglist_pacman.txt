@@ -1,11 +1,17 @@
 # ------------------------------------------------------------------------------
 # All the pacman packages to install on my archlinux system.
 #
+# It allows both wayland and xorg display server
+# I use i3 (x11) and sway (wayland) as my main DisplayManager
+#
 # You can comment a line with '#'
 # Run `./exec_pacman.sh` to install all these packages
 #
 # For further details about pacman
 # https://wiki.archlinux.org/title/Pacman
+#
+# AUR packages must be installed manually using the Archlinux User Repo
+# See https://wiki.archlinux.org/index.php/Arch_User_Repository
 # ------------------------------------------------------------------------------
 
 
@@ -31,6 +37,7 @@ wayland
 
 lightdm
 lightdm-slick-greeter
+# lightdm-settings (AUR)
 
 i3-wm
 i3status
@@ -65,12 +72,44 @@ chafa
 
 
 # ------------------------------------------------------------------------------
+# Themes
+# ------------------------------------------------------------------------------
+
+qt5ct
+qt6ct
+
+arc-gtk-theme
+breeze-icons
+
+
+# ------------------------------------------------------------------------------
+# Fonts
+# ------------------------------------------------------------------------------
+
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+
+ttf-roboto
+ttf-roboto-mono
+
+nerd-fonts
+ttf-nerd-fonts-symbols
+
+ttf-font-awesome
+papirus-icon-theme
+
+
+# ------------------------------------------------------------------------------
 # System Core
 # ------------------------------------------------------------------------------
 
 networkmanager
 network-manager-applet
 inetutils
+
+bluez
+bluez-utils
 
 alsa-firmware
 alsa-tools
@@ -85,6 +124,9 @@ acpi
 linux-firmware
 xf86-input-wacom
 libwacom
+
+cups
+cups-pdf
 
 man-db
 man-pages
@@ -125,47 +167,20 @@ usbutils
 android-tools
 gvfs-mtp
 libmtp
+# adb-sync (AUR)
 
 htop
 btop
 lsof
 filelight
 neofetch
+# czkawka (AUR)
 
 ltrace
 strace
 curl
 gnu-netcat
 nmap
-
-
-# ------------------------------------------------------------------------------
-# Themes
-# ------------------------------------------------------------------------------
-
-qt5ct
-qt6ct
-
-arc-gtk-theme
-breeze-icons
-
-
-# ------------------------------------------------------------------------------
-# Fonts
-# ------------------------------------------------------------------------------
-
-noto-fonts
-noto-fonts-cjk
-noto-fonts-emoji
-
-ttf-roboto
-ttf-roboto-mono
-
-nerd-fonts
-ttf-nerd-fonts-symbols
-
-ttf-font-awesome
-papirus-icon-theme
 
 
 # ------------------------------------------------------------------------------
@@ -236,6 +251,7 @@ darktable
 kdenlive
 scribus
 libreoffice-fresh
+# pureref (AUR)
 
 obs-studio
 v4l2loopback-dkms
