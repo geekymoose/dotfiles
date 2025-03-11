@@ -66,9 +66,12 @@ pcmanfm-gtk3
 gvfs
 
 viewnior
-mupdf
-vlc
 chafa
+imagemagick
+vlc
+mpv
+ffmpeg
+mupdf
 
 
 # ------------------------------------------------------------------------------
@@ -145,9 +148,10 @@ stow
 which
 openssh
 
-tar
+7zip
 zip
 unzip
+tar
 unrar
 gzip
 bzip2
@@ -157,6 +161,7 @@ ripgrep
 fd
 fzf
 jq
+delta
 
 rsync
 ntfs-3g
@@ -172,8 +177,8 @@ libmtp
 htop
 btop
 lsof
-filelight
 neofetch
+filelight
 # czkawka (AUR)
 
 ltrace
@@ -200,16 +205,7 @@ zsh-autosuggestions
 zsh-syntax-highlighting
 # oh-my-posh (AUR)
 
-ranger
-atool
-ffmpegthumbnailer
-highlight
-mediainfo
-odt2txt
-perl-image-exiftool
-poppler
-python-chardet
-w3m
+yazi
 
 
 # ------------------------------------------------------------------------------

@@ -10,5 +10,6 @@ alias rm='rm -i'
 alias ip='ip -c'
 alias grep='grep --color=auto'
 
+alias y='yazi'
 which nvim >> /dev/null && alias vim='nvim'
 
