@@ -16,7 +16,7 @@
 
 
 # ------------------------------------------------------------------------------
-# Graphics
+# Window Manager (WM)
 # ------------------------------------------------------------------------------
 
 mesa
@@ -29,11 +29,6 @@ arandr
 autorandr
 
 wayland
-
-
-# ------------------------------------------------------------------------------
-# Window Manager (WM)
-# ------------------------------------------------------------------------------
 
 lightdm
 lightdm-slick-greeter
@@ -58,61 +53,15 @@ rofimoji
 
 dex
 dunst
-pavucontrol
-scrot
-xfce4-screenshooter
-
-pcmanfm-gtk3
-gvfs
-
-viewnior
-chafa
-imagemagick
-vlc
-mpv
-ffmpeg
-mupdf
 
 
 # ------------------------------------------------------------------------------
-# Themes
-# ------------------------------------------------------------------------------
-
-qt5ct
-qt6ct
-
-arc-gtk-theme
-breeze-icons
-
-
-# ------------------------------------------------------------------------------
-# Fonts
-# ------------------------------------------------------------------------------
-
-noto-fonts
-noto-fonts-cjk
-noto-fonts-emoji
-
-ttf-roboto
-ttf-roboto-mono
-
-nerd-fonts
-ttf-nerd-fonts-symbols
-
-ttf-font-awesome
-papirus-icon-theme
-
-
-# ------------------------------------------------------------------------------
-# System Core
+# System core / drivers
 # ------------------------------------------------------------------------------
 
 networkmanager
 network-manager-applet
 inetutils
-
-bluez
-bluez-utils
 
 alsa-firmware
 alsa-tools
@@ -122,34 +71,42 @@ pipewire-alsa
 pipewire-pulse
 pipewire-jack
 wireplumber
+pavucontrol
 
-acpi
+base
+base-devel
 linux-firmware
+acpi
+
 xf86-input-wacom
 libwacom
 
+v4l2loopback-dkms
+
+bluez
+bluez-utils
+
 cups
 cups-pdf
+sane
+# xsane (AUR)
 
 man-db
 man-pages
 texinfo
 
+
+# ------------------------------------------------------------------------------
+# System utilities / commands
+# ------------------------------------------------------------------------------
+
 reflector
-
-
-# ------------------------------------------------------------------------------
-# System utilities
-# ------------------------------------------------------------------------------
-
-base
-base-devel
 stow
 which
 openssh
 
-7zip
 zip
+7zip
 unzip
 tar
 unrar
@@ -157,11 +114,15 @@ gzip
 bzip2
 
 bat
+fzf
 ripgrep
 fd
-fzf
 jq
-delta
+
+htop
+btop
+lsof
+neofetch
 
 rsync
 ntfs-3g
@@ -169,23 +130,16 @@ dosfstools
 udisks2
 usbutils
 
-android-tools
-gvfs-mtp
-libmtp
-# adb-sync (AUR)
-
-htop
-btop
-lsof
-neofetch
-filelight
-# czkawka (AUR)
-
 ltrace
 strace
 curl
 gnu-netcat
 nmap
+
+android-tools
+gvfs-mtp
+libmtp
+# adb-sync (AUR)
 
 
 # ------------------------------------------------------------------------------
@@ -204,8 +158,6 @@ zsh-completions
 zsh-autosuggestions
 zsh-syntax-highlighting
 # oh-my-posh (AUR)
-
-yazi
 
 
 # ------------------------------------------------------------------------------
@@ -238,6 +190,29 @@ lnav
 
 
 # ------------------------------------------------------------------------------
+# Media
+# ------------------------------------------------------------------------------
+
+yazi
+pcmanfm-gtk3
+gvfs
+filelight
+# czkawka (AUR)
+
+viewnior
+chafa
+imagemagick
+scrot
+xfce4-screenshooter
+
+vlc
+mpv
+ffmpeg
+
+mupdf
+
+
+# ------------------------------------------------------------------------------
 # Softwares
 # ------------------------------------------------------------------------------
 
@@ -249,20 +224,46 @@ scribus
 libreoffice-fresh
 # pureref (AUR)
 
+discord
 obs-studio
-v4l2loopback-dkms
 
 veracrypt
 cryptsetup
 keepassxc
 
 firefox
-discord
 obsidian
 # sleek (AUR)
 # spotify (AUR)
 # anki (AUR)
 
-sane
-# xsane (AUR)
+
+# ------------------------------------------------------------------------------
+# Themes
+# ------------------------------------------------------------------------------
+
+qt5ct
+qt6ct
+
+arc-gtk-theme
+breeze-icons
+
+
+# ------------------------------------------------------------------------------
+# Fonts
+# ------------------------------------------------------------------------------
+
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+
+ttf-roboto
+ttf-roboto-mono
+
+nerd-fonts
+ttf-nerd-fonts-symbols
+
+ttf-font-awesome
+papirus-icon-theme
+
 
