@@ -4,12 +4,10 @@
 # To include in script: source "${HOME}/.config/sh/functions.sh"
 # ------------------------------------------------------------------------------
 
-
 COLOR_ERROR='\e[31m'
 COLOR_SUCCESS='\033[32m'
 COLOR_CMD='\e[34m'
 COLOR_NORMAL='\e[0m'
-
 
 # Executes the provided command, but prints the full cmd before executing it.
 # For CI script, you may use `set -v` instead
@@ -31,7 +29,7 @@ function formatted_date_now() {
 function ensure_is_addr_reachable() {
     local addr="$1"
     echo "Trying to reach ${addr}..."
-    ping -Dc 1 -w 1 $addr >> /dev/null 2>&1
+    ping -Dc 1 -w 1 $addr >>/dev/null 2>&1
     if [[ $? -ne 0 ]]; then
         echo -e "${COLOR_ERROR}[ERR] Unable to reach the requested address ${addr}${COLOR_NORMAL}"
         exit 42
@@ -43,7 +41,7 @@ function ensure_is_addr_reachable() {
 # Param 1: the command
 function ensure_is_installed {
     local cmdname="$1"
-    which "$cmdname" >> /dev/null 2>&1
+    which "$cmdname" >>/dev/null 2>&1
     if [[ $? -ne 0 ]]; then
         echo -e "${COLOR_ERROR}[ERR] Command \"$cmdname\" not found${COLOR_NORMAL}"
         exit 42
@@ -65,7 +63,7 @@ function ensure_on_hostname {
 # Exit if not plugged
 function ensure_disklabel_exists {
     local disk_label="$1"
-    local disk_exists=$(ls /dev/disk/by-label/ 2> /dev/null | grep -i $disk_label 2> /dev/null )
+    local disk_exists=$(ls /dev/disk/by-label/ 2>/dev/null | grep -i $disk_label 2>/dev/null)
     if [[ -z "${disk_exists}" ]]; then
         echo -e "${COLOR_ERROR}[ERR] The partition with label \"$disk_label\" does not exists (make sure it is mounted)${COLOR_NORMAL}"
         exit 42
@@ -129,4 +127,3 @@ function run_adb_sync_backup() {
         exit 42
     fi
 }
-

@@ -22,4 +22,3 @@ export MANROFFOPT="-P -c"
 
 # QT config for all environments (see https://wiki.archlinux.org/title/qt#gtk_and_qt)
 export QT_QPA_PLATFORMTHEME=qt6ct
-
