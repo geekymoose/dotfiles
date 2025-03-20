@@ -201,6 +201,7 @@ filelight
 
 viewnior
 chafa
+ueberzugpp
 imagemagick
 scrot
 xfce4-screenshooter
