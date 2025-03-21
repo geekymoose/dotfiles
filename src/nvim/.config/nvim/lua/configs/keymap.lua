@@ -3,6 +3,8 @@
 -- n:normal / i:insert / v:visual+select / x:visual / s:select / c:cmd / o:op
 -- -----------------------------------------------------------------------------
 
+print("Loading config: keymap")
+
 vim.g.mapleader = '-'
 
 vim.keymap.set('n', '<leader>vo', ':vsplit $HOME/.config/nvim/init.lua<CR>')
