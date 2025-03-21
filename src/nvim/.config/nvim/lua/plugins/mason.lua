@@ -9,7 +9,12 @@
 -- :h mason-settings
 -- -----------------------------------------------------------------------------
 
-print("Loading plugin: mason")
+if (vim.g.vscode) then
+    print("Loading plugin: mason is disabled on vscode (use vscode plugins instead for LSP)")
+    return
+else
+    print("Loading plugin: mason")
+end
 
 require("mason").setup({
     ui = {
