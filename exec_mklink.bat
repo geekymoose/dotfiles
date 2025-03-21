@@ -8,25 +8,22 @@ echo - AppData: %LOCALAPPDATA%
 echo - Home: %USERPROFILE%
 echo - PWD: %CD%
 
-call :mklink_config "%LOCALAPPDATA%\nvim\"          "%CD%\src\nvim\.config\nvim\"
-call :mklink_config "%USERPROFILE%\.gitconfig"      "%CD%\src\git\.config\git\config"
+call :crea_conf "%CD%\src\nvim\.config\nvim\"                           "%LOCALAPPDATA%\nvim\" 
+call :crea_conf "%CD%\src\git\.config\git\config"                       "%USERPROFILE%\.gitconfig"
+call :crea_conf "%CD%\src\powershell\.config\powershell\config.ps1"     "%USERPROFILE%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 
 
 REM ----------------------------------------------------------------------------
 REM Function mklink_config
 REM Create symlink to a folder config
 REM ----------------------------------------------------------------------------
-
-:mklink_config
-
-SET config_dst_path=%1
-SET config_src_path=%2
-
+:crea_conf
+SET config_src_path=%1
+SET config_dst_path=%2
 if exist "%config_dst_path%" (
     echo [OK] Config already set: %config_dst_path%
     goto :eof
 )
-
 if not exist "%config_src_path%" (
     echo [ERR] Invalid src path: %config_src_path% does not exist
     goto :eof
@@ -43,4 +40,5 @@ if not exist "%config_src_path%" (
     )
 )
 goto :eof
+REM ----------------------------------------------------------------------------
 
