@@ -4,13 +4,15 @@
 -- Server-specific settings: see `:help lspconfig-setup`
 --
 -- :h lspconfig-all
+--
+-- NOTE
+-- Use Mason to install and config the actual LSP
+-- The following are automatically called my mason (see mason plugin config)
+-- lspconfig.clangd.setup {}
+-- lspconfig.rust_analyzer.setup { settings = { ["rust-analyzer"] = {}, }, }
 -- -----------------------------------------------------------------------------
 
 local lspconfig = require("lspconfig")
-
-lspconfig.clangd.setup {}
-lspconfig.pylsp.setup {}
-lspconfig.rust_analyzer.setup { settings = { ["rust-analyzer"] = {}, }, }
 
 -- LSP diagnostic
 vim.diagnostic.config({
