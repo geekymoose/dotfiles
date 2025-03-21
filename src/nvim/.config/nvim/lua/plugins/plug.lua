@@ -3,6 +3,8 @@
 -- https://github.com/junegunn/vim-plug
 -- -----------------------------------------------------------------------------
 
+print("Loading plugin: plug")
+
 local plug = vim.fn['plug#']
 
 vim.call('plug#begin')

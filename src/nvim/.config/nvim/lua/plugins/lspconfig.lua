@@ -12,6 +12,8 @@
 -- lspconfig.rust_analyzer.setup { settings = { ["rust-analyzer"] = {}, }, }
 -- -----------------------------------------------------------------------------
 
+print("Loading plugin: editorconfig")
+
 local lspconfig = require("lspconfig")
 
 -- LSP diagnostic

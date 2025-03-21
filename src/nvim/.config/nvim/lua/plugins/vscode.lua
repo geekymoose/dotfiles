@@ -3,6 +3,13 @@
 -- https://github.com/mofiqul/vscode.nvim
 -- -----------------------------------------------------------------------------
 
+if (vim.g.vscode) then
+    print("Loading plugin: the nvim plugin vscode.lua is not loaded because is it not required on vscode")
+    return
+else
+    print("Loading plugin: vscode")
+end
+
 local vscode = require("vscode")
 local vscode_colors = require("vscode.colors")
 

@@ -9,6 +9,8 @@
 -- :h mason-settings
 -- -----------------------------------------------------------------------------
 
+print("Loading plugin: mason")
+
 require("mason").setup({
     ui = {
         icons = {

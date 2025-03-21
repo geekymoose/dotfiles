@@ -3,6 +3,8 @@
 -- https://github.com/nvim-tree/nvim-tree.lua
 -- -----------------------------------------------------------------------------
 
+print("Loading plugin: nvimtree")
+
 vim.g.loaded_netrw = 1          -- Ensure netrw is disabled
 vim.g.loaded_netrwPlugin = 1    -- Ensure netrw is disabled
 vim.opt.termguicolors = true    -- Ensure 24-bit colour is enabled

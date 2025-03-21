@@ -3,6 +3,8 @@
 -- https://github.com/nvim-telescope/telescope-fzf-native.nvim
 -- -----------------------------------------------------------------------------
 
+print("Loading plugin: telescope")
+
 local telescope = require("telescope");
 local action_layout = require("telescope.actions.layout")
 

@@ -4,6 +4,12 @@
 -- https://neovim.io/doc/user/lua-guide.html
 -- -----------------------------------------------------------------------------
 
+if (vim.g.vscode) then
+    print("Loading vscode only config (some native nvim plugin may be disabled)")
+else
+    print("Loading native nvim config")
+end
+
 -- Load init plugins
 require("plugins.plug")
 require("plugins.vscode")
