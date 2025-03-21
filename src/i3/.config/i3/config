@@ -209,9 +209,8 @@ bindsym Mod1+p exec --no-startup-id "pavucontrol"
 bindsym Mod1+e exec --no-startup-id "pcmanfm"
 
 # screenshots
-bindsym Print exec --no-startup-id "scrot --focused"
-bindsym Mod1+Print exec --no-startup-id "xfce4-screenshooter --region"
-bindsym Mod1+Shift+Print exec --no-startup-id "xfce4-screenshooter"
+bindsym Print exec --no-startup-id "grim"
+bindsym Mod1+Print exec --no-startup-id "slurp | grim -g -"
 
 
 # ------------------------------------------------------------------------------
