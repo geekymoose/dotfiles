@@ -17,8 +17,10 @@ application/pdf=mupdf.desktop
 
 image/jpeg=viewnior.desktop;gpicview.desktop;
 image/png=viewnior.desktop;gpicview.desktop;
+
 x-scheme-handler/postman=Postman.desktop
 
+inode/directory=pcmanfm.desktop;yazi.desktop;org.kde.filelight;
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop

@@ -29,6 +29,7 @@ arandr
 autorandr
 
 wayland
+wl-clipboard
 
 lightdm
 lightdm-slick-greeter
