@@ -29,7 +29,6 @@ vim.keymap.set('n', '<C-p>', telescope.find_files, {})
 vim.keymap.set('n', '<C-Tab>', telescope.buffers, {})
 vim.keymap.set('n', '<leader>f', telescope.live_grep, {})
 vim.keymap.set('n', '<leader>h', telescope.help_tags, {})
-vim.keymap.set('n', '<leader>d', function() telescope.diagnostics {} end)
 
 
 -- -----------------------------------------------------------------------------
@@ -59,7 +58,7 @@ vim.keymap.set('n', '<F8>', ':NvimTreeFindFile<CR>')
 -- -----------------------------------------------------------------------------
 -- Vim diagnostic (see :h vim.diagnostic)
 -- -----------------------------------------------------------------------------
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+vim.keymap.set('n', '<leader>d', telescope.diagnostics, {})
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
@@ -99,5 +98,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     end,
 })
-
-
