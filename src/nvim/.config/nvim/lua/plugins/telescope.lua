@@ -19,6 +19,8 @@ telescope.setup({
             -- By default, things in .gitignore are also ignored
             "^extern/",
             "^./extern/",
+            "^external/",
+            "^./external/",
             "^build/",
             "^LICENSE*",
         },

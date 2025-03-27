@@ -19,6 +19,7 @@ plug('https://github.com/edeneast/nightfox.nvim')
 plug('https://github.com/rebelot/kanagawa.nvim')
 
 -- Utils
+plug('https://github.com/folke/which-key.nvim')
 plug('https://github.com/folke/todo-comments.nvim')
 plug('https://github.com/ellisonleao/glow.nvim')
 plug('https://github.com/nvim-lua/plenary.nvim') -- required by telescope
