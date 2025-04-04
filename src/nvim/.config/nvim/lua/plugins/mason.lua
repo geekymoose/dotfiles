@@ -1,6 +1,7 @@
 -- -----------------------------------------------------------------------------
 -- Mason (LSP utilities)
 -- https://github.com/williamboman/mason.nvim
+-- https://github.com/williamboman/mason-lspconfig.nvim
 --
 -- :h mason
 -- :h mason-quickstart
@@ -29,14 +30,17 @@ require("mason").setup({
 require("mason-lspconfig").setup()
 
 -- Automatic server setup for LSP installed by Mason
+local lspconfig = require("lspconfig")
 require("mason-lspconfig").setup_handlers {
     function (server_name)
-        local lspconfig = require("lspconfig")
         lspconfig[server_name].setup {}
     end,
     ["rust_analyzer"] = function ()
-        local lspconfig = require("lspconfig")
         lspconfig.rust_analyzer.setup { settings = { ["rust-analyzer"] = {}, }, }
+    end,
+    ["clangd"] = function ()
+        -- Clangd will also look for compile_commands.json inside a "generated" folder
+        lspconfig.clangd.setup({ cmd = { 'clangd', '--compile-commands-dir=generated' } })
     end
 }
 
