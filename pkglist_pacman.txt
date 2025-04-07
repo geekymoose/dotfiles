@@ -138,6 +138,7 @@ gnu-netcat
 nmap
 
 android-tools
+gvfs
 gvfs-mtp
 libmtp
 # adb-sync (AUR)
@@ -171,23 +172,21 @@ tk
 
 code
 neovim
+docker
+godot
 
 gcc
-clang
 gdb
-cmake
+clang
 make
+cmake
+xmake
 cppcheck
 valgrind
 
 rustup
 lua
 python
-
-godot
-
-docker
-lnav
 
 shellcheck
 shfmt
@@ -199,7 +198,6 @@ shfmt
 
 yazi
 pcmanfm-gtk3
-gvfs
 filelight
 # czkawka (AUR)
 
