@@ -4,7 +4,8 @@ REM this is a simple equivalent to the stow script
 
 echo Creating the Windows configuration symlinks...
 echo Current env variables:
-echo - AppData: %LOCALAPPDATA%
+echo - AppData Local: %LOCALAPPDATA%
+echo - AppData Roaming: %APPDATA%
 echo - Home: %USERPROFILE%
 echo - PWD: %CD%
 
@@ -12,6 +13,7 @@ call :crea_conf "%CD%\src\nvim\.config\nvim\"                           "%LOCALA
 call :crea_conf "%CD%\src\git\.config\git\config"                       "%USERPROFILE%\.gitconfig"
 call :crea_conf "%CD%\src\powershell\.config\powershell\config.ps1"     "%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 call :crea_conf "%CD%\src\powershell\.config\powershell\config.ps1"     "%USERPROFILE%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+call :crea_conf "%CD%\src\yazi\.config\yazi\yazi.toml"                  "%APPDATA%\yazi\config\yazi.toml"
 
 REM Stop the script here, otherwise the functions will be run without parameters
 goto :eof
