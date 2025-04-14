@@ -187,6 +187,7 @@ valgrind
 rustup
 lua
 python
+texlive-core
 
 shellcheck
 shfmt
