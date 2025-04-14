@@ -9,6 +9,7 @@ echo - AppData Roaming: %APPDATA%
 echo - Home: %USERPROFILE%
 echo - PWD: %CD%
 
+call :crea_conf "%CD%\src\autohotkey\.config\autohotkey\"               "%USERPROFILE%\.local\bin\autohotkey\"
 call :crea_conf "%CD%\src\nvim\.config\nvim\"                           "%LOCALAPPDATA%\nvim\"
 call :crea_conf "%CD%\src\git\.config\git\config"                       "%USERPROFILE%\.gitconfig"
 call :crea_conf "%CD%\src\powershell\.config\powershell\config.ps1"     "%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
