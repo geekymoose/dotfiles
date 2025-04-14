@@ -1,8 +1,9 @@
 ; AutoHotkey v2 script
 ; Script to switch the Windows Virtual Desktop using Win+X (with X in 1-4 range)
 ; See example: https://github.com/Ciantic/VirtualDesktopAccessor/blob/rust/example.ah2
-; WARNING: VirtualDesktopAccessor.dll must exist on the same location
-; Download it on https://github.com/Ciantic/VirtualDesktopAccessor
+; WARNING: This script uses VirtualDesktopAccessor.dll (a Rust DLL)
+; -> Download it on https://github.com/Ciantic/VirtualDesktopAccessor
+; -> place it in "./local/bin/dll/VirtualDesktopAccessor.dll"
 
 ; Load the DLL
 SetWorkingDir(EnvGet("USERPROFILE"))
