@@ -25,4 +25,10 @@ GoToDesktopNumber(num) {
 #2::GoToDesktopNumber(1)  ; Win+2 -> Desktop 2
 #3::GoToDesktopNumber(2)  ; Win+3 -> Desktop 3
 #4::GoToDesktopNumber(3)  ; Win+4 -> Desktop 4
+#5::GoToDesktopNumber(4)  ; Win+5 -> Desktop 5
+#6::GoToDesktopNumber(5)  ; Win+6 -> Desktop 6
+#7::GoToDesktopNumber(6)  ; Win+7 -> Desktop 7
+#8::GoToDesktopNumber(7)  ; Win+8 -> Desktop 8
+#9::GoToDesktopNumber(8)  ; Win+9 -> Desktop 9
+#0::GoToDesktopNumber(9)  ; Win+0 -> Desktop 10
 
