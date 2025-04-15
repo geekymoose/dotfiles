@@ -3,7 +3,7 @@
 # ------------------------------------------------------------------------------
 
 [include]
-    path                = ~/.config/git-custom/config
+    path                = ~/.config/git-custom/config # For the private config
 
 [init]
     defaultBranch       = main
@@ -12,9 +12,14 @@
     default             = simple
     recurseSubmodules   = on-demand
 
+[fetch]
+    prune               = true
+    pruneTags           = true
+    all                 = true
+
 [pull]
     recurseSubmodules   = on-demand
-    rebase              = false
+    rebase              = true
 
 [credential]
     helper              = cache
