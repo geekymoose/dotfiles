@@ -173,6 +173,7 @@ tk
 code
 neovim
 docker
+docker-compose
 godot
 
 gcc
@@ -249,7 +250,7 @@ obsidian
 qt5ct
 qt6ct
 
-arc-gtk-theme
+# arc-gtk-theme (AUR)
 breeze-icons
 
 
