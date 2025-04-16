@@ -39,7 +39,7 @@ plug('https://github.com/rrethy/vim-illuminate')
 plug('https://github.com/windwp/nvim-autopairs')
 
 -- LSP
-plug('https://github.com/nvim-treesitter/nvim-treesitter')
+plug('https://github.com/nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 plug('https://github.com/neovim/nvim-lspconfig')
 plug('https://github.com/williamboman/mason.nvim')
 plug('https://github.com/williamboman/mason-lspconfig.nvim')
