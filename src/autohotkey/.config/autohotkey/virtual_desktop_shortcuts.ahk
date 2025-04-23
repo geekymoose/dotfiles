@@ -17,6 +17,7 @@ GoToDesktopNumberProc := DllCall("GetProcAddress", "Ptr", VDA_DLL, "AStr", "GoTo
 GoToDesktopNumber(num) {
     global GoToDesktopNumberProc
     DllCall(GoToDesktopNumberProc, "Int", num, "Int")
+    Sleep 50 ; Hack to ensure the ALT+TAB is done after the new Virtual Desktop is selected
     Send "!{Tab}" ; Hack to autofocus the window in the Virtual Desktop we just switched on
     return
 }
