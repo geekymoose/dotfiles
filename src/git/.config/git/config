@@ -67,3 +67,9 @@
     logone              = log --oneline --decorate --graph
     logones             = log --oneline --decorate --graph --format='%h %an %ae'
 
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+
