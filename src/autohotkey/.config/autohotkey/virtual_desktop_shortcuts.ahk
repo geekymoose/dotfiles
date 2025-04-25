@@ -12,8 +12,9 @@ VDA_DLL := DllCall("LoadLibrary", "Str", VDA_PATH, "Ptr")
 
 ; Load functions from VirtualDesktopAccessor DLL
 GoToDesktopNumberProc := DllCall("GetProcAddress", "Ptr", VDA_DLL, "AStr", "GoToDesktopNumber", "Ptr")
+MoveWindowToDesktopNumberProc := DllCall("GetProcAddress", "Ptr", VDA_DLL, "AStr", "MoveWindowToDesktopNumber", "Ptr")
 
-; Function to switch virtual desktop
+; Switch to the specified virtual desktop
 GoToDesktopNumber(num) {
     global GoToDesktopNumberProc
     DllCall(GoToDesktopNumberProc, "Int", num, "Int")
@@ -22,7 +23,15 @@ GoToDesktopNumber(num) {
     return
 }
 
-; Keymap
+; Move window to the specified virtuel desktop
+MoveCurrentWindowToDesktop(number) {
+    global MoveWindowToDesktopNumberProc, GoToDesktopNumberProc
+    activeHwnd := WinGetID("A")
+    DllCall(MoveWindowToDesktopNumberProc, "Ptr", activeHwnd, "Int", number, "Int")
+    return
+}
+
+; Keymaps (switching)
 #1::GoToDesktopNumber(0)  ; Win+1 -> Desktop 1
 #2::GoToDesktopNumber(1)  ; Win+2 -> Desktop 2
 #3::GoToDesktopNumber(2)  ; Win+3 -> Desktop 3
@@ -33,4 +42,16 @@ GoToDesktopNumber(num) {
 #8::GoToDesktopNumber(7)  ; Win+8 -> Desktop 8
 #9::GoToDesktopNumber(8)  ; Win+9 -> Desktop 9
 #0::GoToDesktopNumber(9)  ; Win+0 -> Desktop 10
+
+; Keymaps (moving window)
+#+1::MoveCurrentWindowToDesktop(0)
+#+2::MoveCurrentWindowToDesktop(1)
+#+3::MoveCurrentWindowToDesktop(2)
+#+4::MoveCurrentWindowToDesktop(3)
+#+5::MoveCurrentWindowToDesktop(4)
+#+6::MoveCurrentWindowToDesktop(5)
+#+7::MoveCurrentWindowToDesktop(6)
+#+8::MoveCurrentWindowToDesktop(7)
+#+9::MoveCurrentWindowToDesktop(8)
+#+0::MoveCurrentWindowToDesktop(9)
 
