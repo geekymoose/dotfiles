@@ -5,7 +5,5 @@
 -- :h nvim-treesitter-commands for a list of all available commands
 -- -----------------------------------------------------------------------------
 
-print("Loading plugin: todocomments")
-
 require("todo-comments").setup()
 

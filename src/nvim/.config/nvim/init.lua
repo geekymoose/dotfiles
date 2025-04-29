@@ -5,9 +5,8 @@
 -- -----------------------------------------------------------------------------
 
 if (vim.g.vscode) then
-    print("Loading vscode only config (some native nvim plugin may be disabled)")
-else
-    print("Loading native nvim config")
+    -- On vscode (NeoVim plugin), we don't load the custom settings
+    return
 end
 
 -- Load init plugins

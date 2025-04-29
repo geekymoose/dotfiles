@@ -2,8 +2,6 @@
 -- General VIM configuration
 -- -----------------------------------------------------------------------------
 
-print("Loading config: options")
-
 -- Theme
 vim.opt.syntax = "on"
 vim.opt.termguicolors = true            -- Enable 23-bit RGB color in the TUI

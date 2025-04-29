@@ -3,8 +3,6 @@
 -- https://github.com/hrsh7th/nvim-cmp
 -- -----------------------------------------------------------------------------
 
-print("Loading plugin: cmp")
-
 local cmp = require("cmp")
 
 cmp.setup({

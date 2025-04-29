@@ -12,14 +12,6 @@
 -- lspconfig.rust_analyzer.setup { settings = { ["rust-analyzer"] = {}, }, }
 -- -----------------------------------------------------------------------------
 
-if (vim.g.vscode) then
-    print("Loading plugin: lspconfig is disabled on vscode (use vscode plugins instead for LSP)")
-    return
-else
-    print("Loading plugin: lspconfig")
-end
-
-
 local lspconfig = require("lspconfig")
 
 -- LSP diagnostic

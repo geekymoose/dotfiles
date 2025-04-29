@@ -6,8 +6,6 @@
 -- :h nvim-treesitter-commands for a list of all available commands
 -- -----------------------------------------------------------------------------
 
-print("Loading plugin: treesitter")
-
 require ("nvim-treesitter.configs").setup {
     -- Parser to always install (or "all")
     ensure_installed = {
