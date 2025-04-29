@@ -15,8 +15,8 @@ application/x-extension-xht=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/pdf=mupdf.desktop
 
-image/jpeg=viewnior.desktop;gpicview.desktop;
-image/png=viewnior.desktop;gpicview.desktop;
+image/jpeg=org.gnome.eog.desktop;viewnior.desktop;gpicview.desktop;
+image/png=org.gnome.eog.desktop;viewnior.desktop;gpicview.desktop;
 
 x-scheme-handler/postman=Postman.desktop
 
