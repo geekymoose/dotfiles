@@ -9,11 +9,15 @@ echo - AppData Roaming: %APPDATA%
 echo - Home: %USERPROFILE%
 echo - PWD: %CD%
 
+REM Windows specific
 call :crea_conf "%CD%\src\autohotkey\.config\autohotkey\"               "%USERPROFILE%\.local\bin\autohotkey\"
-call :crea_conf "%CD%\src\nvim\.config\nvim\"                           "%LOCALAPPDATA%\nvim\"
-call :crea_conf "%CD%\src\git\.config\git\config"                       "%USERPROFILE%\.gitconfig"
 call :crea_conf "%CD%\src\powershell\.config\powershell\config.ps1"     "%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 call :crea_conf "%CD%\src\powershell\.config\powershell\config.ps1"     "%USERPROFILE%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+
+REM Linux / Windows
+call :crea_conf "%CD%\src\alacritty\.config\alacritty\alacritty.toml"   "%APPDATA%\alacritty\alacritty.toml"
+call :crea_conf "%CD%\src\nvim\.config\nvim\"                           "%LOCALAPPDATA%\nvim\"
+call :crea_conf "%CD%\src\git\.config\git\config"                       "%USERPROFILE%\.gitconfig"
 call :crea_conf "%CD%\src\yazi\.config\yazi\yazi.toml"                  "%APPDATA%\yazi\config\yazi.toml"
 
 REM Stop the script here, otherwise the functions will be run without parameters
