@@ -1,4 +1,3 @@
 gtk-theme-name="Arc-Dark"
-gtk-icon-theme-name="breeze-dark"
-gtk-font-name="Sans 11"
-gtk-cursor-theme-name="Breeze_Amber"
+gtk-icon-theme-name="papirus"
+gtk-font-name="NotoSans 12"

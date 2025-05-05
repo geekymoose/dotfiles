@@ -7,7 +7,7 @@
 // -----------------------------------------------------------------------------
 
 configuration {
-    font: "NotoSans 14";
+    font: "NotoSans 16";
     icon-theme: "Papirus";
     show-icons: true;
     modes: "drun,run,window,ssh";

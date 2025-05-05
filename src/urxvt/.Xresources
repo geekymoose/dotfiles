@@ -58,7 +58,7 @@ urxvt.scrollTtyOutput:      false
 urxvt.scrollWithBuffer:     true
 
 ! Fonts
-urxvt.font:                 xft:Source\ Code\ Pro:size=11
+urxvt.font:                 xft:CaskaydiaMono\ Nerd\ Font:size=11
 Xft.dpi:                    96
 Xft.antialias:              true
 Xft.rgba:                   rgb
