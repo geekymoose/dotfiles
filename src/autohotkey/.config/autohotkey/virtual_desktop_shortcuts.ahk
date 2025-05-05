@@ -18,8 +18,7 @@ MoveWindowToDesktopNumberProc := DllCall("GetProcAddress", "Ptr", VDA_DLL, "AStr
 GoToDesktopNumber(num) {
     global GoToDesktopNumberProc
     DllCall(GoToDesktopNumberProc, "Int", num, "Int")
-    Sleep 50 ; Hack to ensure the ALT+TAB is done after the new Virtual Desktop is selected
-    Send "!{Tab}" ; Hack to autofocus the window in the Virtual Desktop we just switched on
+    SimulateAltTab() ; Hack to autofocus the window in the Virtual Desktop we just switched on
     return
 }
 
@@ -29,6 +28,14 @@ MoveCurrentWindowToDesktop(number) {
     activeHwnd := WinGetID("A")
     DllCall(MoveWindowToDesktopNumberProc, "Ptr", activeHwnd, "Int", number, "Int")
     return
+}
+
+SimulateAltTab() {
+    ; Send "!{Tab}" ; For some reasons, this doesn't work, therefore I manually do each input call
+    DllCall("keybd_event", "UChar", 0x12, "UChar", 0, "UInt", 0, "UInt", 0) ; Simulate Alt down
+    DllCall("keybd_event", "UChar", 0x09, "UChar", 0, "UInt", 0, "UInt", 0) ; Simulate Tab down
+    DllCall("keybd_event", "UChar", 0x09, "UChar", 0, "UInt", 2, "UInt", 0) ; Simulate Tab up
+    DllCall("keybd_event", "UChar", 0x12, "UChar", 0, "UInt", 2, "UInt", 0) ; Simulate Alt up
 }
 
 ; Keymaps (switching)
