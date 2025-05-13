@@ -10,7 +10,11 @@
 -- :h mason-settings
 -- -----------------------------------------------------------------------------
 
-require("mason").setup({
+local lspconfig = require("lspconfig")
+local mason = require("mason")
+local mason_lspconfig = require("mason-lspconfig")
+
+mason.setup({
     ui = {
         icons = {
             package_installed = "✓",
@@ -20,20 +24,5 @@ require("mason").setup({
     }
 })
 
-require("mason-lspconfig").setup()
-
--- Automatic server setup for LSP installed by Mason
-local lspconfig = require("lspconfig")
-require("mason-lspconfig").setup_handlers {
-    function (server_name)
-        lspconfig[server_name].setup {}
-    end,
-    ["rust_analyzer"] = function ()
-        lspconfig.rust_analyzer.setup { settings = { ["rust-analyzer"] = {}, }, }
-    end,
-    ["clangd"] = function ()
-        -- Clangd will also look for compile_commands.json inside a "generated" folder
-        lspconfig.clangd.setup({ cmd = { 'clangd', '--compile-commands-dir=generated' } })
-    end
-}
+mason_lspconfig.setup()
 

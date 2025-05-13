@@ -6,10 +6,7 @@
 -- :h lspconfig-all
 --
 -- NOTE
--- Use Mason to install and config the actual LSP
--- The following are automatically called my mason (see mason plugin config)
--- lspconfig.clangd.setup {}
--- lspconfig.rust_analyzer.setup { settings = { ["rust-analyzer"] = {}, }, }
+-- Use Mason to install the LSP
 -- -----------------------------------------------------------------------------
 
 local lspconfig = require("lspconfig")
@@ -35,4 +32,19 @@ sign({name = 'DiagnosticSignError', text = '❌'})
 sign({name = 'DiagnosticSignWarn', text = '⚠️'})
 sign({name = 'DiagnosticSignHint', text = '💡'})
 sign({name = 'DiagnosticSignInfo', text = '❔'})
+
+--  LSP configurations
+vim.lsp.config.clangd = {
+    cmd = {
+        'clangd',
+        '--compile-commands-dir=generated',
+        -- Clangd will also look for compile_commands.json inside a "generated" folder
+    }
+}
+
+vim.lsp.config.rust_analyzer = {
+    settings = {
+        ["rust-analyzer"] = {}
+    }
+}
 
