@@ -1,9 +1,9 @@
 -- -----------------------------------------------------------------------------
 -- LSP config plugin
 -- https://github.com/neovim/nvim-lspconfig
--- Server-specific settings: see `:help lspconfig-setup`
 --
--- :h lspconfig-all
+-- For config help, see `:help lspconfig-all`
+-- Server-specific settings: see `:help lsp-quickstart`
 --
 -- NOTE
 -- Use Mason to install the LSP
@@ -33,18 +33,21 @@ sign({name = 'DiagnosticSignWarn', text = '⚠️'})
 sign({name = 'DiagnosticSignHint', text = '💡'})
 sign({name = 'DiagnosticSignInfo', text = '❔'})
 
---  LSP configurations
-vim.lsp.config.clangd = {
+--  LSP configurations: C++
+vim.lsp.enable('clangd')
+vim.lsp.config('clangd', {
     cmd = {
         'clangd',
         '--compile-commands-dir=generated',
         -- Clangd will also look for compile_commands.json inside a "generated" folder
     }
-}
+})
 
-vim.lsp.config.rust_analyzer = {
+--  LSP configurations: Rust
+vim.lsp.enable('rust_analyzer')
+vim.lsp.config('rust_analyzer', {
     settings = {
-        ["rust-analyzer"] = {}
-    }
-}
+        ['rust-analyzer'] = {},
+    },
+})
 
