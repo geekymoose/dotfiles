@@ -176,6 +176,7 @@ neovim
 docker
 docker-compose
 godot
+godot-mono
 
 gcc
 gdb
