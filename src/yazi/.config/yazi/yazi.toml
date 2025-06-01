@@ -1,7 +1,7 @@
 # ~/.config/yazi/yazi.toml
 # See https://yazi-rs.github.io/docs/configuration/yazi
 
-[manager]
+[mgr]
 sort_by = "alphabetical"
 sort_sensitive = false
 linemode = "size" # Add size info
