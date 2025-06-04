@@ -9,3 +9,4 @@
 (D) Unset the nvim-tree keymap `<C-e>` @shortcuts @plugin +Neovim
 (B) Add a plugin to help nvim development @plugin @dev +Neovim
 (D) Improve the `lua` configuration so that `plugins` files can be imported several times @plugin @dev +Neovim
+(B) Setup a CTRL+SHIFT+F shortcut to apply autoformat +Neovim @format
