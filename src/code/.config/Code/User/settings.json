@@ -1,7 +1,10 @@
 {
+    "workbench.iconTheme": "simple-icons",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
-    "workbench.iconTheme": "simple-icons",
-    "editor.fontFamily": "'CaskaydiaMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace"
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.codeLens": false,
+    "editor.renderWhitespace": "all",
+    "editor.fontFamily": "'CaskaydiaMono Nerd Font Mono', 'Cascadia Cove', monospace",
 }
