@@ -1,0 +1,12 @@
+[Shortcuts]
+KisToolSelectOutline=`
+clones_array=7
+duplicatelayer=Ctrl+J; Ctrl+D
+isolate_active_layer=Y
+next_frame=D
+previous_frame=A
+reload_preset_action=<
+reset_fg_bg=Shift+X
+show_brush_presets=F6;\s
+toggle_layer_visibility=Z
+toggle_playback=W
