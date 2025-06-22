@@ -1,7 +1,7 @@
 # My Linux dotfiles
 
 My personal Archlinux configuration (I use i3 window manager).
-These are targeted for my usecase, but I hope they can be useful for you.
+These are targeted for my use-cases, but I hope they can be useful for you.
 
 ## Features
 
@@ -20,9 +20,11 @@ These are targeted for my usecase, but I hope they can be useful for you.
 - ssh <https://wiki.archlinux.org/title/ssh_keys>
 - tmux <https://wiki.archlinux.org/title/tmux>
 - urxvt <https://wiki.archlinux.org/index.php/urxvt>
+- vscode <https://code.visualstudio.com/>
 - x11 <https://wiki.archlinux.org/title/xorg>
 - zsh <https://wiki.archlinux.org/title/zsh>
 - yazi <https://yazi-rs.github.io/docs/configuration/overview/>
+- zed <https://zed.dev/>
 
 ## Install
 
@@ -52,4 +54,3 @@ I saw other interesting techniques with git config. For further information, see
 - <https://www.gnu.org/software/stow/>
 - <https://www.atlassian.com/git/tutorials/dotfiles>
 - <https://github.com/kazhala/dotbare>
-
