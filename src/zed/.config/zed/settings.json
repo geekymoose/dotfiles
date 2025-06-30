@@ -16,5 +16,6 @@
     "mode": "system",
     "light": "One Dark",
     "dark": "One Dark"
-  }
+  },
+  "show_whitespaces": "boundary"
 }
