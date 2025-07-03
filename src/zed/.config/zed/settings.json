@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+    "enabled_in_text_threads": false
+  },
+  "icon_theme": "Colored Zed Icons Theme Dark",
   "base_keymap": "VSCode",
   "buffer_font_family": "CaskaydiaMono Nerd Font Mono",
   "vim_mode": true,
