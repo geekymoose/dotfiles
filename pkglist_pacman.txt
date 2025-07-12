@@ -190,6 +190,7 @@ valgrind
 rustup
 lua
 python
+python-pip
 texlive-core
 
 shellcheck
@@ -262,5 +263,3 @@ ttf-nerd-fonts-symbols
 
 ttf-font-awesome
 papirus-icon-theme
-
-
