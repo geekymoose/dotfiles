@@ -3,6 +3,7 @@
 # ------------------------------------------------------------------------------
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -15,8 +16,7 @@ export TERMINAL=alacritty
 export TERM=alacritty
 export BROWSER=firefox
 
-# Color in man page
-# See https://wiki.archlinux.org/title/color_output_in_console#man
+# Color in man page (See https://wiki.archlinux.org/title/color_output_in_console#man)
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
 

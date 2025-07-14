@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # Set of reusable functions
-# These are mostly targetted to be used in my personal scripts
+# These are mostly targeted to be used in my personal scripts
 # To include in script: source "${HOME}/.config/sh/functions.sh"
 # ------------------------------------------------------------------------------
 
