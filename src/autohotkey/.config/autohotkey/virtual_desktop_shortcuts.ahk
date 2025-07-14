@@ -61,4 +61,3 @@ SimulateAltTab() {
 #+8::MoveCurrentWindowToDesktop(7)
 #+9::MoveCurrentWindowToDesktop(8)
 #+0::MoveCurrentWindowToDesktop(9)
-

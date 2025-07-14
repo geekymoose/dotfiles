@@ -4,4 +4,3 @@
 
 nitrogen --restore
 notify-send -i display "Display profile" "Autorandr profile loaded: $AUTORANDR_CURRENT_PROFILE"
-

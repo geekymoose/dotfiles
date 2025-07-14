@@ -41,7 +41,7 @@
     sticky_history = yes
     history_length = 20
     show_age_threshold = 60
-    idle_threshold = 120 
+    idle_threshold = 120
 
     # Navigation
     monitor = 0
@@ -67,4 +67,3 @@
     background = "#603030"
     foreground = "#F9FAF9"
     timeout = 0
-

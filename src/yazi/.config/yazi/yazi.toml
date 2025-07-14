@@ -6,4 +6,3 @@ sort_by = "alphabetical"
 sort_sensitive = false
 linemode = "size" # Add size info
 mouse_events = ["scroll"] # Only mouse scroll (no click etc)
-

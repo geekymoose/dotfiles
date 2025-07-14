@@ -219,4 +219,3 @@ bindsym Mod1+Print exec --no-startup-id "slurp | grim -g -"
 
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Godot"] floating enable
-

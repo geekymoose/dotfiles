@@ -82,4 +82,3 @@ urxvt.matcher.button:       1
 urxvt.keysym.C-Delete:      perl:matcher:last
 urxvt.keysym.M-Delete:      perl:matcher:list
 urxvt.matcher.rend.0:       Uline Bold fg5
-
