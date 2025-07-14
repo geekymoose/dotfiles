@@ -20,6 +20,14 @@ vim.diagnostic.config({
     severity_sort = false,
 })
 
+-- LSP apply auto-format on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*",
+    callback = function()
+        vim.lsp.buf.format({ async = false })
+    end,
+})
+
 -- LSP diagnostic custom icons
 local sign = function(opts)
     vim.fn.sign_define(opts.name, {
