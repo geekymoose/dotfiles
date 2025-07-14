@@ -32,4 +32,3 @@ require("plugins.telescope")
 require("plugins.todocomments")
 require("plugins.treesitter")
 require("plugins.trouble")
-

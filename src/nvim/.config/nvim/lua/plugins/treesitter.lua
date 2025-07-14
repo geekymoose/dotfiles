@@ -6,7 +6,7 @@
 -- :h nvim-treesitter-commands for a list of all available commands
 -- -----------------------------------------------------------------------------
 
-require ("nvim-treesitter.configs").setup {
+require("nvim-treesitter.configs").setup {
     -- Parser to always install (or "all")
     ensure_installed = {
         "bash",
@@ -56,4 +56,3 @@ require ("nvim-treesitter.configs").setup {
         additional_vim_regex_highlighting = false,
     },
 }
-

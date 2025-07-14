@@ -25,4 +25,3 @@ mason.setup({
 })
 
 mason_lspconfig.setup()
-

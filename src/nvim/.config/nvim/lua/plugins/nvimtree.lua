@@ -3,9 +3,9 @@
 -- https://github.com/nvim-tree/nvim-tree.lua
 -- -----------------------------------------------------------------------------
 
-vim.g.loaded_netrw = 1          -- Ensure netrw is disabled
-vim.g.loaded_netrwPlugin = 1    -- Ensure netrw is disabled
-vim.opt.termguicolors = true    -- Ensure 24-bit colour is enabled
+vim.g.loaded_netrw = 1       -- Ensure netrw is disabled
+vim.g.loaded_netrwPlugin = 1 -- Ensure netrw is disabled
+vim.opt.termguicolors = true -- Ensure 24-bit colour is enabled
 
 require("nvim-tree").setup {
     view = {
@@ -24,4 +24,3 @@ require("nvim-tree").setup {
         },
     },
 }
-

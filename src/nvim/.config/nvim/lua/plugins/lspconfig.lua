@@ -28,12 +28,12 @@ local sign = function(opts)
         numhl = ''
     })
 end
-sign({name = 'DiagnosticSignError', text = '❌'})
-sign({name = 'DiagnosticSignWarn', text = '⚠️'})
-sign({name = 'DiagnosticSignHint', text = '💡'})
-sign({name = 'DiagnosticSignInfo', text = '❔'})
+sign({ name = 'DiagnosticSignError', text = '❌' })
+sign({ name = 'DiagnosticSignWarn', text = '⚠️' })
+sign({ name = 'DiagnosticSignHint', text = '💡' })
+sign({ name = 'DiagnosticSignInfo', text = '❔' })
 
---  LSP configurations: C++
+-- LSP configurations: C++
 vim.lsp.enable('clangd')
 vim.lsp.config('clangd', {
     cmd = {
@@ -43,11 +43,10 @@ vim.lsp.config('clangd', {
     }
 })
 
---  LSP configurations: Rust
+-- LSP configurations: Rust
 vim.lsp.enable('rust_analyzer')
 vim.lsp.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {},
     },
 })
-
