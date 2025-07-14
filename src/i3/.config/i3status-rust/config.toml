@@ -13,11 +13,9 @@ theme = "semi-native"
 [icons]
 icons = "awesome6"
 
-
 [[block]]
 block = "music"
-format = " $icon $volume $prev $play $next "
-player = "spotify"
+format = " $icon $artist - $title $volume_icon $volume $prev $play $next "
 [[block.click]]
 button = "up"
 action = "volume_up"
