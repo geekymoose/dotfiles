@@ -67,15 +67,16 @@ inetutils
 alsa-firmware
 alsa-tools
 alsa-utils
-pipewire
-pipewire-alsa
-pipewire-pulse
-pipewire-jack
-wireplumber
+pulseaudio
+pulseaudio-alse
+pulseaudio-jack
+jack2
 pavucontrol
 
 base
 base-devel
+linux
+linux-headers
 linux-firmware
 acpi
 
