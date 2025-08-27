@@ -16,36 +16,14 @@
 
 
 # ------------------------------------------------------------------------------
-# Window Manager (WM)
+# Window Manager (common)
 # ------------------------------------------------------------------------------
 
 mesa
 
-xorg-server
-xorg-xinit
-xorg-xrandr
-xorg-xwayland
-arandr
-autorandr
-
-wayland
-wl-clipboard
-
 lightdm
 lightdm-slick-greeter
 # lightdm-settings (AUR)
-
-i3-wm
-i3status
-i3status-rust
-i3lock
-nitrogen
-xss-lock
-
-sway
-swaybg
-swaylock
-swayidle
 
 dmenu
 rofi
@@ -57,28 +35,81 @@ dunst
 
 
 # ------------------------------------------------------------------------------
-# System core / drivers
+# Window Manager (i3 - Xorg)
 # ------------------------------------------------------------------------------
+
+xorg-server
+xorg-xinit
+xorg-xrandr
+xorg-xwayland
+arandr
+autorandr
+
+i3-wm
+i3status
+i3status-rust
+i3lock
+nitrogen
+xss-lock
+
+xfce4-screenshooter
+
+
+# ------------------------------------------------------------------------------
+# Window Manager (Sway - Wayland)
+# ------------------------------------------------------------------------------
+
+wayland
+wl-clipboard
+
+sway
+swaybg
+swaylock
+swayidle
+
+grim
+slurp
+
+
+# ------------------------------------------------------------------------------
+# Fonts / Themes
+# ------------------------------------------------------------------------------
+
+qt5ct
+qt6ct
+# arc-gtk-theme (AUR)
+
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+
+nerd-fonts
+ttf-nerd-fonts-symbols
+
+ttf-font-awesome
+papirus-icon-theme
+
+
+# ------------------------------------------------------------------------------
+# Drivers
+# ------------------------------------------------------------------------------
+
+linux
+linux-headers
+linux-firmware
+acpi
 
 networkmanager
 network-manager-applet
-inetutils
 
 alsa-firmware
 alsa-tools
 alsa-utils
 pulseaudio
-pulseaudio-alse
+pulseaudio-alsa
 pulseaudio-jack
 jack2
 pavucontrol
-
-base
-base-devel
-linux
-linux-headers
-linux-firmware
-acpi
 
 xf86-input-wacom
 libwacom
@@ -93,27 +124,31 @@ cups-pdf
 sane
 # xsane (AUR)
 
+ntfs-3g
+dosfstools
+udisks2
+usbutils
+
+android-tools
+gvfs
+gvfs-mtp
+libmtp
+
+
+# ------------------------------------------------------------------------------
+# System core
+# ------------------------------------------------------------------------------
+
 man-db
 man-pages
 texinfo
 
-
-# ------------------------------------------------------------------------------
-# System utilities / commands
-# ------------------------------------------------------------------------------
+base
+base-devel
 
 reflector
 stow
 which
-openssh
-
-zip
-7zip
-unzip
-tar
-unrar
-gzip
-bzip2
 
 bat
 fzf
@@ -124,25 +159,31 @@ jq
 htop
 btop
 lsof
-neofetch
+
+
+# ------------------------------------------------------------------------------
+# Utilities / commands
+# ------------------------------------------------------------------------------
+
+zip
+7zip
+unzip
+tar
+unrar
+gzip
+bzip2
 
 rsync
-ntfs-3g
-dosfstools
-udisks2
-usbutils
+# adb-sync (AUR)
+
+openssh
+curl
+gnu-netcat
+inetutils
+nmap
 
 ltrace
 strace
-curl
-gnu-netcat
-nmap
-
-android-tools
-gvfs
-gvfs-mtp
-libmtp
-# adb-sync (AUR)
 
 
 # ------------------------------------------------------------------------------
@@ -172,7 +213,7 @@ git-lfs
 git-delta
 tk
 
-code
+# code (or visual-studio-code-bin from AUR)
 neovim
 docker
 docker-compose
@@ -180,13 +221,13 @@ godot
 godot-mono
 
 gcc
-gdb
 clang
 make
 cmake
 xmake
-cppcheck
+gdb
 valgrind
+cppcheck
 
 rustup
 lua
@@ -211,8 +252,6 @@ viewnior
 chafa
 ueberzugpp
 imagemagick
-grim
-slurp
 
 vlc
 mpv
@@ -243,24 +282,6 @@ keepassxc
 firefox
 obsidian
 # sleek (AUR)
-# spotify (AUR)
+# tidal (AUR)
 # anki (AUR)
 
-
-# ------------------------------------------------------------------------------
-# Fonts // Themes
-# ------------------------------------------------------------------------------
-
-qt5ct
-qt6ct
-# arc-gtk-theme (AUR)
-
-noto-fonts
-noto-fonts-cjk
-noto-fonts-emoji
-
-nerd-fonts
-ttf-nerd-fonts-symbols
-
-ttf-font-awesome
-papirus-icon-theme
