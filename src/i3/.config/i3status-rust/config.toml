@@ -15,13 +15,7 @@ icons = "awesome6"
 
 [[block]]
 block = "music"
-format = " $icon $artist - $title $volume_icon $volume $prev $play $next "
-[[block.click]]
-button = "up"
-action = "volume_up"
-[[block.click]]
-button = "down"
-action = "volume_down"
+format = " $icon $artist - $title $prev $play $next "
 
 [[block]]
 block = "sound"
