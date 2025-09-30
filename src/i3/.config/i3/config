@@ -182,7 +182,7 @@ exec --no-startup-id "dex --autostart --environment i3"
 # Shortcuts
 # ------------------------------------------------------------------------------
 
-# audio (use pactl to adjust volume in PulseAudio)
+# audio
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status"
 bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status"
@@ -200,7 +200,6 @@ bindsym $mod+r exec --no-startup-id "rofi -show drun"
 bindsym Mod1+8 exec --no-startup-id "rofi -show p -modi p:rofi-power-menu"
 bindsym Mod1+9 exec --no-startup-id "rofimoji --action copy --files latin-1_supplement"
 bindsym Mod1+0 exec --no-startup-id "rofimoji --action copy"
-bindsym Mod1+l exec --no-startup-id "i3lock"
 
 # softwares
 bindsym Mod1+f exec --no-startup-id "firefox"
@@ -208,9 +207,10 @@ bindsym Mod1+u exec --no-startup-id "alacritty"
 bindsym Mod1+p exec --no-startup-id "pavucontrol"
 bindsym Mod1+e exec --no-startup-id "pcmanfm"
 
-# screenshots
-bindsym Print exec --no-startup-id "xfce4-screenshooter -w -s $HOME/downloads/"
-bindsym Mod1+Print exec --no-startup-id "xfce4-screenshooter"
+# custom scripts
+bindsym Print exec --no-startup-id "zozo-screenshot-rect.sh"
+bindsym Mod1+Print exec --no-startup-id "zozo-screenshot.sh"
+bindsym Mod1+l exec --no-startup-id "zozo-lock.sh"
 
 
 # ------------------------------------------------------------------------------
