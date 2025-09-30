@@ -127,3 +127,28 @@ function run_adb_sync_backup() {
         exit 42
     fi
 }
+
+# Runs the LUKS open command on the provided arguments
+# Param 1: the name of the LUKS logical partition (e.g., diskdata)
+# Param 2: the sources where the LUKS partition is located (e.g., /dev/sda1)
+# Param 3: where to mount to decrypted partition (e.g., /mnt/diskdata)
+function run_mount_luks()
+{
+    local name=$1
+    local src=$2
+    local dst=$3
+
+    echo "Mounting ${src} to ${dst}..."
+
+    $(mountpoint -q ${dst})
+    if [[ $? -eq 0 ]]
+    then
+        echo "Partition ${name} is already mounted (nothing is done)"
+        return 0
+    else
+        echo "Partition ${name} is not already mounted, running the encryption mount"
+        sudo cryptsetup luksOpen ${src} ${name}
+        sudo mount /dev/mapper/${name} ${dst}
+        return 0
+    fi
+}
