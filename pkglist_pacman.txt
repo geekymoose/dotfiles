@@ -213,12 +213,12 @@ git-lfs
 git-delta
 tk
 
-# code (or visual-studio-code-bin from AUR)
+# visual-studio-code-bin (AUR, or use code)
+zed
 neovim
+
 docker
 docker-compose
-godot
-godot-mono
 
 gcc
 clang
@@ -228,6 +228,8 @@ xmake
 gdb
 valgrind
 cppcheck
+shellcheck
+shfmt
 
 rustup
 lua
@@ -235,8 +237,9 @@ python
 python-pip
 texlive-core
 
-shellcheck
-shfmt
+godot
+godot-mono
+# unityhub (AUR)
 
 
 # ------------------------------------------------------------------------------
@@ -284,4 +287,3 @@ obsidian
 # sleek (AUR)
 # tidal (AUR)
 # anki (AUR)
-
