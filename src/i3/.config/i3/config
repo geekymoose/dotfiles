@@ -176,6 +176,7 @@ exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock"
 exec --no-startup-id "dunst"
 exec --no-startup-id "autorandr --change"
 exec --no-startup-id "dex --autostart --environment i3"
+exec --no-startup-id "zozo-init-pc.sh" # Custom init script
 
 
 # ------------------------------------------------------------------------------
