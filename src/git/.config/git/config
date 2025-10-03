@@ -1,9 +1,10 @@
 # ------------------------------------------------------------------------------
 # https://git-scm.com/docs/git-config
+# Can be placed in ~/.config/git/config
 # ------------------------------------------------------------------------------
 
 [include]
-    path                = ~/.config/git-custom/config # For the private config
+    path                = ~/.config/git/config_custom # For the private config
 
 [init]
     defaultBranch       = main
@@ -72,3 +73,4 @@
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
+

@@ -1,0 +1,10 @@
+# ------------------------------------------------------------------------------
+# https://git-scm.com/docs/git-config
+# Can be placed in ~/.config/git/config-custom
+# For custom config (e.g., at work), use another file and don't symlink this one
+# ------------------------------------------------------------------------------
+
+[user]
+    name    = geekymoose
+    email   = constantin.masson@umontreal.ca
+
