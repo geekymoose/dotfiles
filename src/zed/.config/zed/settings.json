@@ -7,26 +7,41 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "minimap": {
+    "show": "always"
+  },
   "collaboration_panel": {
     "dock": "right"
   },
   "outline_panel": {
     "dock": "right"
   },
-  "edit_predictions": {
-    "mode": "subtle",
-    "enabled_in_text_threads": false
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark"
   },
-  "icon_theme": "Colored Zed Icons Theme Dark",
+  "show_whitespaces": "boundary",
   "base_keymap": "VSCode",
   "buffer_font_family": "CaskaydiaMono Nerd Font Mono",
   "vim_mode": true,
   "buffer_font_size": 16,
+  "ui_font_family": ".ZedMono",
   "ui_font_size": 16,
   "theme": {
-    "mode": "system",
-    "light": "One Dark",
-    "dark": "One Dark"
+    "mode": "dark",
+    "light": "Gruvbox Light",
+    "dark": "VSCode Dark Modern"
   },
-  "show_whitespaces": "boundary"
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": false,
+    "show_parameter_hints": false,
+    "show_value_hints": false,
+    "show_other_hints": false
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+    "enabled_in_text_threads": false
+  }
 }

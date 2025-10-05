@@ -240,6 +240,9 @@ godot
 godot-mono
 # unityhub (AUR)
 
+dotnet-runtime
+dotnet-sdk
+
 
 # ------------------------------------------------------------------------------
 # Media

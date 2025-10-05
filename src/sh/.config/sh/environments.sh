@@ -16,6 +16,9 @@ export TERMINAL=alacritty
 export TERM=alacritty
 export BROWSER=firefox
 
+# Custom variables
+export GODOT_PATH=$(which godot)
+
 # Color in man page (See https://wiki.archlinux.org/title/color_output_in_console#man)
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
