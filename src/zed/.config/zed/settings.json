@@ -7,6 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light",
+    "dark": "VSCode Dark Modern"
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
+  "buffer_font_family": "CaskaydiaMono Nerd Font Mono",
+  "buffer_font_size": 16,
+  "ui_font_family": "CaskaydiaMono Nerd Font Mono",
+  "ui_font_size": 16,
+  "show_whitespaces": "boundary",
   "minimap": {
     "show": "always"
   },
@@ -19,21 +36,6 @@
   "project_panel": {
     "hide_gitignore": true
   },
-  "theme": {
-    "mode": "dark",
-    "light": "Gruvbox Light",
-    "dark": "VSCode Dark Modern"
-  },
-  "icon_theme": {
-    "mode": "dark",
-    "light": "Colored Zed Icons Theme Dark",
-    "dark": "Colored Zed Icons Theme Dark"
-  },
-  "show_whitespaces": "boundary",
-  "buffer_font_family": "CaskaydiaMono Nerd Font Mono",
-  "buffer_font_size": 16,
-  "ui_font_family": "CaskaydiaMono Nerd Font Mono",
-  "ui_font_size": 16,
   "inlay_hints": {
     "enabled": false,
     "show_type_hints": false,
@@ -41,8 +43,6 @@
     "show_value_hints": false,
     "show_other_hints": false
   },
-  "base_keymap": "VSCode",
-  "vim_mode": true,
   "edit_predictions": {
     "mode": "subtle",
     "enabled_in_text_threads": false
