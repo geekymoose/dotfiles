@@ -19,6 +19,7 @@ call :crea_conf "%CD%\src\alacritty\.config\alacritty\alacritty.toml"   "%APPDAT
 call :crea_conf "%CD%\src\nvim\.config\nvim\"                           "%LOCALAPPDATA%\nvim\"
 call :crea_conf "%CD%\src\git\.config\git\config"                       "%USERPROFILE%\.gitconfig"
 call :crea_conf "%CD%\src\yazi\.config\yazi\yazi.toml"                  "%APPDATA%\yazi\config\yazi.toml"
+call :crea_conf "%CD%\src\zed\.config\zed\settings.json"                "%APPDATA%\Zed\settings.json"
 
 REM Stop the script here, otherwise the functions will be run without parameters
 goto :eof
@@ -51,4 +52,3 @@ if not exist "%config_src_path%" (
 )
 goto :eof
 REM ----------------------------------------------------------------------------
-
