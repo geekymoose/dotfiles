@@ -273,6 +273,7 @@ krita
 blender
 darktable
 kdenlive
+reaper
 scribus
 libreoffice-fresh
 # pureref (AUR)

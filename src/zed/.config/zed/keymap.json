@@ -7,5 +7,11 @@
     "bindings": {
       "ctrl-`": "workspace::ToggleBottomDock"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-f": "editor::Format"
+    }
   }
 ]
