@@ -13,5 +13,10 @@
     "bindings": {
       "alt-shift-f": "editor::Format"
     }
+  },
+  {
+    "bindings": {
+      "alt-o": "editor::SwitchSourceHeader"
+    }
   }
 ]
