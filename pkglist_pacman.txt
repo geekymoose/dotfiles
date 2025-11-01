@@ -49,7 +49,7 @@ i3-wm
 i3status
 i3status-rust
 i3lock
-nitrogen
+# nitrogen (AUR)
 xss-lock
 
 xfce4-screenshooter
@@ -249,7 +249,7 @@ dotnet-sdk
 # ------------------------------------------------------------------------------
 
 yazi
-pcmanfm-gtk3
+pcmanfm
 filelight
 # czkawka (AUR)
 
