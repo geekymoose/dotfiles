@@ -237,7 +237,6 @@ python-pip
 texlive-core
 
 godot
-godot-mono
 # unityhub (AUR)
 
 dotnet-runtime
