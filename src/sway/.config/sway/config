@@ -15,10 +15,17 @@ set $down j
 set $left h
 set $right l
 
+set $background_home "$HOME/.local/share/backgrounds/home.jpg"
+set $background_lock "$HOME/.local/share/backgrounds/lock.png"
+
 
 # ------------------------------------------------------------------------------
 # Theme
 # ------------------------------------------------------------------------------
+
+# Swaybg background and lock
+output * bg $background_home fill
+bindsym Mod1+l exec "swaylock -e -F -f -k -l -s fill -i $background_lock"
 
 # Font for window titles (and bar if bar {} has no font)
 font pango:NotoSans Bold Semi-Condensed 10
@@ -165,14 +172,6 @@ bindsym $mod+Shift+0 move container to workspace number 10
 
 
 # ------------------------------------------------------------------------------
-# Autostart
-# ------------------------------------------------------------------------------
-
-exec "dunst"
-exec "zozo-init-pc.sh" # Custom init script
-
-
-# ------------------------------------------------------------------------------
 # Applications
 # ------------------------------------------------------------------------------
 
@@ -188,12 +187,11 @@ bindsym Mod1+f exec "firefox"
 bindsym Mod1+p exec "pavucontrol"
 bindsym Mod1+e exec "pcmanfm"
 
-# Custom
-bindsym Print exec "zozo-screenshot-rect.sh"
-bindsym Mod1+Print exec "zozo-screenshot.sh"
-bindsym Mod1+l exec "zozo-lock.sh"
+# Screenshots
+bindsym Print exec "slurp | grim -g -"
+bindsym Mod1+Print exec grim
 
-# Specific applications floating mode
+# Custom floating applications
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Godot"] floating enable
 
@@ -202,4 +200,5 @@ for_window [class="Godot"] floating enable
 # Extra
 # ------------------------------------------------------------------------------
 
+exec "dunst" # Autostart dunst notif
 include /etc/sway/config.d/*
