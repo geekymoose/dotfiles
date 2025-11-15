@@ -158,7 +158,6 @@ strace
 
 alacritty
 rxvt-unicode
-tmux
 
 bash
 bash-completion

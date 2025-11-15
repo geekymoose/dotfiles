@@ -19,7 +19,6 @@ These are targeted for my use-cases, but I hope they can be useful for you.
 - rofi <https://wiki.archlinux.org/title/rofi>
 - ssh <https://wiki.archlinux.org/title/ssh_keys>
 - script (custom script)
-- tmux <https://wiki.archlinux.org/title/tmux>
 - urxvt <https://wiki.archlinux.org/index.php/urxvt>
 - vscode <https://code.visualstudio.com/>
 - x11 <https://wiki.archlinux.org/title/xorg>
