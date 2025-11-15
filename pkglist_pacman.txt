@@ -1,9 +1,6 @@
 # ------------------------------------------------------------------------------
 # All the pacman packages to install on my archlinux system.
 #
-# It allows both wayland and xorg display server
-# I use i3 (x11) and sway (wayland) as my main DisplayManager
-#
 # You can comment a line with '#'
 # Run `./exec_pacman.sh` to install all these packages
 #
@@ -16,43 +13,12 @@
 
 
 # ------------------------------------------------------------------------------
-# Window Manager (common)
+# Window Manager
 # ------------------------------------------------------------------------------
 
 lightdm
 lightdm-slick-greeter
 # lightdm-settings (AUR)
-
-dunst
-rofi
-rofimoji
-# rofi-power-menu (AUR)
-
-
-# ------------------------------------------------------------------------------
-# Window Manager (i3 - Xorg)
-# ------------------------------------------------------------------------------
-
-xorg-server
-xorg-xinit
-xorg-xrandr
-xorg-xwayland
-arandr
-autorandr
-
-i3-wm
-i3status
-i3status-rust
-i3lock
-# nitrogen (AUR)
-xss-lock
-
-xfce4-screenshooter
-
-
-# ------------------------------------------------------------------------------
-# Window Manager (Sway - Wayland)
-# ------------------------------------------------------------------------------
 
 wayland
 wl-clipboard
@@ -61,6 +27,12 @@ sway
 swaybg
 swaylock
 swayidle
+i3status-rust
+
+dunst
+rofi
+rofimoji
+# rofi-power-menu (AUR)
 
 grim
 slurp
@@ -97,12 +69,12 @@ acpi
 networkmanager
 network-manager-applet
 
-alsa-firmware
-alsa-tools
-alsa-utils
-pulseaudio
-pulseaudio-alsa
-pulseaudio-jack
+pipewire
+pipewire-audio
+pipewire-alsa
+pipewire-pulse
+pipewire-jack
+wireplumber
 pavucontrol
 jack2
 
