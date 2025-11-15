@@ -15,7 +15,6 @@ These are targeted for my use-cases, but I hope they can be useful for you.
 - mime <https://wiki.archlinux.org/title/xdg_mime_applications>
 - neovim <https://wiki.archlinux.org/index.php/neovim>
 - qt <https://wiki.archlinux.org/title/qt>
-- ranger <https://wiki.archlinux.org/index.php/ranger>
 - rofi <https://wiki.archlinux.org/title/rofi>
 - ssh <https://wiki.archlinux.org/title/ssh_keys>
 - script (custom script)
