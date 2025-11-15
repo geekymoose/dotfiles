@@ -17,7 +17,6 @@ These are targeted for my use-cases, but I hope they can be useful for you.
 - rofi <https://wiki.archlinux.org/title/rofi>
 - ssh <https://wiki.archlinux.org/title/ssh_keys>
 - vscode <https://code.visualstudio.com/>
-- x11 <https://wiki.archlinux.org/title/xorg>
 - zsh <https://wiki.archlinux.org/title/zsh>
 - yazi <https://yazi-rs.github.io/docs/configuration/overview/>
 - zed <https://zed.dev/>
