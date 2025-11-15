@@ -24,11 +24,11 @@ These are targeted for my use-cases, but I hope they can be useful for you.
 ## Install
 
 All the required packages are listed in the `pkglist_pacman.txt` file (Archlinux).
-You can comment any package from the file to skip its install.
+To skip a package, comment its entry with `#`.
 
 ```bash
-# Install all required packages using pacman (Archlinux)
-./exec_pacman.sh
+# Install all required packages using pacman (sudo is required)
+sudo ./exec_pacman.sh
 ```
 
 ## Setup
@@ -37,7 +37,7 @@ I use GNU Stow to synchronize the settings.
 Each package in the `src` folder is organized the same way it lives on the local computer.
 
 ```bash
-# Apply all symlinks
+# Create all symlinks with stow
 ./exec_stow.sh
 ```
 
