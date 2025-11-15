@@ -19,19 +19,14 @@
 # Window Manager (common)
 # ------------------------------------------------------------------------------
 
-mesa
-
 lightdm
 lightdm-slick-greeter
 # lightdm-settings (AUR)
 
-dmenu
+dunst
 rofi
 rofimoji
 # rofi-power-menu (AUR)
-
-dex
-dunst
 
 
 # ------------------------------------------------------------------------------
