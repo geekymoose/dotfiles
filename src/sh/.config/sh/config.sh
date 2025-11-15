@@ -14,17 +14,6 @@ if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
-# RANGER
-# Preventing nested ranger instances
-# See https://wiki.archlinux.org/index.php/Ranger
-function ranger() {
-    if [ -z "$RANGER_LEVEL" ]; then
-        /usr/bin/ranger "$@"
-    else
-        exit
-    fi
-}
-
 # YAZI
 # Change the current working directory when exiting Yazi
 # See https://yazi-rs.github.io/docs/quick-start
