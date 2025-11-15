@@ -11,7 +11,7 @@
 theme = "semi-native"
 
 [icons]
-icons = "awesome6"
+icons = "awesome4"
 
 [[block]]
 block = "music"
@@ -19,9 +19,6 @@ format = " $icon $artist - $title $prev $play $next "
 
 [[block]]
 block = "sound"
-[[block.click]]
-button = "left"
-cmd = "pavucontrol"
 
 [[block]]
 block = "cpu"
@@ -59,7 +56,8 @@ missing_format = ""
 
 [[block]]
 block = "keyboard_layout"
-driver = "setxkbmap"
+driver = "sway"
+format = "$variant"
 
 [[block]]
 block = "notify"
