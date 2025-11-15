@@ -76,7 +76,6 @@ pipewire-pulse
 pipewire-jack
 wireplumber
 pavucontrol
-jack2
 
 xf86-input-wacom
 libwacom
