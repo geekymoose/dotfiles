@@ -1,6 +1,0 @@
-#!/bin/bash
-# This script is executed after a mode switch has taken place
-# https://github.com/phillipberndt/autorandr?tab=readme-ov-file
-
-nitrogen --restore
-notify-send -i display "Display profile" "Autorandr profile loaded: $AUTORANDR_CURRENT_PROFILE"
