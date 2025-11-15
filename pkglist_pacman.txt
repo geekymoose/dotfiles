@@ -16,9 +16,7 @@
 # Window Manager
 # ------------------------------------------------------------------------------
 
-lightdm
-lightdm-slick-greeter
-# lightdm-settings (AUR)
+lemurs
 
 wayland
 wl-clipboard
