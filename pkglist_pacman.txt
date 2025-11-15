@@ -103,7 +103,7 @@ libmtp
 
 
 # ------------------------------------------------------------------------------
-# System core
+# System
 # ------------------------------------------------------------------------------
 
 man-db
@@ -114,6 +114,18 @@ base
 base-devel
 
 reflector
+
+htop
+btop
+lsof
+
+openssh
+
+
+# ------------------------------------------------------------------------------
+# Utilities
+# ------------------------------------------------------------------------------
+
 stow
 which
 
@@ -122,15 +134,6 @@ fzf
 ripgrep
 fd
 jq
-
-htop
-btop
-lsof
-
-
-# ------------------------------------------------------------------------------
-# Utilities / commands
-# ------------------------------------------------------------------------------
 
 zip
 7zip
@@ -143,11 +146,9 @@ bzip2
 rsync
 # adb-sync (AUR)
 
-openssh
 curl
 inetutils
 nmap
-
 ltrace
 strace
 
@@ -157,7 +158,6 @@ strace
 # ------------------------------------------------------------------------------
 
 alacritty
-rxvt-unicode
 
 bash
 bash-completion
@@ -173,17 +173,14 @@ zsh-syntax-highlighting
 # Programming
 # ------------------------------------------------------------------------------
 
+neovim
+zed
+code
+
 git
 git-lfs
 git-delta
 tk
-
-# visual-studio-code-bin (AUR, or use code)
-zed
-neovim
-
-docker
-docker-compose
 
 gcc
 clang
@@ -193,20 +190,25 @@ xmake
 gdb
 valgrind
 cppcheck
+
 shellcheck
 shfmt
 
 rustup
+
 lua
 python
 python-pip
-texlive-core
 
-godot
-# unityhub (AUR)
+texlive-core
 
 dotnet-runtime
 dotnet-sdk
+
+docker
+docker-compose
+
+godot
 
 
 # ------------------------------------------------------------------------------
@@ -214,20 +216,18 @@ dotnet-sdk
 # ------------------------------------------------------------------------------
 
 yazi
+chafa
+ueberzugpp
+imagemagick
+
 pcmanfm
 filelight
 # czkawka (AUR)
 
 viewnior
-chafa
-ueberzugpp
-imagemagick
-
-vlc
+mupdf
 mpv
 ffmpeg
-
-mupdf
 
 
 # ------------------------------------------------------------------------------
@@ -243,15 +243,13 @@ scribus
 libreoffice-fresh
 # pureref (AUR)
 
-discord
-obs-studio
-
 veracrypt
 cryptsetup
 keepassxc
 
 firefox
 obsidian
+obs-studio
 # sleek (AUR)
 # tidal (AUR)
 # anki (AUR)
