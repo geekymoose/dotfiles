@@ -75,6 +75,10 @@ pipewire-jack
 wireplumber
 pavucontrol
 
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-desktop-portal-wlr
+
 xf86-input-wacom
 libwacom
 
