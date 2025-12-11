@@ -7,4 +7,6 @@ if [[ $(hostname) == "carrot" ]]; then
     run_mount_luks "diskdata" "/dev/nvme0n1p5" "/mnt/diskdata"
 elif [[ $(hostname) == "tofu" ]]; then
     run_mount_luks "diskdata" "/dev/nvme0n1p8" "/mnt/diskdata"
+elif [[ $(hostname) == "nox" ]]; then
+    run_mount_luks "diskdata" "/dev/sda" "/mnt/diskdata"
 fi
