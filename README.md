@@ -5,22 +5,22 @@ They are targeted for my use-cases, but feel free to use any of them.
 
 ## Features
 
-- alacritty <https://wiki.archlinux.org/title/alacritty>
-- bash <https://wiki.archlinux.org/title/bash>
-- dunst <https://wiki.archlinux.org/title/dunst>
-- git <https://wiki.archlinux.org/index.php/git>
-- gtk <https://wiki.achlinux.org/index.php/gtk>
-- mime <https://wiki.archlinux.org/title/xdg_mime_applications>
-- neovim <https://wiki.archlinux.org/index.php/neovim>
-- qt <https://wiki.archlinux.org/title/qt>
-- rofi <https://wiki.archlinux.org/title/rofi>
-- shell <https://wiki.archlinux.org/title/command-line_shell>
-- ssh <https://wiki.archlinux.org/title/ssh_keys>
-- sway <https://swaywm.org>
-- vscode <https://code.visualstudio.com>
-- zsh <https://wiki.archlinux.org/title/zsh>
-- yazi <https://yazi-rs.github.io/docs/configuration/overview>
-- zed <https://zed.dev>
+- Alacritty <https://wiki.archlinux.org/title/alacritty>
+- Bash <https://wiki.archlinux.org/title/bash>
+- Dunst <https://wiki.archlinux.org/title/dunst>
+- Git <https://wiki.archlinux.org/index.php/git>
+- GTK <https://wiki.achlinux.org/index.php/gtk>
+- Mime <https://wiki.archlinux.org/title/xdg_mime_applications>
+- NeoVim <https://wiki.archlinux.org/index.php/neovim>
+- Qt <https://wiki.archlinux.org/title/qt>
+- Rofi <https://wiki.archlinux.org/title/rofi>
+- Shell <https://wiki.archlinux.org/title/command-line_shell>
+- SSH <https://wiki.archlinux.org/title/ssh_keys>
+- Sway <https://swaywm.org>
+- Vscode <https://code.visualstudio.com>
+- Yazi <https://yazi-rs.github.io/docs/configuration/overview>
+- Zed <https://zed.dev>
+- Zsh <https://wiki.archlinux.org/title/zsh>
 
 ## Install
 
