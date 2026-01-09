@@ -46,4 +46,4 @@ source '/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 source '/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh'
 
 # oh-my-posh (https://ohmyposh.dev/docs/installation/prompt)
-eval "$(oh-my-posh init zsh --config '/usr/share/oh-my-posh/themes/powerlevel10k_classic.omp.json')"
+eval "$(oh-my-posh init zsh --config '/usr/share/oh-my-posh/themes/avit.omp.json')"
