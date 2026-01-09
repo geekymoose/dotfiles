@@ -189,8 +189,11 @@ bindsym Mod1+p exec "pavucontrol"
 bindsym Mod1+e exec "pcmanfm"
 
 # Screenshots
-bindsym F12 exec "slurp | grim -g -"
-bindsym Mod1+F12 exec grim
+bindsym F12 exec grim
+bindsym Mod1+F12 exec "slurp | grim -g -"
+
+# Custom floating applications
+for_window [class="Godot"] floating enable
 
 
 # ------------------------------------------------------------------------------
