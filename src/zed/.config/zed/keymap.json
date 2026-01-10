@@ -1,22 +1,22 @@
 // Zed keymap
-// Run `zed: open default keymap` for default values
-// See documentation: https://zed.dev/docs/key-bindings
+// See https://zed.dev/docs/key-bindings
+// Run `zed: open default keymap` to check the default values
 [
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "workspace::ToggleBottomDock"
-    }
+      "ctrl-`": "workspace::ToggleBottomDock",
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "alt-shift-f": "editor::Format"
-    }
+      "alt-shift-f": "editor::Format",
+    },
   },
   {
     "bindings": {
-      "alt-o": "editor::SwitchSourceHeader"
-    }
-  }
+      "alt-o": "editor::SwitchSourceHeader",
+    },
+  },
 ]
