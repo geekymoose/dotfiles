@@ -6,5 +6,6 @@
   "editor.codeLens": false,
   "editor.renderWhitespace": "all",
   "editor.fontFamily": "'CaskaydiaMono Nerd Font Mono', monospace",
-  "workbench.iconTheme": "simple-icons"
+  "workbench.iconTheme": "simple-icons",
+  "diffEditor.renderSideBySide": false
 }
