@@ -7,5 +7,6 @@
   "editor.renderWhitespace": "all",
   "editor.fontFamily": "'CaskaydiaMono Nerd Font Mono', monospace",
   "workbench.iconTheme": "simple-icons",
-  "diffEditor.renderSideBySide": false
+  "diffEditor.renderSideBySide": false,
+  "editor.fontSize": 16
 }

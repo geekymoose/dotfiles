@@ -4,11 +4,12 @@
 
 {
   "agent": {
+    "dock": "bottom",
     "default_model": {
       "provider": "lmstudio",
-      "model": "qwen2.5-coder-7b-instruct"
+      "model": "qwen2.5-coder-7b-instruct",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
   "base_keymap": "VSCode",
   "vim_mode": true,
