@@ -10,7 +10,6 @@ echo - Home: %USERPROFILE%
 echo - PWD: %CD%
 
 REM Windows specific
-call :crea_conf "%CD%\src\autohotkey\.config\autohotkey\"               "%USERPROFILE%\.local\bin\autohotkey\"
 call :crea_conf "%CD%\src\powershell\.config\powershell\config.ps1"     "%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 call :crea_conf "%CD%\src\powershell\.config\powershell\config.ps1"     "%USERPROFILE%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 
