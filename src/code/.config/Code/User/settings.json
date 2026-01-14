@@ -2,11 +2,17 @@
   // Editor
   "editor.codeLens": false,
   "editor.inlayHints.enabled": "offUnlessPressed",
-  "editor.fontFamily": "'CaskaydiaMono Nerd Font Mono', monospace",
+  "editor.fontFamily": "'CaskaydiaMono Nerd Font Mono', 'Cascadia Cove', monospace",
   "editor.fontSize": 16,
+  "editor.minimap.enabled": false,
+  "editor.minimap.showSlider": "always",
   "editor.renderWhitespace": "all",
 
+  // Explorer
+  "explorer.excludeGitIgnore": true,
+
   // Workbench
+  "workbench.activityBar.location": "top",
   "workbench.iconTheme": "simple-icons",
 
   // DiffEditor
