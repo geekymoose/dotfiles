@@ -1,12 +1,19 @@
 {
+  // Editor
+  "editor.codeLens": false,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.fontFamily": "'CaskaydiaMono Nerd Font Mono', monospace",
+  "editor.fontSize": 16,
+  "editor.renderWhitespace": "all",
+
+  // Workbench
+  "workbench.iconTheme": "simple-icons",
+
+  // DiffEditor
+  "diffEditor.renderSideBySide": false,
+
+  // Extensions
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "editor.inlayHints.enabled": "offUnlessPressed",
-  "editor.codeLens": false,
-  "editor.renderWhitespace": "all",
-  "editor.fontFamily": "'CaskaydiaMono Nerd Font Mono', monospace",
-  "workbench.iconTheme": "simple-icons",
-  "diffEditor.renderSideBySide": false,
-  "editor.fontSize": 16
 }
