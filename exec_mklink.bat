@@ -16,6 +16,7 @@ call :crea_conf "%CD%\src\powershell\.config\powershell\config.ps1"     "%USERPR
 
 REM Linux / Windows
 call :crea_conf "%CD%\src\alacritty\.config\alacritty\alacritty.toml"   "%APPDATA%\alacritty\alacritty.toml"
+call :crea_conf "%CD%\src\code\.config\Code\User\settings.json"         "%APPDATA%\Code\User\settings.json"
 call :crea_conf "%CD%\src\nvim\.config\nvim\"                           "%LOCALAPPDATA%\nvim\"
 call :crea_conf "%CD%\src\git\.config\git\config"                       "%USERPROFILE%\.gitconfig"
 call :crea_conf "%CD%\src\yazi\.config\yazi\yazi.toml"                  "%APPDATA%\yazi\config\yazi.toml"

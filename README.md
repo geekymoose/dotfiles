@@ -54,6 +54,15 @@ cp your_bg_lock.png $/home/.local/share/backgrounds/lock.png
 systemctl enable lemurs
 ```
 
+# Fonts
+***
+
+> The fonts I use.
+> On Archlinux, you can see the required package in `pkglist_pacman`.
+
+- CaskaydiaMono Nerd Font (code, terminal)
+- NotoSans (system)
+
 ## Resources
 
 I saw other interesting techniques with git config. For further information, see these links:
