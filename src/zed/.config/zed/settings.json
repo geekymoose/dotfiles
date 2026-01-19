@@ -3,15 +3,11 @@
 // Run `zed: open default settings` to check the default values
 
 {
-  "agent": {
-    "default_model": {
-      "provider": "lmstudio",
-      "model": "qwen2.5-coder-7b-instruct",
-    },
-    "model_parameters": [],
-  },
+  // Keymap
   "base_keymap": "VSCode",
   "vim_mode": true,
+
+  // Theme
   "theme": {
     "mode": "dark",
     "light": "Gruvbox Light",
@@ -27,9 +23,12 @@
   "ui_font_family": "CaskaydiaMono Nerd Font Mono",
   "ui_font_size": 16,
   "show_whitespaces": "boundary",
+
   "minimap": {
-    "show": "always",
+    "show": "never",
   },
+
+  // Panels
   "collaboration_panel": {
     "dock": "right",
   },
@@ -39,6 +38,8 @@
   "project_panel": {
     "hide_gitignore": true,
   },
+
+  // Help
   "inlay_hints": {
     "enabled": false,
     "show_type_hints": false,
@@ -46,8 +47,63 @@
     "show_value_hints": false,
     "show_other_hints": false,
   },
+
+  // AI Prediction
   "edit_predictions": {
     "mode": "subtle",
     "enabled_in_text_threads": false,
+  },
+
+  // AI Agents
+  "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "Mammouth AI",
+      "model": "claude-haiku-4-5",
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "language_models": {
+    "openai_compatible": {
+      "Mammouth AI": {
+        "api_url": "https://api.mammouth.ai/v1",
+        "available_models": [
+          {
+            "name": "claude-opus-4-5",
+            "display_name": "Claude Opus 4.5",
+            "max_tokens": 32768,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "claude-sonnet-4-5",
+            "display_name": "Claude Sonnet 4.5",
+            "max_tokens": 32768,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "claude-haiku-4-5",
+            "display_name": "Claude Haiku 4.5",
+            "max_tokens": 32768,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
+    },
   },
 }
