@@ -21,11 +21,11 @@ lemurs
 wayland
 wl-clipboard
 
+i3status-rust
 sway
 swaybg
-swaylock
 swayidle
-i3status-rust
+swaylock
 
 dunst
 rofi
@@ -59,28 +59,28 @@ papirus-icon-theme
 # Drivers
 # ------------------------------------------------------------------------------
 
-linux
-linux-headers
-linux-firmware
 acpi
+linux
+linux-firmware
+linux-headers
 
 networkmanager
 network-manager-applet
 
-pipewire
-pipewire-audio
-pipewire-alsa
-pipewire-pulse
-pipewire-jack
-wireplumber
 pavucontrol
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-pulse
+wireplumber
 
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 
-xf86-input-wacom
 libwacom
+xf86-input-wacom
 
 v4l2loopback-dkms
 
@@ -92,8 +92,8 @@ cups-pdf
 sane
 # xsane (AUR)
 
-ntfs-3g
 dosfstools
+ntfs-3g
 udisks2
 usbutils
 
@@ -116,8 +116,8 @@ base-devel
 
 reflector
 
-htop
 btop
+htop
 lsof
 
 openssh
@@ -131,26 +131,26 @@ stow
 which
 
 bat
-fzf
-ripgrep
 fd
+fzf
 jq
+ripgrep
 
-zip
-7zip
-unzip
+bzip2
+gzip
 tar
 unrar
-gzip
-bzip2
+unzip
+zip
+7zip
 
 rsync
 # adb-sync (AUR)
 
 curl
 inetutils
-nmap
 ltrace
+nmap
 strace
 
 
@@ -164,8 +164,8 @@ bash
 bash-completion
 
 zsh
-zsh-completions
 zsh-autosuggestions
+zsh-completions
 zsh-syntax-highlighting
 # oh-my-posh (AUR)
 
@@ -174,23 +174,25 @@ zsh-syntax-highlighting
 # Programming
 # ------------------------------------------------------------------------------
 
+code
 neovim
 zed
-code
 
 git
-git-lfs
 git-delta
+git-lfs
 tk
 
-gcc
 clang
-make
 cmake
+gcc
+make
 xmake
-gdb
-valgrind
+
 cppcheck
+gdb
+tokei
+valgrind
 
 shellcheck
 shfmt
@@ -216,37 +218,37 @@ godot
 # Media
 # ------------------------------------------------------------------------------
 
-yazi
 chafa
-ueberzugpp
 imagemagick
+ueberzugpp
+yazi
 
-pcmanfm
 filelight
+pcmanfm
 # czkawka (AUR)
 
-viewnior
-mupdf
-mpv
 ffmpeg
+mpv
+mupdf
+viewnior
 
 
 # ------------------------------------------------------------------------------
 # Softwares
 # ------------------------------------------------------------------------------
 
-krita
 blender
 darktable
 kdenlive
+krita
+libreoffice-fresh
 reaper
 scribus
-libreoffice-fresh
 # pureref (AUR)
 
-veracrypt
 cryptsetup
 keepassxc
+veracrypt
 
 firefox
 obsidian
