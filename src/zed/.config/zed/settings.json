@@ -10,8 +10,8 @@
   // Theme
   "theme": {
     "mode": "dark",
-    "light": "Gruvbox Light",
-    "dark": "VSCode Dark Modern",
+    "light": "One Light",
+    "dark": "One Dark",
   },
   "icon_theme": {
     "mode": "dark",
