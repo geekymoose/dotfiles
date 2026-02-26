@@ -1,3 +1,0 @@
-
-
-x 2025-07-14 2025-07-14 Setup a CTRL+SHIFT+F shortcut to apply autoformat +Neovim @format pri:B
