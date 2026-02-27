@@ -23,9 +23,15 @@
   "ui_font_family": "CaskaydiaMono Nerd Font Mono",
   "ui_font_size": 16,
   "show_whitespaces": "boundary",
-
   "minimap": {
     "show": "never",
+  },
+
+  // Git
+  "diff_view_style": "unified",
+  "git_panel": {
+    "sort_by_path": true,
+    "tree_view": true,
   },
 
   // Panels
