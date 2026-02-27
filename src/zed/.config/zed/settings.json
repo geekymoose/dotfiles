@@ -31,7 +31,7 @@
   "diff_view_style": "unified",
   "git_panel": {
     "sort_by_path": true,
-    "tree_view": true,
+    "tree_view": false,
   },
 
   // Panels
@@ -67,9 +67,17 @@
       "provider": "Mammouth AI",
       "model": "claude-sonnet-4-5",
     },
-    "favorite_models": [],
+    "favorite_models": [
+      {
+        "provider": "Mammouth AI",
+        "model": "claude-sonnet-4-5",
+        "enable_thinking": false,
+      },
+    ],
     "model_parameters": [],
   },
+
+  // AI Providers
   "language_models": {
     "openai_compatible": {
       "Mammouth AI": {
