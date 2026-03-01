@@ -77,7 +77,7 @@
     "model_parameters": [],
   },
 
-  // AI Providers
+  // Custom AI Providers
   "language_models": {
     "openai_compatible": {
       "Mammouth AI": {
@@ -118,6 +118,13 @@
           },
         ],
       },
+    },
+  },
+
+  // Custom External Agents
+  "agent_servers": {
+    "mistral-vibe": {
+      "type": "registry",
     },
   },
 }
