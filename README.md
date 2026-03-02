@@ -5,25 +5,25 @@ These are targeted for my use cases, but feel free to use any of them.
 
 ## Features
 
-- **Alacritty** - GPU-accelerated terminal emulator <https://wiki.archlinux.org/title/alacritty>
-- **Bash** - Bash specific configuration <https://wiki.archlinux.org/title/bash>
-- **Dunst** - Lightweight notification daemon <https://wiki.archlinux.org/title/dunst>
-- **Git** - Version control <https://wiki.archlinux.org/index.php/git>
-- **GTK** - GTK+ theme <https://wiki.archlinux.org/index.php/gtk>
-- **Krita** - Digital painting <https://https://krita.org/en>
-- **Mime** - Default applications <https://wiki.archlinux.org/title/xdg_mime_applications>
-- **NeoVim** - Text editor <https://wiki.archlinux.org/index.php/neovim>
-- **Qt** - Qt theme <https://wiki.archlinux.org/title/qt>
-- **Rofi** - Application launcher <https://wiki.archlinux.org/title/rofi>
-- **Scripts** - Custom shell scripts and utilities
-- **Shell** - POSIX shell configuration <https://wiki.archlinux.org/title/command-line_shell>
-- **SSH** - SSH client configuration <https://wiki.archlinux.org/title/ssh_keys>
-- **Sway** - Wayland compositor (i3 replacement) <https://swaywm.org>
-- **Vibe** - Mistral Vibe coding agent <https://https://docs.mistral.ai/mistral-vibe>
-- **VSCode** - Visual Studio Code IDE <https://code.visualstudio.com>
-- **Yazi** - Terminal file manager <https://yazi-rs.github.io/docs/configuration/overview>
-- **Zed** - Modern code editor <https://zed.dev>
-- **Zsh** - Z shell configuration <https://wiki.archlinux.org/title/zsh>
+- [`Alacritty`](https://wiki.archlinux.org/title/alacritty) - GPU-accelerated terminal emulator
+- [`Bash`](https://wiki.archlinux.org/title/bash) - Bash specific configuration
+- [`Dunst`](https://wiki.archlinux.org/title/dunst) - Lightweight notification daemon
+- [`Git`](https://wiki.archlinux.org/index.php/git) - Version control
+- [`GTK`](https://wiki.archlinux.org/index.php/gtk) - GTK+ theme
+- [`Krita`](https://krita.org/en) - Digital painting
+- [`Mime`](https://wiki.archlinux.org/title/xdg_mime_applications) - Default applications
+- [`NeoVim`](https://wiki.archlinux.org/index.php/neovim) - Text editor
+- [`Qt`](https://wiki.archlinux.org/title/qt) - Qt theme
+- [`Rofi`](https://wiki.archlinux.org/title/rofi) - Application launcher
+- [`Scripts`] - Custom shell scripts and utilities
+- [`Shell`](https://wiki.archlinux.org/title/command-line_shell) - POSIX shell configuration
+- [`SSH`](https://wiki.archlinux.org/title/ssh_keys) - SSH client configuration
+- [`Sway`](https://swaywm.org) - Wayland compositor (i3 replacement)
+- [`Vibe`](https://docs.mistral.ai/mistral-vibe) - Mistral Vibe coding agent
+- [`VSCode`](https://code.visualstudio.com) - Visual Studio Code IDE
+- [`Yazi`](https://yazi-rs.github.io/docs/configuration/overview) - Terminal file manager
+- [`Zed`](https://zed.dev) - Modern code editor
+- [`Zsh`](https://wiki.archlinux.org/title/zsh) - Z shell configuration
 
 ## Installation
 
