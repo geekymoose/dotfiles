@@ -15,7 +15,7 @@ These are targeted for my use cases, but feel free to use any of them.
 - [`NeoVim`](https://wiki.archlinux.org/index.php/neovim) - Text editor
 - [`Qt`](https://wiki.archlinux.org/title/qt) - Qt theme
 - [`Rofi`](https://wiki.archlinux.org/title/rofi) - Application launcher
-- [`Scripts`] - Custom shell scripts and utilities
+- `Scripts` - Custom shell scripts and utilities
 - [`Shell`](https://wiki.archlinux.org/title/command-line_shell) - POSIX shell configuration
 - [`SSH`](https://wiki.archlinux.org/title/ssh_keys) - SSH client configuration
 - [`Sway`](https://swaywm.org) - Wayland compositor (i3 replacement)
