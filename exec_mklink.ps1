@@ -15,7 +15,6 @@ $links = @(
     @{ src = "$dotfiles\src\git\.config\git\config";                     dst = "$HOME\.gitconfig" }
     @{ src = "$dotfiles\src\yazi\.config\yazi\yazi.toml";                dst = "$env:APPDATA\yazi\config\yazi.toml" }
     @{ src = "$dotfiles\src\zed\.config\zed\settings.json";              dst = "$env:APPDATA\Zed\settings.json" }
-    @{ src = "$dotfiles\test_coco.json";              dst = "$HOME\test_coco.json" }
 )
 
 Write-Host "Creating Windows configuration symlinks..."
