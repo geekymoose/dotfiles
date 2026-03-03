@@ -4,7 +4,6 @@
 
 # Path
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/.local/bin-local"
 export PATH="$PATH:$HOME/.lmstudio/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
