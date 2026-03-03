@@ -1,8 +1,0 @@
-# Godot Expert Agent Configuration
-
-display_name = "Godot Rust Agent"
-description = "Specialized agent for Godot game engine development with Rust"
-system_prompt_id = "godot_rust_agent"
-active_model = "devstral-2"
-safety = "neutral"
-auto_approve = false

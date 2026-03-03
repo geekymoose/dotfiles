@@ -1,3 +1,13 @@
+---
+description: Specialized agent for Godot game engine development with Rust
+mode: primary
+temperature: 0.2
+tools:
+  write: true
+  edit: true
+  bash: true
+---
+
 # Godot Rust Agent
 
 ## Role

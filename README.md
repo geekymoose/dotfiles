@@ -13,13 +13,13 @@ These are targeted for my use cases, but feel free to use any of them.
 - [`Krita`](https://krita.org/en) - Digital painting
 - [`Mime`](https://wiki.archlinux.org/title/xdg_mime_applications) - Default applications
 - [`NeoVim`](https://wiki.archlinux.org/index.php/neovim) - Text editor
+- [`OpenCode`](https://github.com/anomalyco/opencode) - AI coding agent
 - [`Qt`](https://wiki.archlinux.org/title/qt) - Qt theme
 - [`Rofi`](https://wiki.archlinux.org/title/rofi) - Application launcher
 - `Scripts` - Custom shell scripts and utilities
 - [`Shell`](https://wiki.archlinux.org/title/command-line_shell) - POSIX shell configuration
 - [`SSH`](https://wiki.archlinux.org/title/ssh_keys) - SSH client configuration
 - [`Sway`](https://swaywm.org) - Wayland compositor (i3 replacement)
-- [`Vibe`](https://docs.mistral.ai/mistral-vibe) - Mistral Vibe coding agent
 - [`VSCode`](https://code.visualstudio.com) - Visual Studio Code IDE
 - [`Yazi`](https://yazi-rs.github.io/docs/configuration/overview) - Terminal file manager
 - [`Zed`](https://zed.dev) - Modern code editor
