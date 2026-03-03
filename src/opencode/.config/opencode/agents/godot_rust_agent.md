@@ -1,6 +1,7 @@
 ---
 description: Specialized agent for Godot game engine development with Rust
 mode: primary
+model: mistral/devstral-medium-latest
 temperature: 0.2
 tools:
   write: true
