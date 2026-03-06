@@ -4,8 +4,8 @@
 source "${HOME}/.config/sh/functions.sh"
 
 SRC="/mnt/diskdata/tofu"
-DST="/run/media/veracrypt1/tofu"
-SYNC_FILE="/run/media/veracrypt1/last_sync.txt"
+DST="/run/media/veracrypt1/sync/tofu"
+SYNC_FILE="/run/media/veracrypt1/sync/last_sync.txt"
 
 ensure_on_hostname "carrot"
 

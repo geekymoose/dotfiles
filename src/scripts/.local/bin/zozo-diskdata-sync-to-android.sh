@@ -4,7 +4,7 @@
 source "${HOME}/.config/sh/functions.sh"
 
 SRC="/mnt/diskdata"
-DST="/sdcard/Android/disklocal/tofu"
+DST="/sdcard/Android/diskdata/sync/tofu"
 
 ensure_on_hostname "tofu"
 

@@ -4,7 +4,7 @@
 source "${HOME}/.config/sh/functions.sh"
 
 SRC="/mnt/diskdata"
-DST="/mnt/diskdata/tofu"
+DST="/mnt/diskdata/sync/tofu"
 ADDR=192.168.1.186
 
 ensure_on_hostname "tofu"
