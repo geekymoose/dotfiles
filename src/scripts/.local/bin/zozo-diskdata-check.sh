@@ -60,7 +60,7 @@ check_extension "WMV"
 # Temporary files
 check_pattern "~" ".*~$"
 check_pattern ".Temp" "\.Temp$"
-check_pattern ".*_grim.*" "_grim"
+check_pattern ".*_grim.*" "_grim\."
 check_pattern "screenshot_" "^screenshot_"
 
 # Non-standard image naming patterns
@@ -99,19 +99,7 @@ fd -HIi -t f --search-path ${DISKDATA} --regex "^ "
 fd -HIi -t f --search-path ${DISKDATA} --regex " $"
 fd -HIi -t f --search-path ${DISKDATA} --regex ".* .*" \
     --exclude "builds/**/unity default resources" \
-    --exclude "notes" \
-    --exclude "web"
-
-# Check for wrong permission.
-# The "other" permissions should be 0 for any file and folder.
-echo "Check file permission (custom search path)"
-fd -HIi -t x --search-path ${DISKDATA} \
-    --exclude "builds" \
-    --exclude "sources" \
-    --exclude "setup"
-fd -i -t x --search-path ${DISKDATA}/sources \
-    --exclude "extern" \
-    --exclude "*.sh"
+    --exclude "notes"
 
 # Uppercase characters in filenames
 # Only lowercase characters are allowed in filenames
@@ -125,8 +113,7 @@ fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
     --exclude "projects/**/fmod/" \
     --exclude "setup/**/.git/" \
     --exclude "setup/**/PKGBUILD" \
-    --exclude "setup/**/.SRCINFO" \
-    --exclude "web"
+    --exclude "setup/**/.SRCINFO"
 
 # Hidden files and directories
 echo "Hidden files"
@@ -135,3 +122,14 @@ fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
     --exclude "sources/" \
     --exclude "projects/**/fmod" \
     --exclude "setup/"
+
+# Check for wrong permission.
+# The "other" permissions should be 0 for any file and folder.
+echo "Check file permission (custom search path)"
+fd -HIi -t x --search-path ${DISKDATA} \
+    --exclude "builds" \
+    --exclude "sources" \
+    --exclude "setup"
+fd -i -t x --search-path ${DISKDATA}/sources \
+    --exclude "extern" \
+    --exclude "*.sh"
