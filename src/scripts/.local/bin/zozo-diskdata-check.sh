@@ -115,6 +115,11 @@ fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
     --exclude "setup/**/PKGBUILD" \
     --exclude "setup/**/.SRCINFO"
 
+# Only alpha-numeric characters in filenames (no accent etc)
+# This allows spaces because it check in folders that allow them
+echo "Only alpha-numeric characters"
+fd -s --search-path ${DISKDATA} --regex ".*[^\p{Han}a-zA-Z0-9 .()#+_-].*"
+
 # Hidden files and directories
 echo "Hidden files"
 fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
