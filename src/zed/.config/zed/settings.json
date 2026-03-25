@@ -123,6 +123,9 @@
 
   // Custom External Agents
   "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
     "mistral-vibe": {
       "type": "registry",
     },
