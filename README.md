@@ -5,25 +5,25 @@ These are targeted for my use cases, but feel free to use any of them.
 
 ## Features
 
-- [`Alacritty`](https://wiki.archlinux.org/title/alacritty) - GPU-accelerated terminal emulator
-- [`Bash`](https://wiki.archlinux.org/title/bash) - Bash specific configuration
-- [`Dunst`](https://wiki.archlinux.org/title/dunst) - Lightweight notification daemon
-- [`Git`](https://wiki.archlinux.org/index.php/git) - Version control
-- [`GTK`](https://wiki.archlinux.org/index.php/gtk) - GTK+ theme
-- [`Krita`](https://krita.org/en) - Digital painting
-- [`Mime`](https://wiki.archlinux.org/title/xdg_mime_applications) - Default applications
-- [`NeoVim`](https://wiki.archlinux.org/index.php/neovim) - Text editor
-- [`OpenCode`](https://github.com/anomalyco/opencode) - AI coding agent
-- [`Qt`](https://wiki.archlinux.org/title/qt) - Qt theme
-- [`Rofi`](https://wiki.archlinux.org/title/rofi) - Application launcher
-- `Scripts` - Custom shell scripts and utilities
-- [`Shell`](https://wiki.archlinux.org/title/command-line_shell) - POSIX shell configuration
-- [`SSH`](https://wiki.archlinux.org/title/ssh_keys) - SSH client configuration
-- [`Sway`](https://swaywm.org) - Wayland compositor (i3 replacement)
-- [`VSCode`](https://code.visualstudio.com) - Visual Studio Code IDE
-- [`Yazi`](https://yazi-rs.github.io/docs/configuration/overview) - Terminal file manager
-- [`Zed`](https://zed.dev) - Modern code editor
-- [`Zsh`](https://wiki.archlinux.org/title/zsh) - Z shell configuration
+- [`Alacritty`](./src/alacritty/.config/alacritty/) - GPU-accelerated terminal emulator
+- [`Bash`](./src/bash/) - Bash specific configuration
+- [`Dunst`](./src/dunst/.config/dunst/) - Lightweight notification daemon
+- [`Git`](./src/git/.config/git/) - Version control
+- [`GTK`](./src/gtk/.config/) - GTK+ theme
+- [`Krita`](./src/krita/.config/) - Digital painting
+- [`Mime`](./src/mime/.config/) - Default applications
+- [`NeoVim`](./src/nvim/.config/nvim/) - Text editor
+- [`OpenCode`](./src/opencode/.config/opencode/) - AI coding agent
+- [`Qt`](./src/qt/.config/) - Qt theme
+- [`Rofi`](./src/rofi/.config/rofi/) - Application launcher
+- [`Scripts`](./src/scripts/.local/bin/) - Custom shell scripts and utilities
+- [`Shell`](./src/sh/.config/sh/) - POSIX shell configuration
+- [`SSH`](./src/ssh/.ssh/) - SSH client configuration
+- [`Sway`](./src/sway/.config/sway/) - Wayland compositor (i3 replacement)
+- [`VSCode`](./src/code/.config/Code/User/) - Visual Studio Code IDE
+- [`Yazi`](./src/yazi/.config/yazi/) - Terminal file manager
+- [`Zed`](./src/zed/.config/zed/) - Modern code editor
+- [`Zsh`](./src/zsh/) - Z shell configuration
 
 ## Installation
 
