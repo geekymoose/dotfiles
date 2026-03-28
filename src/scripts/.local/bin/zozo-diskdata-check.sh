@@ -109,8 +109,6 @@ fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
     --exclude "builds" \
     --exclude "notes" \
     --exclude "sources" \
-    --exclude "projects/**/README.md" \
-    --exclude "projects/**/fmod/" \
     --exclude "setup/**/.git/" \
     --exclude "setup/**/PKGBUILD" \
     --exclude "setup/**/.SRCINFO"
@@ -125,7 +123,6 @@ echo "Hidden files"
 fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
     --exclude "notes/.obsidian" \
     --exclude "sources/" \
-    --exclude "projects/**/fmod" \
     --exclude "setup/"
 
 # Check for wrong permission.
