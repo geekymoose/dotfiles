@@ -30,6 +30,7 @@
   // Git
   "diff_view_style": "unified",
   "git_panel": {
+    "dock": "left",
     "sort_by_path": true,
     "tree_view": false,
   },
@@ -42,6 +43,7 @@
     "dock": "right",
   },
   "project_panel": {
+    "dock": "left",
     "hide_gitignore": true,
   },
 
@@ -62,6 +64,7 @@
 
   // AI Agents
   "agent": {
+    "dock": "right",
     "default_profile": "write",
     "default_model": {
       "provider": "Mammouth AI",
@@ -124,7 +127,7 @@
   // Custom External Agents
   "agent_servers": {
     "claude-acp": {
-      "type": "registry"
+      "type": "registry",
     },
     "mistral-vibe": {
       "type": "registry",

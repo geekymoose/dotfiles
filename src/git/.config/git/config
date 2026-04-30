@@ -28,6 +28,7 @@
 [core]
     pager               = delta
     autocrlf            = input
+    longpaths           = true
 
 [interactive]
     diffFilter          = delta --color-only
@@ -69,8 +70,7 @@
     logones             = log --oneline --decorate --graph --format='%h %an %ae'
 
 [filter "lfs"]
-    required = true
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-
+    required            = true
+    clean               = git-lfs clean -- %f
+    smudge              = git-lfs smudge -- %f
+    process             = git-lfs filter-process
