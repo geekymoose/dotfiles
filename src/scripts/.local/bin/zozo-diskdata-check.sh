@@ -135,3 +135,8 @@ fd -HIi -t x --search-path ${DISKDATA} \
 fd -i -t x --search-path ${DISKDATA}/sources \
     --exclude "extern" \
     --exclude "*.sh"
+
+# Notes should only be markdown (end with .md)
+fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
+    --exclude ".obsidian" \
+    --exclude "DATA"
