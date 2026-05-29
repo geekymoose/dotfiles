@@ -27,6 +27,9 @@
     "show": "never",
   },
 
+  // Utils
+  "cli_default_open_behavior": "new_window",
+
   // Git
   "diff_view_style": "unified",
   "git_panel": {
