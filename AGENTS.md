@@ -28,7 +28,7 @@ This repository contains system configurations, shell, editor settings, and othe
 - Apply changes directly to the file
 - Insert a line break after each sentence in markdown and comments
 - Respect the stow directory structure (each package mirrors its install location)
-- Do not use the following special chars: ‘ ’ “ ”
+- Do not use the following special chars: ‘ ’ “ ” —
 - Do not commit changes; perform file edits only
 
 ## Platform Notes

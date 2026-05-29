@@ -1,0 +1,50 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "provider": {
+        "mammouth": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "Mammouth AI",
+            "options": {
+                "baseURL": "https://api.mammouth.ai/v1/",
+            },
+            "models": {
+                "claude-haiku-4-5": {
+                    "name": "Claude Haiku 4.5",
+                    "tool_call": true,
+                    "cost": { "input": 1.0, "output": 5.0 },
+                    "limit": { "context": 200000, "output": 64000 },
+                },
+                "claude-sonnet-4-5": {
+                    "name": "Claude Sonnet 4.5",
+                    "tool_call": true,
+                    "cost": { "input": 3.0, "output": 15.0 },
+                    "limit": { "context": 200000, "output": 64000 },
+                },
+                "claude-sonnet-4-6": {
+                    "name": "Claude Sonnet 4.6",
+                    "tool_call": true,
+                    "cost": { "input": 3.0, "output": 15.0 },
+                    "limit": { "context": 1000000, "output": 128000 },
+                },
+                "claude-opus-4-5": {
+                    "name": "Claude Opus 4.5",
+                    "tool_call": true,
+                    "cost": { "input": 5.0, "output": 25.0 },
+                    "limit": { "context": 200000, "output": 64000 },
+                },
+                "claude-opus-4-6": {
+                    "name": "Claude Opus 4.6",
+                    "tool_call": true,
+                    "cost": { "input": 5.0, "output": 25.0 },
+                    "limit": { "context": 1000000, "output": 128000 },
+                },
+                "claude-opus-4.7": {
+                    "name": "Claude Opus 4.7",
+                    "tool_call": true,
+                    "cost": { "input": 5.0, "output": 25.0 },
+                    "limit": { "context": 1000000, "output": 128000 },
+                },
+            },
+        },
+    },
+}

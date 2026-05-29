@@ -38,6 +38,7 @@
   // Panels
   "collaboration_panel": {
     "dock": "right",
+    "button": false,
   },
   "outline_panel": {
     "dock": "right",
@@ -58,7 +59,7 @@
 
   // AI Prediction
   "edit_predictions": {
-    "mode": "subtle",
+    "mode": "eager",
     "enabled_in_text_threads": false,
   },
 
@@ -74,7 +75,6 @@
       {
         "provider": "Mammouth AI",
         "model": "claude-sonnet-4-5",
-        "enable_thinking": false,
       },
     ],
     "model_parameters": [],
@@ -89,7 +89,7 @@
           {
             "name": "claude-opus-4-5",
             "display_name": "Claude Opus 4.5",
-            "max_tokens": 32768,
+            "max_tokens": 200000,
             "capabilities": {
               "tools": true,
               "images": false,
@@ -100,7 +100,7 @@
           {
             "name": "claude-sonnet-4-5",
             "display_name": "Claude Sonnet 4.5",
-            "max_tokens": 32768,
+            "max_tokens": 200000,
             "capabilities": {
               "tools": true,
               "images": false,
@@ -111,7 +111,7 @@
           {
             "name": "claude-haiku-4-5",
             "display_name": "Claude Haiku 4.5",
-            "max_tokens": 32768,
+            "max_tokens": 200000,
             "capabilities": {
               "tools": true,
               "images": false,
