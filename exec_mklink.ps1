@@ -5,16 +5,40 @@ $dotfiles = $PSScriptRoot
 
 $links = @(
     # Windows specific
-    @{ src = "$dotfiles\src\powershell\.config\powershell\config.ps1"; dst = "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" }
-    @{ src = "$dotfiles\src\powershell\.config\powershell\config.ps1"; dst = "$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1" }
+    @{
+        src = "$dotfiles\src\powershell\.config\powershell\config.ps1";
+        dst = "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+    }
+    @{
+        src = "$dotfiles\src\powershell\.config\powershell\config.ps1";
+        dst = "$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+    }
 
-    # linux / Windows
-    @{ src = "$dotfiles\src\alacritty\.config\alacritty\alacritty.toml"; dst = "$env:APPDATA\alacritty\alacritty.toml" }
-    @{ src = "$dotfiles\src\code\.config\Code\User\settings.json";       dst = "$env:APPDATA\Code\User\settings.json" }
-    @{ src = "$dotfiles\src\nvim\.config\nvim";                          dst = "$env:LOCALAPPDATA\nvim" }
-    @{ src = "$dotfiles\src\git\.config\git\config";                     dst = "$HOME\.gitconfig" }
-    @{ src = "$dotfiles\src\yazi\.config\yazi\yazi.toml";                dst = "$env:APPDATA\yazi\config\yazi.toml" }
-    @{ src = "$dotfiles\src\zed\.config\zed\settings.json";              dst = "$env:APPDATA\Zed\settings.json" }
+    # Linux / Windows
+    @{
+        src = "$dotfiles\src\alacritty\.config\alacritty\alacritty.toml";
+        dst = "$env:APPDATA\alacritty\alacritty.toml"
+    }
+    @{
+        src = "$dotfiles\src\code\.config\Code\User\settings.json";
+        dst = "$env:APPDATA\Code\User\settings.json"
+    }
+    @{
+        src = "$dotfiles\src\nvim\.config\nvim";
+        dst = "$env:LOCALAPPDATA\nvim"
+    }
+    @{
+        src = "$dotfiles\src\git\.config\git\config";
+        dst = "$HOME\.gitconfig"
+    }
+    @{
+        src = "$dotfiles\src\yazi\.config\yazi\yazi.toml";
+        dst = "$env:APPDATA\yazi\config\yazi.toml"
+    }
+    @{
+        src = "$dotfiles\src\zed\.config\zed\settings.json";
+        dst = "$env:APPDATA\Zed\settings.json"
+    }
 )
 
 Write-Host "Creating Windows configuration symlinks..."
