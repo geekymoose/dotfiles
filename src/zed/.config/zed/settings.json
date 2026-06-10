@@ -69,4 +69,12 @@
   "agent": {
     "dock": "right",
   },
+  "agent_servers": {
+    "opencode": {
+      "default_config_options": {
+        "model": "mistral/codestral-latest",
+      },
+      "type": "registry",
+    },
+  },
 }
