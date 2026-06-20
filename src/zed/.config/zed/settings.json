@@ -11,7 +11,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark",
+    "dark": "VSCode Dark Modern",
   },
   "icon_theme": {
     "mode": "dark",
