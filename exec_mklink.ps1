@@ -32,6 +32,10 @@ $links = @(
         dst = "$env:USERPROFILE\.config\opencode\agents"
     }
     @{
+        src = "$dotfiles\src\opencode\.config\opencode\commands";
+        dst = "$env:USERPROFILE\.config\opencode\commands"
+    }
+    @{
         src = "$dotfiles\src\opencode\.config\opencode\skills";
         dst = "$env:USERPROFILE\.config\opencode\skills"
     }
