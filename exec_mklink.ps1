@@ -24,22 +24,6 @@ $links = @(
         dst = "$env:APPDATA\Code\User\settings.json"
     }
     @{
-        src = "$dotfiles\src\opencode\.config\opencode\opencode.jsonc";
-        dst = "$env:USERPROFILE\.config\opencode\opencode.jsonc"
-    }
-    @{
-        src = "$dotfiles\src\opencode\.config\opencode\agents";
-        dst = "$env:USERPROFILE\.config\opencode\agents"
-    }
-    @{
-        src = "$dotfiles\src\opencode\.config\opencode\commands";
-        dst = "$env:USERPROFILE\.config\opencode\commands"
-    }
-    @{
-        src = "$dotfiles\src\opencode\.config\opencode\skills";
-        dst = "$env:USERPROFILE\.config\opencode\skills"
-    }
-    @{
         src = "$dotfiles\src\nvim\.config\nvim";
         dst = "$env:LOCALAPPDATA\nvim"
     }

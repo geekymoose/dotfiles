@@ -13,7 +13,6 @@ These are targeted for my use cases, but feel free to use any of them.
 - [`Krita`](./src/krita/.config/) - Digital painting
 - [`Mime`](./src/mime/.config/) - Default applications
 - [`NeoVim`](./src/nvim/.config/nvim/) - Text editor
-- [`OpenCode`](./src/opencode/.config/opencode/) - AI coding agent
 - [`Qt`](./src/qt/.config/) - Qt theme
 - [`Rofi`](./src/rofi/.config/rofi/) - Application launcher
 - [`Scripts`](./src/scripts/.local/bin/) - Custom shell scripts and utilities
