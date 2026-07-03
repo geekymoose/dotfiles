@@ -1,7 +1,7 @@
 ---
 description: Specialized agent for Godot game engine development with Rust
 mode: subagent
-model: mistral/devstral-medium-latest
+model: mistral/mistral-medium-latest
 temperature: 0.2
 tools:
   write: true
@@ -19,7 +19,7 @@ You focus on creating custom Godot Nodes using Godot Rust GDExtension (GDext).
 
 ## Rust / GDExtension Support
 
-- GDext documentation: https://godot-rust.github.io/docs/gdext
+- GDext documentation: <https://godot-rust.github.io/docs/gdext>
 - Analyze Rust code in Godot context
 - GDExtension architecture understanding
 - GDext Rust library proficiency

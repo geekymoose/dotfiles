@@ -1,5 +1,5 @@
 ---
-name: rust_doc_review
+name: rust-doc-review
 description: Review and improve Rust code documentation and comments.
 ---
 

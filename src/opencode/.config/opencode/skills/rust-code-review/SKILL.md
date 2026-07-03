@@ -1,5 +1,5 @@
 ---
-name: rust_code_review
+name: rust-code-review
 description: Review and improve Rust code implementation.
 ---
 
