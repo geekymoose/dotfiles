@@ -21,11 +21,11 @@ lemurs
 wayland
 wl-clipboard
 
-i3status-rust
 sway
 swaybg
 swayidle
 swaylock
+i3status-rust
 
 dunst
 rofi
@@ -56,16 +56,21 @@ papirus-icon-theme
 
 
 # ------------------------------------------------------------------------------
-# Drivers
+# Drivers / System
 # ------------------------------------------------------------------------------
 
-acpi
+base
+base-devel
 linux
 linux-firmware
 linux-headers
 
-networkmanager
-network-manager-applet
+man-db
+man-pages
+texinfo
+reflector
+
+acpi
 
 pavucontrol
 pipewire
@@ -75,22 +80,19 @@ pipewire-jack
 pipewire-pulse
 wireplumber
 
+networkmanager
+
+bluez
+bluez-utils
+bluetui
+
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 
-libwacom
-xf86-input-wacom
-
-v4l2loopback-dkms
-
-bluez
-bluez-utils
-
 cups
 cups-pdf
 sane
-# xsane (AUR)
 
 dosfstools
 ntfs-3g
@@ -102,25 +104,10 @@ gvfs
 gvfs-mtp
 libmtp
 
+libwacom
+xf86-input-wacom
 
-# ------------------------------------------------------------------------------
-# System
-# ------------------------------------------------------------------------------
-
-man-db
-man-pages
-texinfo
-
-base
-base-devel
-
-reflector
-
-btop
-htop
-lsof
-
-openssh
+v4l2loopback-dkms
 
 
 # ------------------------------------------------------------------------------
@@ -144,8 +131,13 @@ unzip
 zip
 7zip
 
+openssh
 rsync
 # adb-sync (AUR)
+
+btop
+htop
+lsof
 
 curl
 inetutils
