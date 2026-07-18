@@ -13,6 +13,7 @@ These are targeted for my use cases, but feel free to use any of them.
 - [`Krita`](./src/krita/.config/) - Digital painting
 - [`Mime`](./src/mime/.config/) - Default applications
 - [`NeoVim`](./src/nvim/.config/nvim/) - Text editor
+- [`OpenCode`](./src/opencode/.config/opencode/) - AI coding agent
 - [`Qt`](./src/qt/.config/) - Qt theme
 - [`Rofi`](./src/rofi/.config/rofi/) - Application launcher
 - [`Scripts`](./src/scripts/.local/bin/) - Custom shell scripts and utilities
@@ -30,7 +31,7 @@ All the required packages are listed in the `pkglist_pacman.txt` file (Arch Linu
 To skip a package, comment the line with `#`.
 
 I use GNU Stow to synchronize the settings.
-Each package in the `src` folder is organized the same way it lives on the local computer.
+Each package in `src` folder is organized the same way it lives on the local computer.
 
 ```sh
 # Install all packages
