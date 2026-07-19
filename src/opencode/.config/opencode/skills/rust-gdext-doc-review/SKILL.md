@@ -36,6 +36,7 @@ For `#[derive(GodotClass)]` structs:
 - Explain node interactions and scene tree usage
 - Describe signals (`#[signal]`) and their use cases
 - Document exposed methods (`#[func]`) with Godot behavior
+- Do not comment functions from GDext, such as `ready` and `process`
 
 ## Restrictions
 
