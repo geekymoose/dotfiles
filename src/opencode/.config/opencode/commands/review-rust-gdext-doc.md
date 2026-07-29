@@ -1,6 +1,6 @@
 ---
 description: Review Rust in-code documentation for Godot (GDext)
-agent: godot-rust-agent
+agent: rust-gdext-agent
 model: mistral/mistral-medium-latest
 ---
 
