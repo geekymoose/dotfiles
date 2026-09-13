@@ -1,4 +1,5 @@
 #!/bin/bash
+#
 # Checks if files in the diskdata partition conform to naming convention rules.
 # These rules ensure consistency and organization across the diskdata partition.
 # The script reports files with:
@@ -42,7 +43,12 @@ function check_pattern() {
        --exclude ".Trash-1000"
 }
 
-# Non-standard file extensions (only lowercase accepted)
+
+# ------------------------------------------------------------------------------
+# Check extension types
+# ------------------------------------------------------------------------------
+
+# Lookup non-standard file extensions (only lowercase accepted)
 check_extension "GIF"
 check_extension "JPEG"
 check_extension "jpeg"
@@ -57,11 +63,28 @@ check_extension "WAV"
 check_extension "WEBM"
 check_extension "WMV"
 
-# Temporary files
+
+# ------------------------------------------------------------------------------
+# Check special files
+# ------------------------------------------------------------------------------
+
+# Loopup temporary files (not allowed)
 check_pattern "~" ".*~$"
 check_pattern ".Temp" "\.Temp$"
 check_pattern ".*_grim.*" "_grim\."
 check_pattern "screenshot_" "^screenshot_"
+
+# Lookup hidden files and directories (not allowed)
+echo -e "---> LOOKUP for hidden files and directories"
+fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
+    --exclude "notes/.obsidian" \
+    --exclude "sources/" \
+    --exclude "setup/"
+
+
+# ------------------------------------------------------------------------------
+# Check image naming rules
+# ------------------------------------------------------------------------------
 
 # Non-standard image naming patterns
 # Expected format: "YYYY-MM-DD_HHMMSS" naming convention
@@ -93,17 +116,21 @@ check_pattern \
     "*0000-00-00_00-00-00*" \
     "[[:digit:]]{4}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}.*"
 
+
+# ------------------------------------------------------------------------------
+# Check general naming rules
+# ------------------------------------------------------------------------------
+
 # No space allowed in filenames
-echo -e "---> LOOKUP for filename with spaces (custom search paths)"
+echo -e "---> LOOKUP for filename with spaces"
 fd -HIi -t f --search-path ${DISKDATA} --regex "^ "
 fd -HIi -t f --search-path ${DISKDATA} --regex " $"
 fd -HIi -t f --search-path ${DISKDATA} --regex ".* .*" \
     --exclude "builds/**/unity default resources" \
     --exclude "notes"
 
-# Uppercase characters in filenames
 # Only lowercase characters are allowed in filenames
-echo "Only lowercases (custom search path)"
+echo -e "---> LOOKUP for filename with uppercase (only lowercase allowed)"
 fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
     --exclude "_inbox" \
     --exclude "builds" \
@@ -115,19 +142,22 @@ fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
 
 # Only alpha-numeric characters in filenames (no accent etc)
 # This allows spaces because it check in folders that allow them
-echo "Only alpha-numeric characters"
+echo -e "---> LOOKUP for filename with special characters (only alpha-numeric characters)"
 fd -s --search-path ${DISKDATA} --regex ".*[^\p{Han}a-zA-Z0-9 .()#+_-].*"
 
-# Hidden files and directories
-echo "Hidden files"
-fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
-    --exclude "notes/.obsidian" \
-    --exclude "sources/" \
-    --exclude "setup/"
+# Note files should only be markdown (end with .md)
+fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
+    --exclude ".obsidian" \
+    --exclude "DATA"
+
+
+# ------------------------------------------------------------------------------
+# Check metadata
+# ------------------------------------------------------------------------------
 
 # Check for wrong permission.
 # The "other" permissions should be 0 for any file and folder.
-echo "Check file permission (custom search path)"
+echo "Check file permission"
 fd -HIi -t x --search-path ${DISKDATA} \
     --exclude "builds" \
     --exclude "sources" \
@@ -135,8 +165,3 @@ fd -HIi -t x --search-path ${DISKDATA} \
 fd -i -t x --search-path ${DISKDATA}/sources \
     --exclude "extern" \
     --exclude "*.sh"
-
-# Notes should only be markdown (end with .md)
-fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
-    --exclude ".obsidian" \
-    --exclude "DATA"
