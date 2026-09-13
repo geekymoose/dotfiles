@@ -19,6 +19,8 @@ DISKDATA=/mnt/diskdata
 # Lookup for files with the provided extension.
 # The search is case sensitive.
 # Reports any matches found.
+# Parameters:
+# 1. The extension to check (e.g. "jpg", "md")
 function check_extension() {
     description="${1}"
     search_pattern=".*\.${1}$"
@@ -26,12 +28,14 @@ function check_extension() {
     fd -HIs \
        --search-path ${DISKDATA} \
        --regex "${search_pattern}" \
-       --exclude "_inbox/" \
-       --exclude ".Trash-1000"
+       --exclude "_inbox/"
 }
 
 # Lookup for files matching the provided regex pattern.
 # Reports any matches found.
+# Parameters:
+# 1. The description of the pattern (to display in the log)
+# 2. The regex pattern to match (e.g. ".*\.jpg$")
 function check_pattern() {
     description="${1}"
     search_pattern="${2}"
@@ -39,8 +43,7 @@ function check_pattern() {
     fd -HIi \
        --search-path ${DISKDATA} \
        --regex "${search_pattern}" \
-       --exclude "_inbox/" \
-       --exclude ".Trash-1000"
+       --exclude "_inbox/"
 }
 
 
@@ -157,7 +160,7 @@ fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
 
 # Check for wrong permission.
 # The "other" permissions should be 0 for any file and folder.
-echo "Check file permission"
+echo -e "---> LOOKUP for wrong permissions"
 fd -HIi -t x --search-path ${DISKDATA} \
     --exclude "builds" \
     --exclude "sources" \
