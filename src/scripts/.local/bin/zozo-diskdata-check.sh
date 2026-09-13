@@ -254,17 +254,13 @@ fd -i -t x --search-path ${DISKDATA}/sources \
 # Report image that are missing "DateTimeOriginal" metadata
 export -f check_missing_metadata_datetimeoriginal
 echo -e "${COLOR_INFO}---> LOOKUP for missing jpg metadata (DateTimeOriginal))"
-fd -HIi \
-    --search-path ${DISKDATA}/media/photos \
-    --type f \
-    --extension jpg \
+fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
+    --exclude "art" \
     --exec bash -c 'check_missing_metadata_datetimeoriginal "$1"' _ {}
 
 # Report image that are missing "DateTimeOriginal" metadata
 export -f check_invalid_filename_datetimeoriginal
 echo -e "${COLOR_INFO}---> LOOKUP for invalid jpg metadata (DateTimeOriginal should match filename))"
-fd -HIi \
-    --search-path ${DISKDATA}/media/photos/ \
-    --type f \
-    --extension jpg \
+fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
+    --exclude "art" \
     --exec bash -c 'check_invalid_filename_datetimeoriginal "$1"' _ {}
