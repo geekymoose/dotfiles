@@ -17,17 +17,17 @@ source "${HOME}/.config/sh/functions.sh"
 DISKDATA=/mnt/diskdata
 
 # Check if DISKDATA is a valid directory
-if ! [[ -d ${DISKDATA} ]] ; then
+if ! [[ -d ${DISKDATA} ]]; then
     echo -e "${COLOR_ERROR}Error: ${DISKDATA} is not a valid directory. Make sure it is mounted and accessible."
     exit 1
 fi
 # Check if exiv2 is installed
-if ! command -v exiv2 &> /dev/null; then
+if ! command -v exiv2 &>/dev/null; then
     echo -e "${COLOR_ERROR}Error: exiv2 is not installed. Install it with 'sudo pacman -S exiv2'"
     exit 1
 fi
 # Check if fd is installed
-if ! command -v fd &> /dev/null; then
+if ! command -v fd &>/dev/null; then
     echo -e "${COLOR_ERROR}Error: fd is not installed. Install it with 'sudo pacman -S fd'"
     exit 1
 fi
@@ -42,9 +42,9 @@ function check_extension() {
     search_pattern=".*\.${1}$"
     echo -e "${COLOR_INFO}---> LOOKUP for extension: ${description}"
     fd -HIs \
-       --search-path ${DISKDATA} \
-       --regex "${search_pattern}" \
-       --exclude "_inbox/"
+        --search-path ${DISKDATA} \
+        --regex "${search_pattern}" \
+        --exclude "_inbox/"
 }
 
 # Lookup for files matching the provided regex pattern.
@@ -57,9 +57,9 @@ function check_pattern() {
     search_pattern="${2}"
     echo -e "${COLOR_INFO}---> LOOKUP for pattern: ${description}"
     fd -HIi \
-       --search-path ${DISKDATA} \
-       --regex "${search_pattern}" \
-       --exclude "_inbox/"
+        --search-path ${DISKDATA} \
+        --regex "${search_pattern}" \
+        --exclude "_inbox/"
 }
 
 # Lookup for missing "DateTimeOriginal" metadata.
@@ -78,7 +78,7 @@ function check_missing_metadata_datetimeoriginal() {
 
     datetime_metadata_fetched=$(exiv2 -K "Exif.Photo.DateTimeOriginal" -Pv "$file" 2>/dev/null)
     if [[ -z "$datetime_metadata_fetched" ]]; then
-        echo -e "${COLOR_ERROR}Error: Missing DateTimeOriginal metadata in file: $file" >&2
+        echo -e "${COLOR_ERROR}Missing DateTimeOriginal metadata in file: $file" >&2
     fi
 }
 
@@ -96,7 +96,7 @@ function check_invalid_filename_datetimeoriginal() {
         return 0
     fi
 
-    # Extract DateTimeOriginal metadata using exiv2
+    # Extract DateTimeOriginal metadata
     datetime_metadata_fetched=$(exiv2 -K "Exif.Photo.DateTimeOriginal" -Pv "$file" 2>/dev/null)
     if [[ -z "$datetime_metadata_fetched" ]]; then
         return 0
@@ -106,15 +106,19 @@ function check_invalid_filename_datetimeoriginal() {
 
     # Extract date from filename (YYYY-MM-DD_HHMMSS)
     filename=$(basename "$file")
-    datetime_naming="${filename:0:17}"  # Extract YYYY-MM-DD_HHMMSS (remove seconds)
+    datetime_naming="${filename:0:17}" # Extract YYYY-MM-DD_HHMMSS (remove seconds)
 
     # Compare metadata date with filename date
     if [[ "$datetime_metadata" != "$datetime_naming" ]]; then
-        echo -e "${COLOR_ERROR}Error: Metadata DateTimeOriginal ($datetime_metadata) does not match filename date ($datetime_naming): $file"
+        echo -e "${COLOR_ERROR}Metadata DateTimeOriginal ($datetime_metadata) does not match filename date ($datetime_naming): $file"
+
+        # Uncomment to build a batch mv command file
+        new_file="$(dirname "$file")/${datetime_metadata}${filename:17}"
+        echo "mv -v \"$file\" \"${new_file}\"" >>mv_commands.txt
+
         return 1
     fi
 }
-
 
 # ------------------------------------------------------------------------------
 # Check extension types
@@ -135,7 +139,6 @@ check_extension "WAV"
 check_extension "WEBM"
 check_extension "WMV"
 
-
 # ------------------------------------------------------------------------------
 # Check special files
 # ------------------------------------------------------------------------------
@@ -152,7 +155,6 @@ fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
     --exclude "notes/.obsidian" \
     --exclude "sources/" \
     --exclude "setup/"
-
 
 # ------------------------------------------------------------------------------
 # Check image naming rules
@@ -188,7 +190,6 @@ check_pattern \
     "*0000-00-00_00-00-00*" \
     "[[:digit:]]{4}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}.*"
 
-
 # ------------------------------------------------------------------------------
 # Check general naming rules
 # ------------------------------------------------------------------------------
@@ -222,7 +223,6 @@ fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
     --exclude ".obsidian" \
     --exclude "DATA"
 
-
 # ------------------------------------------------------------------------------
 # Check metadata
 # ------------------------------------------------------------------------------
@@ -242,16 +242,16 @@ fd -i -t x --search-path ${DISKDATA}/sources \
 export -f check_missing_metadata_datetimeoriginal
 echo -e "${COLOR_INFO}---> LOOKUP for missing jpg metadata (DateTimeOriginal))"
 fd -HIi \
-   --search-path ${DISKDATA}/media/photos \
-   --type f \
-   --extension jpg \
-   --exec bash -c 'check_missing_metadata_datetimeoriginal "$1"' _ {}
+    --search-path ${DISKDATA}/media/photos \
+    --type f \
+    --extension jpg \
+    --exec bash -c 'check_missing_metadata_datetimeoriginal "$1"' _ {}
 
 # Report image that are missing "DateTimeOriginal" metadata
 export -f check_invalid_filename_datetimeoriginal
 echo -e "${COLOR_INFO}---> LOOKUP for invalid jpg metadata (DateTimeOriginal should match filename))"
 fd -HIi \
-   --search-path ${DISKDATA}/media/photos \
-   --type f \
-   --extension jpg \
-   --exec bash -c 'check_invalid_filename_datetimeoriginal "$1"' _ {}
+    --search-path ${DISKDATA}/media/photos/ \
+    --type f \
+    --extension jpg \
+    --exec bash -c 'check_invalid_filename_datetimeoriginal "$1"' _ {}
