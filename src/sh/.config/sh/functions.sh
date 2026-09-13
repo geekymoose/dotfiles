@@ -5,15 +5,20 @@
 # ------------------------------------------------------------------------------
 
 COLOR_ERROR='\e[31m'
-COLOR_SUCCESS='\033[32m'
-COLOR_CMD='\e[34m'
+COLOR_SUCCESS='\e[32m'
+COLOR_INFO='\e[34m'
 COLOR_NORMAL='\e[0m'
+
+export COLOR_ERROR
+export COLOR_SUCCESS
+export COLOR_INFO
+export COLOR_NORMAL
 
 # Executes the provided command, but prints the full cmd before executing it.
 # For CI script, you may use `set -v` instead
 # Param 1: the command line to execute
 function apply_cmd() {
-    echo -e "${COLOR_CMD}${1}${COLOR_NORMAL}"
+    echo -e "${COLOR_INFO}${1}${COLOR_NORMAL}"
     eval $1
 }
 

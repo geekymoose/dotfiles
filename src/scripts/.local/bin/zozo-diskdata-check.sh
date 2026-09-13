@@ -16,6 +16,22 @@
 source "${HOME}/.config/sh/functions.sh"
 DISKDATA=/mnt/diskdata
 
+# Check if DISKDATA is a valid directory
+if ! [[ -d ${DISKDATA} ]] ; then
+    echo -e "${COLOR_ERROR}Error: ${DISKDATA} is not a valid directory. Make sure it is mounted and accessible."
+    exit 1
+fi
+# Check if exiv2 is installed
+if ! command -v exiv2 &> /dev/null; then
+    echo -e "${COLOR_ERROR}Error: exiv2 is not installed. Install it with 'sudo pacman -S exiv2'"
+    exit 1
+fi
+# Check if fd is installed
+if ! command -v fd &> /dev/null; then
+    echo -e "${COLOR_ERROR}Error: fd is not installed. Install it with 'sudo pacman -S fd'"
+    exit 1
+fi
+
 # Lookup for files with the provided extension.
 # The search is case sensitive.
 # Reports any matches found.
@@ -44,6 +60,59 @@ function check_pattern() {
        --search-path ${DISKDATA} \
        --regex "${search_pattern}" \
        --exclude "_inbox/"
+}
+
+# Lookup for missing "DateTimeOriginal" metadata.
+# Reports any errors.
+# Parameters:
+# 1. The file to check (should be a file, not a directory)
+function check_missing_metadata_datetimeoriginal() {
+    local file="$1"
+    local datetime_metadata
+    local datetime_naming
+
+    if [[ -d "$file" ]]; then
+        echo -e "${COLOR_ERROR}Invalid parameter (must be a file, not a directory): $file" >&2
+        return 0
+    fi
+
+    datetime_metadata_fetched=$(exiv2 -K "Exif.Photo.DateTimeOriginal" -Pv "$file" 2>/dev/null)
+    if [[ -z "$datetime_metadata_fetched" ]]; then
+        echo -e "${COLOR_ERROR}Error: Missing DateTimeOriginal metadata in file: $file" >&2
+    fi
+}
+
+# Lookup for mismatched "DateTimeOriginal" metadata and filename suffix YYYY-MM-DD.
+# Reports any errors.
+# Parameters:
+# 1. The file to check (should be a file, not a directory)
+function check_invalid_filename_datetimeoriginal() {
+    local file="$1"
+    local datetime_metadata
+    local datetime_naming
+
+    if [[ -d "$file" ]]; then
+        echo -e "${COLOR_ERROR}Invalid parameter (must be a file, not a directory): $file" >&2
+        return 0
+    fi
+
+    # Extract DateTimeOriginal metadata using exiv2
+    datetime_metadata_fetched=$(exiv2 -K "Exif.Photo.DateTimeOriginal" -Pv "$file" 2>/dev/null)
+    if [[ -z "$datetime_metadata_fetched" ]]; then
+        return 0
+    fi
+    # Convert YYYY:MM:DD hh:mm:ss to YYYY-MM-DD_hhmmss
+    datetime_metadata=${datetime_metadata_fetched:0:4}-${datetime_metadata_fetched:5:2}-${datetime_metadata_fetched:8:2}_${datetime_metadata_fetched:11:2}${datetime_metadata_fetched:14:2}${datetime_metadata_fetched:17:2}
+
+    # Extract date from filename (YYYY-MM-DD_HHMMSS)
+    filename=$(basename "$file")
+    datetime_naming="${filename:0:17}"  # Extract YYYY-MM-DD_HHMMSS (remove seconds)
+
+    # Compare metadata date with filename date
+    if [[ "$datetime_metadata" != "$datetime_naming" ]]; then
+        echo -e "${COLOR_ERROR}Error: Metadata DateTimeOriginal ($datetime_metadata) does not match filename date ($datetime_naming): $file"
+        return 1
+    fi
 }
 
 
@@ -168,3 +237,21 @@ fd -HIi -t x --search-path ${DISKDATA} \
 fd -i -t x --search-path ${DISKDATA}/sources \
     --exclude "extern" \
     --exclude "*.sh"
+
+# Report image that are missing "DateTimeOriginal" metadata
+export -f check_missing_metadata_datetimeoriginal
+echo -e "${COLOR_INFO}---> LOOKUP for missing jpg metadata (DateTimeOriginal))"
+fd -HIi \
+   --search-path ${DISKDATA}/media/photos \
+   --type f \
+   --extension jpg \
+   --exec bash -c 'check_missing_metadata_datetimeoriginal "$1"' _ {}
+
+# Report image that are missing "DateTimeOriginal" metadata
+export -f check_invalid_filename_datetimeoriginal
+echo -e "${COLOR_INFO}---> LOOKUP for invalid jpg metadata (DateTimeOriginal should match filename))"
+fd -HIi \
+   --search-path ${DISKDATA}/media/photos \
+   --type f \
+   --extension jpg \
+   --exec bash -c 'check_invalid_filename_datetimeoriginal "$1"' _ {}
