@@ -14,7 +14,9 @@
 # Regex syntax: https://docs.rs/regex/1.0.0/regex/#syntax
 
 source "${HOME}/.config/sh/functions.sh"
-DISKDATA=/mnt/diskdata
+
+export DISKDATA=/mnt/diskdata
+export LOGDIR=${HOME}/downloads/
 
 # Check if DISKDATA is a valid directory
 if ! [[ -d ${DISKDATA} ]]; then
@@ -79,7 +81,18 @@ function check_missing_metadata_datetimeoriginal() {
     datetime_metadata_fetched=$(exiv2 -K "Exif.Photo.DateTimeOriginal" -Pv "$file" 2>/dev/null)
     if [[ -z "$datetime_metadata_fetched" ]]; then
         echo -e "${COLOR_ERROR}Missing DateTimeOriginal metadata in file: $file" >&2
+
+        # Extract date from filename (YYYY-MM-DD_HHMMSS)
+        filename=$(basename "$file")
+        datetime_naming="${filename:0:17}" # Extract YYYY-MM-DD_HHMMSS (remove seconds)
+
+        # Convert YYYY-MM-DD_HHMMSS to YYYY:MM:DD HH:MM:SS
+        new_datetime_metadata="${datetime_naming:0:4}:${datetime_naming:5:2}:${datetime_naming:8:2} ${datetime_naming:11:2}:${datetime_naming:13:2}:${datetime_naming:15:2}"
+
+        # Build a batch exiv2 command file
+        echo "exiv2 -M\"set Exif.Photo.DateTimeOriginal ${new_datetime_metadata}\" \"${file}\"" >>${LOGDIR}/update_batch_commands.sh
     fi
+
 }
 
 # Lookup for mismatched "DateTimeOriginal" metadata and filename suffix YYYY-MM-DD.
@@ -112,9 +125,9 @@ function check_invalid_filename_datetimeoriginal() {
     if [[ "$datetime_metadata" != "$datetime_naming" ]]; then
         echo -e "${COLOR_ERROR}Metadata DateTimeOriginal ($datetime_metadata) does not match filename date ($datetime_naming): $file"
 
-        # Uncomment to build a batch mv command file
+        # Build a batch mv command file
         new_file="$(dirname "$file")/${datetime_metadata}${filename:17}"
-        echo "mv -v \"$file\" \"${new_file}\"" >>mv_commands.txt
+        echo "mv -v \"$file\" \"${new_file}\"" >>${LOGDIR}/rename_batch_commands.sh
 
         return 1
     fi
