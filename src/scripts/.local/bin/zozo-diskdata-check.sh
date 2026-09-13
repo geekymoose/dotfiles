@@ -89,7 +89,7 @@ function check_missing_metadata_datetimeoriginal() {
         # Convert YYYY-MM-DD_HHMMSS to YYYY:MM:DD HH:MM:SS
         new_datetime_metadata="${datetime_naming:0:4}:${datetime_naming:5:2}:${datetime_naming:8:2} ${datetime_naming:11:2}:${datetime_naming:13:2}:${datetime_naming:15:2}"
 
-        # Build a batch exiv2 command file
+        # And Build a batch exiv2 command file
         echo "exiv2 -M\"set Exif.Photo.DateTimeOriginal ${new_datetime_metadata}\" \"${file}\"" >>${LOGDIR}/update_batch_commands.sh
     fi
 
@@ -163,7 +163,7 @@ check_pattern ".*_grim.*" "_grim\."
 check_pattern "screenshot_" "^screenshot_"
 
 # Lookup hidden files and directories (not allowed)
-echo -e "---> LOOKUP for hidden files and directories"
+echo -e "${COLOR_INFO}---> LOOKUP for hidden files and directories"
 fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
     --exclude "notes/.obsidian" \
     --exclude "sources/" \
@@ -208,7 +208,7 @@ check_pattern \
 # ------------------------------------------------------------------------------
 
 # No space allowed in filenames
-echo -e "---> LOOKUP for filename with spaces"
+echo -e "${COLOR_INFO}---> LOOKUP for filename with spaces"
 fd -HIi -t f --search-path ${DISKDATA} --regex "^ "
 fd -HIi -t f --search-path ${DISKDATA} --regex " $"
 fd -HIi -t f --search-path ${DISKDATA} --regex ".* .*" \
@@ -216,7 +216,7 @@ fd -HIi -t f --search-path ${DISKDATA} --regex ".* .*" \
     --exclude "notes"
 
 # Only lowercase characters are allowed in filenames
-echo -e "---> LOOKUP for filename with uppercase (only lowercase allowed)"
+echo -e "${COLOR_INFO}---> LOOKUP for filename with uppercase (only lowercase allowed)"
 fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
     --exclude "_inbox" \
     --exclude "builds" \
@@ -228,7 +228,7 @@ fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
 
 # Only alpha-numeric characters in filenames (no accent etc)
 # This allows spaces because it check in folders that allow them
-echo -e "---> LOOKUP for filename with special characters (only alpha-numeric characters)"
+echo -e "${COLOR_INFO}---> LOOKUP for filename with special characters (only alpha-numeric characters)"
 fd -s --search-path ${DISKDATA} --regex ".*[^\p{Han}a-zA-Z0-9 .()#+_-].*"
 
 # Note files should only be markdown (end with .md)
@@ -242,7 +242,7 @@ fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
 
 # Check for wrong permission.
 # The "other" permissions should be 0 for any file and folder.
-echo -e "---> LOOKUP for wrong permissions"
+echo -e "${COLOR_INFO}---> LOOKUP for wrong permissions"
 fd -HIi -t x --search-path ${DISKDATA} \
     --exclude "builds" \
     --exclude "sources" \
