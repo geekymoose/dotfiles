@@ -18,33 +18,20 @@ source "${HOME}/.config/sh/functions.sh"
 export DISKDATA=/mnt/diskdata
 export LOGDIR=${HOME}/downloads/
 
-# Check if DISKDATA is a valid directory
-if ! [[ -d ${DISKDATA} ]]; then
-    log_error "Error: ${DISKDATA} is not a valid directory. Make sure it is mounted and accessible."
-    exit 1
-fi
-# Check if exiv2 is installed
-if ! command -v exiv2 &>/dev/null; then
-    log_error "Error: exiv2 is not installed. Install it with 'sudo pacman -S exiv2'"
-    exit 1
-fi
-# Check if fd is installed
-if ! command -v fd &>/dev/null; then
-    log_error "Error: fd is not installed. Install it with 'sudo pacman -S fd'"
-    exit 1
-fi
+ensure_folder_exists "${DISKDATA}"
+ensure_is_installed "exiv2"
+ensure_is_installed "fd"
 
-# Lookup for files with the provided extension.
-# The search is case sensitive.
+# Lookup for files with the provided extension (case-sensitive).
 # Reports any matches found.
 # Parameters:
-# 1. The extension to check (e.g. "jpg", "md")
+#   $1 - The extension to check (e.g. "jpg", "md")
 function check_extension() {
-    description="${1}"
-    search_pattern=".*\.${1}$"
+    local description="${1}"
+    local search_pattern=".*\.${1}$"
     log_info "---> LOOKUP for extension: ${description}"
     fd -HIs \
-        --search-path ${DISKDATA} \
+        --search-path "${DISKDATA}" \
         --regex "${search_pattern}" \
         --exclude "_inbox/"
 }
@@ -52,22 +39,24 @@ function check_extension() {
 # Lookup for files matching the provided regex pattern.
 # Reports any matches found.
 # Parameters:
-# 1. The description of the pattern (to display in the log)
-# 2. The regex pattern to match (e.g. ".*\.jpg$")
+#   $1 - The description of the pattern (to display in the log)
+#   $2 - The regex pattern to match (e.g. ".*\.jpg$")
 function check_pattern() {
-    description="${1}"
-    search_pattern="${2}"
+    local description="${1}"
+    local search_pattern="${2}"
     log_info "---> LOOKUP for pattern: ${description}"
     fd -HIi \
-        --search-path ${DISKDATA} \
+        --search-path "${DISKDATA}" \
         --regex "${search_pattern}" \
         --exclude "_inbox/"
 }
 
-# Lookup for missing "DateTimeOriginal" metadata.
-# Reports any errors.
+# Lookup for missing "DateTimeOriginal" metadata in image files.
+# Reports errors and generates a batch command to fix missing metadata.
 # Parameters:
-# 1. The file to check (should be a file, not a directory)
+#   $1 - The file to check (must be a file, not a directory).
+# Returns:
+#   0 on success, 1 if the input is invalid or metadata is missing.
 function check_missing_metadata_datetimeoriginal() {
     local file="$1"
     local datetime_metadata
@@ -96,9 +85,11 @@ function check_missing_metadata_datetimeoriginal() {
 }
 
 # Lookup for mismatched "DateTimeOriginal" metadata and filename suffix YYYY-MM-DD.
-# Reports any errors.
+# Reports errors and generates a batch command to rename files with mismatched metadata.
 # Parameters:
-# 1. The file to check (should be a file, not a directory)
+#   $1 - The file to check (must be a file, not a directory).
+# Returns:
+#   0 on success, 1 if the input is invalid or metadata does not match the filename.
 function check_invalid_filename_datetimeoriginal() {
     local file="$1"
     local datetime_metadata
@@ -227,7 +218,7 @@ fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
     --exclude "setup/**/.SRCINFO"
 
 # Only alpha-numeric characters in filenames (no accent etc)
-# This allows spaces because it check in folders that allow them
+# This allows spaces because it checks in folders that allow them
 log_info "---> LOOKUP for filename with special characters (only alpha-numeric characters)"
 fd -s --search-path ${DISKDATA} --regex ".*[^\p{Han}a-zA-Z0-9 .()#+_-].*"
 
