@@ -1,17 +1,7 @@
 # Dotfiles
 
 Personal Arch Linux and Windows configuration files managed with GNU Stow.
-This repository contains system configurations, shell, editor settings, and other configs.
-
-## Project Structure
-
-- `src/` - Configuration source files organized by application
-- `setup-links.ps1` - Script to create configuration symlinks on Windows
-- `exec_pacman.sh` - Script to install all Archlinux packages
-- `exec_stow.sh` - Script to create configuration symlinks on Linux
-- `pkglist_pacman.txt` - List of required Archlinux packages
-- `LICENSE` - Project license information
-- `README.md` - Project introduction for humans
+This repository contains system, shell, editor, and other configs.
 
 ## Project Tools
 
@@ -35,6 +25,6 @@ This repository contains system configurations, shell, editor settings, and othe
 
 - Linux configurations use GNU Stow for symlink management (`exec_stow.sh`)
 - Windows configurations use PowerShell script (`setup-links.ps1`)
-- Some applications (Alacritty, Git, Neovim, VSCode, Yazi, Zed) have cross-platform configs
+- Some applications have cross-platform configs
 - Sway, Dunst, Rofi are Linux-only (Wayland)
 - PowerShell, AutoHotkey are Windows-only

@@ -3,6 +3,16 @@
 My personal Archlinux configuration.
 These are targeted for my use cases, but feel free to use any of them.
 
+## Project Structure
+
+- `src/` - Configuration source files organized by application
+- `build/setup-links.ps1` - Script to create configuration symlinks on Windows
+- `build/exec_pacman.sh` - Script to install all Archlinux packages
+- `build/exec_stow.sh` - Script to create configuration symlinks on Linux
+- `build/pkglist_pacman.txt` - List of required Archlinux packages
+- `LICENSE` - Project license information
+- `README.md` - Project introduction for humans
+
 ## Features
 
 - [`Alacritty`](./src/alacritty/.config/alacritty/) - GPU-accelerated terminal emulator
@@ -27,34 +37,36 @@ These are targeted for my use cases, but feel free to use any of them.
 
 ## Installation
 
-All the required packages are listed in the `pkglist_pacman.txt` file (Arch Linux).
+All the required packages are listed in the `build/pkglist_pacman.txt` file.
 To skip a package, comment the line with `#`.
+This is targeted for Arch Linux, but can be adapted for other distributions.
 
 I use GNU Stow to synchronize the settings.
 Each package in `src` folder is organized the same way it lives on the local computer.
 
 ```sh
-# Install all packages
-sudo ./exec_pacman.sh
+# Install all packages (Archlinux)
+sudo ./bash/exec_pacman.sh
 
-# Create all symlinks
-./exec_stow.sh
+# Create all symlinks (any distributions)
+./bash/exec_stow.sh
 
-# Setup Neovim plugins
+# Setup Neovim plugins (any distribution)
 nvim # Then run :PlugInstall
 
-# Install zsh oh-my-posh (AUR)
+# Install zsh oh-my-posh (Archlinux AUR)
 git clone https://aur.archlinux.org/oh-my-posh.git
 cd oh-my-posh
 cat PKGBUILD # Check if the URLs are correct (for security)
 makepkg -sirc
 
-# For Sway: set the backgrounds (replace your_bg_* with your files)
+# Set background for Sway window manager (any distribution)
+# Replace your_bg_* with your files
 mkdir -p $HOME/.local/share/backgrounds
 cp your_bg_home.jpg $HOME/.local/share/backgrounds/home.jpg
 cp your_bg_lock.png $HOME/.local/share/backgrounds/lock.png
 
-# Autostart the lemurs display manager
+# Autostart the lemurs display manager (any distribution)
 systemctl enable lemurs
 ```
 
