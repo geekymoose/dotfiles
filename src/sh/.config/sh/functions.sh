@@ -4,6 +4,8 @@
 # To include in script: source "${HOME}/.config/sh/functions.sh"
 # ------------------------------------------------------------------------------
 
+ERROR_CODE=42
+
 COLOR_ERROR='\e[31m'
 COLOR_SUCCESS='\e[32m'
 COLOR_INFO='\e[34m'
@@ -31,7 +33,7 @@ function log_info() {
 
 # Echo normal (default color)
 function log_normal() {
-    echo -e "${COLOR_NORMAL}$1${COLOR_NORMAL}"
+    echo -e "${COLOR_NORMAL}$1"
 }
 
 # Executes the provided command after printing it.
@@ -44,13 +46,14 @@ function apply_cmd() {
     local cmd="$1"
     [[ -z "$cmd" ]] && {
         log_error "Empty command" >&2
-        exit 42
+        exit $ERROR_CODE
     }
 
     log_info "${cmd}"
     bash -c "$cmd" || {
-        log_error "Command failed: $cmd"
-        exit 42
+        local exit_code=$?
+        log_error "Command failed: $cmd (exit code: $exit_code)"
+        exit $exit_code
     }
 }
 
@@ -67,12 +70,12 @@ function ensure_is_addr_reachable() {
     local addr="$1"
     [[ -z "$addr" ]] && {
         log_error "Empty address" >&2
-        exit 42
+        exit $ERROR_CODE
     }
     log_info "Trying to reach ${addr}..."
     if ! ping -c 1 -W 1 "$addr" >>/dev/null 2>&1; then
         log_error "Unable to reach the requested address ${addr}"
-        exit 42
+        exit $ERROR_CODE
     fi
 }
 
@@ -85,12 +88,12 @@ function ensure_is_installed() {
 
     [[ -z "$cmdname" ]] && {
         log_error "Empty command name"
-        exit 42
+        exit $ERROR_CODE
     }
 
     command -v "$cmdname" >/dev/null 2>&1 || {
         log_error "Command \"$cmdname\" not found"
-        exit 42
+        exit $ERROR_CODE
     }
 }
 
@@ -102,12 +105,12 @@ function ensure_on_hostname() {
     local expected_name="$1"
     if [[ $(hostname) != "$expected_name" ]]; then
         log_error "Action not allowed on this computer (only usable on ${expected_name})"
-        exit 42
+        exit $ERROR_CODE
     fi
 }
 
 # Checks if a disk with the provided label is plugged (case-insensitive).
-# Exits with code 1 if not found.
+# Exits with code 42 if not found.
 #
 # Requires: rg
 # Param 1: disk label to check
@@ -117,12 +120,12 @@ function ensure_disklabel_exists() {
     local disk_label="$1"
     [[ -z "$disk_label" ]] && {
         log_error "Empty disk label"
-        exit 42
+        exit $ERROR_CODE
     }
 
     if ! [[ -e "/dev/disk/by-label/${disk_label}" ]]; then
         log_error "The partition with label \"$disk_label\" does not exist (make sure it is mounted)"
-        exit 42
+        exit $ERROR_CODE
     fi
 }
 
@@ -134,7 +137,7 @@ function ensure_folder_exists() {
     local folderpath="$1"
     if ! [[ -d "$folderpath" ]]; then
         log_error "The folder \"${folderpath}\" does not exist or is not a valid directory"
-        exit 42
+        exit $ERROR_CODE
     fi
 }
 
@@ -158,7 +161,7 @@ function run_rsync_backup() {
     # Run rsync and make sure we add prefix "/" (see documentation)
     apply_cmd "rsync -avr --delete \"${src}/\" \"${dst}/\"" || {
         log_error "An error occurred during the rsync"
-        exit 42
+        exit $ERROR_CODE
     }
     log_success "Backup rsync successfully done"
 }
@@ -178,12 +181,12 @@ function run_adb_sync_backup() {
     ensure_folder_exists "${src}"
 
     apply_cmd "adb devices"
-    apply_cmd "adb-sync --delete \"${src}/\" \"${dst}/\""
+    apply_cmd "adb-sync --delete \"${src}/\" \"${dst}/\"" || {
 
-    if $? -ne 0; then
         log_error "Error during adb-sync"
         exit 42
-    fi
+
+    }
 
     log_success "Backup adb-sync successfully done"
 }
@@ -214,11 +217,11 @@ function run_mount_luks() {
 
         sudo cryptsetup luksOpen "${src}" "${name}" || {
             log_error "LUKS open failed"
-            exit 42
+            exit $ERROR_CODE
         }
         sudo mount "/dev/mapper/${name}" "${dst}" || {
             log_error "Mount failed"
-            exit 42
+            exit $ERROR_CODE
         }
         return 0
     fi
