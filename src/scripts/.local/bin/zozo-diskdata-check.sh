@@ -128,7 +128,7 @@ function check_invalid_filename_datetimeoriginal() {
 # Check extension types
 # ------------------------------------------------------------------------------
 
-# Lookup non-standard file extensions (only lowercase accepted)
+# Only lowercase extensions are allowed.
 check_extension "GIF"
 check_extension "JPEG"
 check_extension "jpeg"
@@ -143,17 +143,22 @@ check_extension "WAV"
 check_extension "WEBM"
 check_extension "WMV"
 
+# Files in the notes directory should only be markdown (end with .md)
+fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
+    --exclude ".obsidian" \
+    --exclude "DATA"
+
 # ------------------------------------------------------------------------------
 # Check special files
 # ------------------------------------------------------------------------------
 
-# Loopup temporary files (not allowed)
+# Temporary files are not allowed.
 check_pattern "~" ".*~$"
 check_pattern ".Temp" "\.Temp$"
 check_pattern ".*_grim.*" "_grim\."
 check_pattern "screenshot_" "^screenshot_"
 
-# Lookup hidden files and directories (not allowed)
+# Hidden files and hidden directories are not allowed.
 log_info "---> LOOKUP for hidden files and directories"
 fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
     --exclude "notes/.obsidian" \
@@ -161,11 +166,10 @@ fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
     --exclude "setup/"
 
 # ------------------------------------------------------------------------------
-# Check image naming rules
+# Check date formats
 # ------------------------------------------------------------------------------
 
-# Non-standard image naming patterns
-# Expected format: "YYYY-MM-DD_HHMMSS" naming convention
+# Files prefixed with date must follow the "YYYY-MM-DD_HHMMSS" convention (ISO_8601)
 check_pattern \
     "00000000_00h00m00s*" \
     "^[[:digit:]]{8}[_-][[:digit:]]{2}h[[:digit:]]{2}m[[:digit:]]{2}s.*"
@@ -195,7 +199,7 @@ check_pattern \
     "[[:digit:]]{4}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}.*"
 
 # ------------------------------------------------------------------------------
-# Check general naming rules
+# Check filename characters
 # ------------------------------------------------------------------------------
 
 # No space allowed in filenames
@@ -207,7 +211,7 @@ fd -HIi -t f --search-path ${DISKDATA} --regex ".* .*" \
     --exclude "notes"
 
 # Only lowercase characters are allowed in filenames
-log_info "---> LOOKUP for filename with uppercase (only lowercase allowed)"
+log_info "---> LOOKUP for filename with uppercase"
 fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
     --exclude "_inbox" \
     --exclude "builds" \
@@ -219,21 +223,15 @@ fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
 
 # Only alpha-numeric characters in filenames (no accent etc)
 # This allows spaces because it checks in folders that allow them
-log_info "---> LOOKUP for filename with special characters (only alpha-numeric characters)"
+log_info "---> LOOKUP for filename with special characters"
 fd -s --search-path ${DISKDATA} --regex ".*[^\p{Han}a-zA-Z0-9 .()#+_-].*"
-
-# Note files should only be markdown (end with .md)
-fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
-    --exclude ".obsidian" \
-    --exclude "DATA"
 
 # ------------------------------------------------------------------------------
 # Check metadata
 # ------------------------------------------------------------------------------
 
-# Check for wrong permission.
-# The "other" permissions should be 0 for any file and folder.
-log_info "---> LOOKUP for wrong permissions"
+# Executables are not allowed (exect in builds, setup, and sources)
+log_info "---> LOOKUP for file with executable permissions"
 fd -HIi -t x --search-path ${DISKDATA} \
     --exclude "builds" \
     --exclude "sources" \
@@ -242,16 +240,16 @@ fd -i -t x --search-path ${DISKDATA}/sources \
     --exclude "extern" \
     --exclude "*.sh"
 
-# Report image that are missing "DateTimeOriginal" metadata
+# All jpg file must have the "DateTimeOriginal" metadata
 export -f check_missing_metadata_datetimeoriginal
-log_info "---> LOOKUP for missing jpg metadata (DateTimeOriginal))"
+log_info "---> LOOKUP for missing DateTimeOriginal metadata in jpg files"
 fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
     --exclude "art" \
     --exec bash -c 'check_missing_metadata_datetimeoriginal "$1"' _ {}
 
-# Report image that are missing "DateTimeOriginal" metadata
+# All jpg filename must be prefixed with the "DateTimeOriginal" metadata value
 export -f check_invalid_filename_datetimeoriginal
-log_info "---> LOOKUP for invalid jpg metadata (DateTimeOriginal should match filename))"
+log_info "---> LOOKUP for jpg filename that does not match the DateTimeOriginal value"
 fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
     --exclude "art" \
     --exec bash -c 'check_invalid_filename_datetimeoriginal "$1"' _ {}
