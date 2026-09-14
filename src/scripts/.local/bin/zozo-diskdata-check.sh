@@ -15,6 +15,11 @@
 
 source "${HOME}/.config/sh/functions.sh"
 
+export -f log_error
+export -f log_success
+export -f log_info
+export -f log_normal
+
 export DISKDATA=/mnt/diskdata
 export LOGDIR=${HOME}/downloads/
 
@@ -79,9 +84,8 @@ function find_missing_metadata_datetimeoriginal() {
         new_datetime_metadata="${datetime_naming:0:4}:${datetime_naming:5:2}:${datetime_naming:8:2} ${datetime_naming:11:2}:${datetime_naming:13:2}:${datetime_naming:15:2}"
 
         # And Build a batch exiv2 command file
-        echo "exiv2 -M\"set Exif.Photo.DateTimeOriginal ${new_datetime_metadata}\" \"${file}\"" >>${LOGDIR}/update_batch_commands.sh
+        echo "exiv2 -M\"set Exif.Photo.DateTimeOriginal ${new_datetime_metadata}\" \"${file}\"" >>"${LOGDIR}/update_batch_commands.sh"
     fi
-
 }
 
 # Lookup for mismatched "DateTimeOriginal" metadata and filename suffix YYYY-MM-DD.
@@ -118,7 +122,7 @@ function find_invalid_filename_datetimeoriginal() {
 
         # Build a batch mv command file
         new_file="$(dirname "$file")/${datetime_metadata}${filename:17}"
-        echo "mv -v \"$file\" \"${new_file}\"" >>${LOGDIR}/rename_batch_commands.sh
+        echo "mv -v \"$file\" \"${new_file}\"" >>"${LOGDIR}/rename_batch_commands.sh"
 
         return 1
     fi
