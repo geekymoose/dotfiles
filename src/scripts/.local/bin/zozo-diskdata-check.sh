@@ -26,7 +26,7 @@ ensure_is_installed "fd"
 # Reports any matches found.
 # Parameters:
 #   $1 - The extension to check (e.g. "jpg", "md")
-function check_extension() {
+function find_extension() {
     local description="${1}"
     local search_pattern=".*\.${1}$"
     log_info "---> LOOKUP for extension: ${description}"
@@ -41,7 +41,7 @@ function check_extension() {
 # Parameters:
 #   $1 - The description of the pattern (to display in the log)
 #   $2 - The regex pattern to match (e.g. ".*\.jpg$")
-function check_pattern() {
+function find_pattern() {
     local description="${1}"
     local search_pattern="${2}"
     log_info "---> LOOKUP for pattern: ${description}"
@@ -57,7 +57,7 @@ function check_pattern() {
 #   $1 - The file to check (must be a file, not a directory).
 # Returns:
 #   0 on success, 1 if the input is invalid or metadata is missing.
-function check_missing_metadata_datetimeoriginal() {
+function find_missing_metadata_datetimeoriginal() {
     local file="$1"
     local datetime_metadata
     local datetime_naming
@@ -90,7 +90,7 @@ function check_missing_metadata_datetimeoriginal() {
 #   $1 - The file to check (must be a file, not a directory).
 # Returns:
 #   0 on success, 1 if the input is invalid or metadata does not match the filename.
-function check_invalid_filename_datetimeoriginal() {
+function find_invalid_filename_datetimeoriginal() {
     local file="$1"
     local datetime_metadata
     local datetime_naming
@@ -129,19 +129,19 @@ function check_invalid_filename_datetimeoriginal() {
 # ------------------------------------------------------------------------------
 
 # Only lowercase extensions are allowed.
-check_extension "GIF"
-check_extension "JPEG"
-check_extension "jpeg"
-check_extension "JPG"
-check_extension "MKV"
-check_extension "MP3"
-check_extension "MP4"
-check_extension "OGG"
-check_extension "PDF"
-check_extension "PNG"
-check_extension "WAV"
-check_extension "WEBM"
-check_extension "WMV"
+find_extension "GIF"
+find_extension "JPEG"
+find_extension "jpeg"
+find_extension "JPG"
+find_extension "MKV"
+find_extension "MP3"
+find_extension "MP4"
+find_extension "OGG"
+find_extension "PDF"
+find_extension "PNG"
+find_extension "WAV"
+find_extension "WEBM"
+find_extension "WMV"
 
 # Files in the notes directory should only be markdown (end with .md)
 fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
@@ -153,10 +153,10 @@ fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
 # ------------------------------------------------------------------------------
 
 # Temporary files are not allowed.
-check_pattern "~" ".*~$"
-check_pattern ".Temp" "\.Temp$"
-check_pattern ".*_grim.*" "_grim\."
-check_pattern "screenshot_" "^screenshot_"
+find_pattern "~" ".*~$"
+find_pattern ".Temp" "\.Temp$"
+find_pattern ".*_grim.*" "_grim\."
+find_pattern "screenshot_" "^screenshot_"
 
 # Hidden files and hidden directories are not allowed.
 log_info "---> LOOKUP for hidden files and directories"
@@ -170,31 +170,31 @@ fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
 # ------------------------------------------------------------------------------
 
 # Files prefixed with date must follow the "YYYY-MM-DD_HHMMSS" convention (ISO_8601)
-check_pattern \
+find_pattern \
     "00000000_00h00m00s*" \
     "^[[:digit:]]{8}[_-][[:digit:]]{2}h[[:digit:]]{2}m[[:digit:]]{2}s.*"
-check_pattern \
+find_pattern \
     "00000000_000000*" \
     "^[[:digit:]]{8}[_-][[:digit:]]{6}.*"
-check_pattern \
+find_pattern \
     "00000000_000000000*" \
     "^[[:digit:]]{8}[_-][[:digit:]]{6}.*"
-check_pattern \
+find_pattern \
     "*0000-00-00_000000000*" \
     "[[:digit:]]{4}[_-][[:digit:]]{2}[_-][[:digit:]]{2}_[[:digit:]]{9}.*"
-check_pattern \
+find_pattern \
     "*0000-00-00_00-00-00*" \
     "[[:digit:]]{4}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}.*"
-check_pattern \
+find_pattern \
     "*0000_00-00*" \
     "[[:digit:]]{4}_[[:digit:]]{2}[_-][[:digit:]]{2}.*"
-check_pattern \
+find_pattern \
     "*0000-00_00*" \
     "[[:digit:]]{4}[_-][[:digit:]]{2}_[[:digit:]]{2}.*"
-check_pattern \
+find_pattern \
     "*0000-00-00-*" \
     "[[:digit:]]{4}[_-][[:digit:]]{2}[_-][[:digit:]]{2}-.*"
-check_pattern \
+find_pattern \
     "*0000-00-00_00-00-00*" \
     "[[:digit:]]{4}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}[_-][[:digit:]]{2}.*"
 
@@ -240,16 +240,32 @@ fd -i -t x --search-path ${DISKDATA}/sources \
     --exclude "extern" \
     --exclude "*.sh"
 
+# Files must have 640 permissions
+log_info "---> LOOKUP for file (not executable) with permission different than 640"
+fd -HIi -t f --search-path ${DISKDATA} \
+    --exclude "builds" \
+    --exclude "sources" \
+    --exclude "setup" \
+    --exec stat -c '%a %n' | rg -v '640'
+
+# Directories must have 750 permissions
+log_info "---> LOOKUP for directory with permission different than 750"
+fd -HIi -t d --search-path ${DISKDATA} \
+    --exclude "builds" \
+    --exclude "sources" \
+    --exclude "setup" \
+    --exec stat -c '%a %n' | rg -v '750'
+
 # All jpg file must have the "DateTimeOriginal" metadata
-export -f check_missing_metadata_datetimeoriginal
+export -f find_missing_metadata_datetimeoriginal
 log_info "---> LOOKUP for missing DateTimeOriginal metadata in jpg files"
 fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
     --exclude "art" \
-    --exec bash -c 'check_missing_metadata_datetimeoriginal "$1"' _ {}
+    --exec bash -c 'find_missing_metadata_datetimeoriginal "$1"' _ {}
 
 # All jpg filename must be prefixed with the "DateTimeOriginal" metadata value
-export -f check_invalid_filename_datetimeoriginal
+export -f find_invalid_filename_datetimeoriginal
 log_info "---> LOOKUP for jpg filename that does not match the DateTimeOriginal value"
 fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
     --exclude "art" \
-    --exec bash -c 'check_invalid_filename_datetimeoriginal "$1"' _ {}
+    --exec bash -c 'find_invalid_filename_datetimeoriginal "$1"' _ {}
