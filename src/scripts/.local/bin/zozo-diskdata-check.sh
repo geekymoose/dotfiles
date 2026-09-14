@@ -20,17 +20,17 @@ export LOGDIR=${HOME}/downloads/
 
 # Check if DISKDATA is a valid directory
 if ! [[ -d ${DISKDATA} ]]; then
-    echo -e "${COLOR_ERROR}Error: ${DISKDATA} is not a valid directory. Make sure it is mounted and accessible."
+    log_error "Error: ${DISKDATA} is not a valid directory. Make sure it is mounted and accessible."
     exit 1
 fi
 # Check if exiv2 is installed
 if ! command -v exiv2 &>/dev/null; then
-    echo -e "${COLOR_ERROR}Error: exiv2 is not installed. Install it with 'sudo pacman -S exiv2'"
+    log_error "Error: exiv2 is not installed. Install it with 'sudo pacman -S exiv2'"
     exit 1
 fi
 # Check if fd is installed
 if ! command -v fd &>/dev/null; then
-    echo -e "${COLOR_ERROR}Error: fd is not installed. Install it with 'sudo pacman -S fd'"
+    log_error "Error: fd is not installed. Install it with 'sudo pacman -S fd'"
     exit 1
 fi
 
@@ -42,7 +42,7 @@ fi
 function check_extension() {
     description="${1}"
     search_pattern=".*\.${1}$"
-    echo -e "${COLOR_INFO}---> LOOKUP for extension: ${description}"
+    log_info "---> LOOKUP for extension: ${description}"
     fd -HIs \
         --search-path ${DISKDATA} \
         --regex "${search_pattern}" \
@@ -57,7 +57,7 @@ function check_extension() {
 function check_pattern() {
     description="${1}"
     search_pattern="${2}"
-    echo -e "${COLOR_INFO}---> LOOKUP for pattern: ${description}"
+    log_info "---> LOOKUP for pattern: ${description}"
     fd -HIi \
         --search-path ${DISKDATA} \
         --regex "${search_pattern}" \
@@ -74,13 +74,13 @@ function check_missing_metadata_datetimeoriginal() {
     local datetime_naming
 
     if [[ -d "$file" ]]; then
-        echo -e "${COLOR_ERROR}Invalid parameter (must be a file, not a directory): $file" >&2
+        log_error "Invalid parameter (must be a file, not a directory): $file"
         return 0
     fi
 
     datetime_metadata_fetched=$(exiv2 -K "Exif.Photo.DateTimeOriginal" -Pv "$file" 2>/dev/null)
     if [[ -z "$datetime_metadata_fetched" ]]; then
-        echo -e "${COLOR_ERROR}Missing DateTimeOriginal metadata in file: $file" >&2
+        log_error "Missing DateTimeOriginal metadata in file: $file"
 
         # Extract date from filename (YYYY-MM-DD_HHMMSS)
         filename=$(basename "$file")
@@ -105,7 +105,7 @@ function check_invalid_filename_datetimeoriginal() {
     local datetime_naming
 
     if [[ -d "$file" ]]; then
-        echo -e "${COLOR_ERROR}Invalid parameter (must be a file, not a directory): $file" >&2
+        log_error "Invalid parameter (must be a file, not a directory): $file"
         return 0
     fi
 
@@ -123,7 +123,7 @@ function check_invalid_filename_datetimeoriginal() {
 
     # Compare metadata date with filename date
     if [[ "$datetime_metadata" != "$datetime_naming" ]]; then
-        echo -e "${COLOR_ERROR}Metadata DateTimeOriginal ($datetime_metadata) does not match filename date ($datetime_naming): $file"
+        log_error "Metadata DateTimeOriginal ($datetime_metadata) does not match filename date ($datetime_naming): $file"
 
         # Build a batch mv command file
         new_file="$(dirname "$file")/${datetime_metadata}${filename:17}"
@@ -163,7 +163,7 @@ check_pattern ".*_grim.*" "_grim\."
 check_pattern "screenshot_" "^screenshot_"
 
 # Lookup hidden files and directories (not allowed)
-echo -e "${COLOR_INFO}---> LOOKUP for hidden files and directories"
+log_info "---> LOOKUP for hidden files and directories"
 fd -HIs --search-path ${DISKDATA} --regex "^\..*" \
     --exclude "notes/.obsidian" \
     --exclude "sources/" \
@@ -208,7 +208,7 @@ check_pattern \
 # ------------------------------------------------------------------------------
 
 # No space allowed in filenames
-echo -e "${COLOR_INFO}---> LOOKUP for filename with spaces"
+log_info "---> LOOKUP for filename with spaces"
 fd -HIi -t f --search-path ${DISKDATA} --regex "^ "
 fd -HIi -t f --search-path ${DISKDATA} --regex " $"
 fd -HIi -t f --search-path ${DISKDATA} --regex ".* .*" \
@@ -216,7 +216,7 @@ fd -HIi -t f --search-path ${DISKDATA} --regex ".* .*" \
     --exclude "notes"
 
 # Only lowercase characters are allowed in filenames
-echo -e "${COLOR_INFO}---> LOOKUP for filename with uppercase (only lowercase allowed)"
+log_info "---> LOOKUP for filename with uppercase (only lowercase allowed)"
 fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
     --exclude "_inbox" \
     --exclude "builds" \
@@ -228,7 +228,7 @@ fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
 
 # Only alpha-numeric characters in filenames (no accent etc)
 # This allows spaces because it check in folders that allow them
-echo -e "${COLOR_INFO}---> LOOKUP for filename with special characters (only alpha-numeric characters)"
+log_info "---> LOOKUP for filename with special characters (only alpha-numeric characters)"
 fd -s --search-path ${DISKDATA} --regex ".*[^\p{Han}a-zA-Z0-9 .()#+_-].*"
 
 # Note files should only be markdown (end with .md)
@@ -242,7 +242,7 @@ fd -HIi --type f --search-path "${DISKDATA}/notes" --regex '.*[^m][^d]$' \
 
 # Check for wrong permission.
 # The "other" permissions should be 0 for any file and folder.
-echo -e "${COLOR_INFO}---> LOOKUP for wrong permissions"
+log_info "---> LOOKUP for wrong permissions"
 fd -HIi -t x --search-path ${DISKDATA} \
     --exclude "builds" \
     --exclude "sources" \
@@ -253,14 +253,14 @@ fd -i -t x --search-path ${DISKDATA}/sources \
 
 # Report image that are missing "DateTimeOriginal" metadata
 export -f check_missing_metadata_datetimeoriginal
-echo -e "${COLOR_INFO}---> LOOKUP for missing jpg metadata (DateTimeOriginal))"
+log_info "---> LOOKUP for missing jpg metadata (DateTimeOriginal))"
 fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
     --exclude "art" \
     --exec bash -c 'check_missing_metadata_datetimeoriginal "$1"' _ {}
 
 # Report image that are missing "DateTimeOriginal" metadata
 export -f check_invalid_filename_datetimeoriginal
-echo -e "${COLOR_INFO}---> LOOKUP for invalid jpg metadata (DateTimeOriginal should match filename))"
+log_info "---> LOOKUP for invalid jpg metadata (DateTimeOriginal should match filename))"
 fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
     --exclude "art" \
     --exec bash -c 'check_invalid_filename_datetimeoriginal "$1"' _ {}
