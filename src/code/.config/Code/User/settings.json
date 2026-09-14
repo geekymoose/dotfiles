@@ -18,6 +18,7 @@
 
   // DiffEditor
   "diffEditor.renderSideBySide": false,
+  "diffEditor.ignoreTrimWhitespace": false,
 
   // Extensions
   "extensions.experimental.affinity": {
