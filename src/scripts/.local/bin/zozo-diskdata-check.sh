@@ -121,10 +121,47 @@ function find_invalid_filename_datetimeoriginal() {
         log_error "Metadata DateTimeOriginal ($datetime_metadata) does not match filename date ($datetime_naming): $file"
 
         # Build a batch mv command file
-        new_file="$(dirname "$file")/${datetime_metadata}${filename:17}"
-        echo "mv -v \"$file\" \"${new_file}\"" >>"${LOGDIR}/rename_batch_commands.sh"
+        new_filename="$(dirname "$file")/${datetime_metadata}${filename:17}"
+        echo "mv -v \"$file\" \"${new_filename}\"" >>"${LOGDIR}/rename_batch_commands.sh"
 
         return 1
+    fi
+}
+
+function find_invalid_photo_prefix() {
+    local file="$1"
+    local old_filename
+    local new_filename
+    local extension
+    local parent_dir_path
+    local parent_dir_name
+    local date_prefix
+    local folder_name
+
+    if [[ -d "$file" ]]; then
+        log_error "Invalid parameter (must be a file, not a directory): $file"
+        return 0
+    fi
+
+    old_filename=$(basename "$file")
+    extension="${old_filename##*.}"
+    parent_dir_path=$(dirname "$file")
+    parent_dir_name=$(basename "$parent_dir_path")
+
+    # Check if parent directory name starts with a date (YYYY-MM-DD_ or YYYY_)
+    if [[ "$parent_dir_name" =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}_)|([0-9]{4}_) ]]; then
+        # Extract date prefix and folder name
+        date_prefix="${BASH_REMATCH[0]}"
+        folder_name="${parent_dir_name#"$date_prefix"}"
+    else
+        folder_name="$parent_dir_name"
+    fi
+
+    # Check if filename ends with the folder name
+    if [[ "$old_filename" != *"$folder_name"* ]]; then
+        new_filename="${old_filename%.*}_${folder_name}.${extension}"
+        log_error "${file} (should end with ${folder_name})"
+        echo "mv -v \"$file\" \"${parent_dir_path}/${new_filename}\"" >>"${LOGDIR}/rename_photos_suffix_commands.sh"
     fi
 }
 
@@ -273,3 +310,17 @@ log_info "---> LOOKUP for jpg filename that does not match the DateTimeOriginal 
 fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
     --exclude "art" \
     --exec bash -c 'find_invalid_filename_datetimeoriginal "$1"' _ {}
+
+# ------------------------------------------------------------------------------
+# Special rules
+# ------------------------------------------------------------------------------
+
+# Photo jpg must have a valid suffix (parent folder name) in the filename
+export -f find_invalid_photo_prefix
+log_info "---> LOOKUP for photos that do not follow the parent folder name"
+fd -HIi -e jpg -e png --search-path "${DISKDATA}/media/" \
+    --exclude "/art/" \
+    --exclude "/gamejams/" \
+    --exclude "/games/" \
+    --exclude "/stravenart/" \
+    --exec bash -c 'find_invalid_photo_prefix "$1"' _ {}
