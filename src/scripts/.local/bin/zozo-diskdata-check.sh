@@ -248,19 +248,19 @@ log_info "---> LOOKUP for filename with spaces"
 fd -HIi -t f --search-path ${DISKDATA} --regex "^ "
 fd -HIi -t f --search-path ${DISKDATA} --regex " $"
 fd -HIi -t f --search-path ${DISKDATA} --regex ".* .*" \
-    --exclude "builds/**/unity default resources" \
-    --exclude "notes"
+    --exclude "/builds/**/unity default resources" \
+    --exclude "/notes/"
 
 # Only lowercase characters are allowed in filenames
 log_info "---> LOOKUP for filename with uppercase"
 fd -HIs --search-path ${DISKDATA} --regex ".*[[:upper:]].*" \
-    --exclude "_inbox" \
-    --exclude "builds" \
-    --exclude "notes" \
-    --exclude "sources" \
-    --exclude "setup/**/.git/" \
-    --exclude "setup/**/PKGBUILD" \
-    --exclude "setup/**/.SRCINFO"
+    --exclude "/_inbox/" \
+    --exclude "/builds/" \
+    --exclude "/notes/" \
+    --exclude "/sources/" \
+    --exclude "/setup/**/.git/" \
+    --exclude "/setup/**/PKGBUILD" \
+    --exclude "/setup/**/.SRCINFO"
 
 # Only alpha-numeric characters in filenames (no accent etc)
 # This allows spaces because it checks in folders that allow them
@@ -274,9 +274,9 @@ fd -s --search-path ${DISKDATA} --regex ".*[^\p{Han}a-zA-Z0-9 .()#+_-].*"
 # Executables are not allowed (exect in builds, setup, and sources)
 log_info "---> LOOKUP for file with executable permissions"
 fd -HIi -t x --search-path ${DISKDATA} \
-    --exclude "builds" \
-    --exclude "sources" \
-    --exclude "setup"
+    --exclude "/builds/" \
+    --exclude "/sources/" \
+    --exclude "/setup/"
 fd -i -t x --search-path ${DISKDATA}/sources \
     --exclude "extern" \
     --exclude "*.sh"
@@ -284,31 +284,31 @@ fd -i -t x --search-path ${DISKDATA}/sources \
 # Files must have 640 permissions
 log_info "---> LOOKUP for file (not executable) with permission different than 640"
 fd -HIi -t f --search-path ${DISKDATA} \
-    --exclude "builds" \
-    --exclude "sources" \
-    --exclude "setup" \
+    --exclude "/builds/" \
+    --exclude "/sources/" \
+    --exclude "/setup/" \
     --exec stat -c '%a %n' | rg -v '640'
 
 # Directories must have 750 permissions
 log_info "---> LOOKUP for directory with permission different than 750"
 fd -HIi -t d --search-path ${DISKDATA} \
-    --exclude "builds" \
-    --exclude "sources" \
-    --exclude "setup" \
+    --exclude "/builds/" \
+    --exclude "/sources/" \
+    --exclude "/setup/" \
     --exec stat -c '%a %n' | rg -v '750'
 
 # All jpg file must have the "DateTimeOriginal" metadata
 export -f find_missing_metadata_datetimeoriginal
 log_info "---> LOOKUP for missing DateTimeOriginal metadata in jpg files"
 fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
-    --exclude "art" \
+    --exclude "/art/" \
     --exec bash -c 'find_missing_metadata_datetimeoriginal "$1"' _ {}
 
 # All jpg filename must be prefixed with the "DateTimeOriginal" metadata value
 export -f find_invalid_filename_datetimeoriginal
 log_info "---> LOOKUP for jpg filename that does not match the DateTimeOriginal value"
 fd -HIi --extension jpg --search-path ${DISKDATA}/media/ \
-    --exclude "art" \
+    --exclude "/art/" \
     --exec bash -c 'find_invalid_filename_datetimeoriginal "$1"' _ {}
 
 # ------------------------------------------------------------------------------
