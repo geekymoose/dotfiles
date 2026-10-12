@@ -6,12 +6,21 @@
 [include]
     path                = ~/.config/git/config_custom # For the private config
 
+[core]
+    pager               = delta
+    autocrlf            = input
+    longpaths           = true
+    preloadindex        = true
+    fscache             = true
+
+[gc]
+    auto                = 256
+
 [init]
     defaultBranch       = main
 
-[push]
-    default             = simple
-    recurseSubmodules   = on-demand
+[credential]
+    helper              = cache
 
 [fetch]
     prune               = true
@@ -22,13 +31,9 @@
     recurseSubmodules   = on-demand
     rebase              = true
 
-[credential]
-    helper              = cache
-
-[core]
-    pager               = delta
-    autocrlf            = input
-    longpaths           = true
+[push]
+    default             = simple
+    recurseSubmodules   = on-demand
 
 [interactive]
     diffFilter          = delta --color-only
@@ -64,13 +69,13 @@
 [mergetool "vscode"]
     cmd                 = code --wait --merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 
-[alias]
-    s                   = status
-    logone              = log --oneline --decorate --graph
-    logones             = log --oneline --decorate --graph --format='%h %an %ae'
-
 [filter "lfs"]
     required            = true
     clean               = git-lfs clean -- %f
     smudge              = git-lfs smudge -- %f
     process             = git-lfs filter-process
+
+[alias]
+    s                   = status
+    logone              = log --oneline --decorate --graph
+    logones             = log --oneline --decorate --graph --format='%h %an %ae'
