@@ -62,6 +62,7 @@
 
   // AI Prediction
   "edit_predictions": {
+    "provider": "codestral",
     "mode": "eager",
   },
 
