@@ -34,7 +34,6 @@
   "diff_view_style": "unified",
   "git_panel": {
     "dock": "left",
-    "sort_by_path": true,
     "tree_view": false,
   },
 
